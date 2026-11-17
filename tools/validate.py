@@ -7,7 +7,7 @@ def load(n):
         return json.load(open(os.path.join(D, n + ".json"), encoding="utf-8"))
     except Exception as e:
         err.append(f"{n}.json: {e}"); return None
-p, a, f, c, s = (load(n) for n in ("personajes", "apuestas", "frases", "chistes", "semana"))
+p, a, f, c, s, rk, qs = (load(n) for n in ("personajes", "apuestas", "frases", "chistes", "semana", "ranking", "quiz_semana"))
 ids = set()
 if p:
     for x in p.get("cuadrilla", []) + p.get("invitados", []):

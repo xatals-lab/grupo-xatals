@@ -29,6 +29,7 @@ function fin(){
   const t=s.cartera<=0?"💸 Te has quedado sin un euro: tiras de crédito del Bacterio.":s.animo>=75?"🏆 Leyenda del bar: HRK y Koi te dan el título de oficial Xatal.":s.animo>=45?"👍 Buena noche. Sales por tu pie y sin llamar a Querejeta.":"😵 Noche regular. Mañana tienes un examen del Bacterio.";
   document.getElementById("escena").innerHTML=`<h2>Cierra el bar</h2><p>${t}</p><p>Ánimo final: <b>${s.animo}</b> · Cartera: <b>${s.cartera} €</b></p><button id="otra">Otra noche</button>`;
   document.getElementById("otra").onclick=()=>location.reload();
+  panelRecord(document.getElementById("rec"),"bar",s.animo*10+s.cartera*5,"Puntos del bar");
 }
 asientos();meters();esc(s.cola[0]);
 })().catch(e=>{document.getElementById("escena").textContent="No he podido cargar los datos del bar.";console.error(e)});

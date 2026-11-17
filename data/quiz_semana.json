@@ -1,0 +1,14 @@
+{
+  "semana": "2026-W47",
+  "titulo": "Quiz de la semana: los del cole y la cuadrilla",
+  "preguntas": [
+    {"pregunta": "¿Cómo le llamaban a Dug los profesores en el cole?", "opciones": ["Señor Urrutia", "Señor Guevara", "Don Diego", "El Gallego"], "correcta": 0, "dato": "Y así nació el «vaya examen, señor Urrutia, vaya examen» con el Bacterio."},
+    {"pregunta": "¿A qué se dedica hoy Buxai?", "opciones": ["Policía local", "Piloto de Ryanair", "Cocinero", "Árbitro"], "correcta": 1, "dato": "Se pegó con toda la clase y ahora te pide que te abroches el cinturón."},
+    {"pregunta": "¿Qué profesor se jubiló en Navidades y salvó a la clase en filosofía?", "opciones": ["El Chino", "El Bacterio", "El Maketo (Valladolid)", "Jesús Monte"], "correcta": 2, "dato": "Había suspendido a casi todos."},
+    {"pregunta": "¿Quién es el informático de Marianistas?", "opciones": ["Wilhelm", "Aiksmann (Iker)", "Bihl", "Arrilucea"], "correcta": 1, "dato": "Un puesto que parecía extinguido desde 2003."},
+    {"pregunta": "¿Quién tiene la colección de camisetas de fútbol?", "opciones": ["Tejedor", "Besga", "Abascal", "Bihl"], "correcta": 2, "dato": "Su padre, don Agustín Abascal, era profesor del cole."},
+    {"pregunta": "¿Quién desapareció del panorama al casarse y tener dos hijas?", "opciones": ["Edortha Mari (Eduardo)", "Iker", "El Rizos", "Guillermo"], "correcta": 0, "dato": "Dicen que lo vieron en un parque con un carrito."},
+    {"pregunta": "¿Qué frase pide Koi para todo lo que no es su horario?", "opciones": ["Horas extra", "Servicios mínimos", "Un convenio", "Un anexo"], "correcta": 1, "dato": "En SMC, por protocolo."},
+    {"pregunta": "¿Quién fue el primero en probar el tabaco y traer revistas prohibidas?", "opciones": ["Besga", "Arrilucea", "Buxai", "Wilhelm"], "correcta": 1, "dato": "El pionero de lo prohibido."}
+  ]
+}
