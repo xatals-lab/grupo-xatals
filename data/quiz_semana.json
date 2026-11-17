@@ -1,50 +1,72 @@
 {
   "semana": "2026-W47",
-  "titulo": "Príncipes, peregrinos y silencios del Koi",
+  "titulo": "La semana de los peregrinos con hipoteca",
   "preguntas": [
     {
-      "pregunta": "¿Quién se quejó del primer albergue del Camino Primitivo?",
-      "opciones": [
-        "PheDiox",
-        "Dug",
-        "El HRK",
-        "El dueño"
-      ],
-      "correcta": 0,
-      "dato": "El dueño respondió con una pregunta que ya merece placa."
-    },
-    {
-      "pregunta": "¿Qué le dijo el dueño del albergue al grupo?",
+      "pregunta": "¿Qué frase soltó el dueño del albergue a PheDiox?",
       "opciones": [
         "¿Príncipes o peregrinos?",
-        "¿Txakoli o agua?",
-        "¿Hay desayuno?",
-        "¿Venís del Alavés?"
+        "¿Pensión completa o media?",
+        "¿Traéis saco o quejas?",
+        "¿Esto es un hotel de cuatro estrellas?"
       ],
       "correcta": 0,
-      "dato": "La cama era precaria; la respuesta, de cinco estrellas."
+      "dato": "La queja de PheDiox ya tiene respuesta oficial del Camino."
     },
     {
-      "pregunta": "¿Quién contó la anécdota del Camino?",
-      "opciones": [
-        "El HRK",
-        "Koi",
-        "Dug",
-        "PheDiox"
-      ],
-      "correcta": 0,
-      "dato": "La contó el HRK el 17 de noviembre."
-    },
-    {
-      "pregunta": "¿Qué festival preguntó el HRK por Koi?",
+      "pregunta": "¿Qué festival mencionó el HRK al compartir el cartel por días?",
       "opciones": [
         "Azkena Rock Festival",
-        "La Blanca",
-        "Jazzaldia",
-        "Sonorama"
+        "Sonorama",
+        "BBK Live",
+        "Viña Rock"
       ],
       "correcta": 0,
-      "dato": "La pregunta era qué día de los tres iría Koi."
+      "dato": "El HRK pidió además adivinar qué día irá Koi."
+    },
+    {
+      "pregunta": "¿Con quién hizo el Camino Primitivo el HRK?",
+      "opciones": [
+        "Koi y PheDiox",
+        "Dug y el Rizos",
+        "Dug y Koi",
+        "Wilhelm y Buxai"
+      ],
+      "correcta": 0,
+      "dato": "El albergue sobrevivió a una inspección de príncipes."
+    },
+    {
+      "pregunta": "¿Qué cuestión planteó Dug sobre vivienda?",
+      "opciones": [
+        "La compra de casa sin ayudas y el coste hipotecario",
+        "El alquiler de un castillo",
+        "La hipoteca del albergue",
+        "Comprar una casa en Mendizorroza"
+      ],
+      "correcta": 0,
+      "dato": "El debate empezó antes de que apareciera la manta del peregrino."
+    },
+    {
+      "pregunta": "¿A qué se refería Dug al preguntar por el voto de cada uno?",
+      "opciones": [
+        "A las elecciones generales de España",
+        "A una votación del Azkena",
+        "A elegir el menú del albergue",
+        "A la presidencia del grupo"
+      ],
+      "correcta": 0,
+      "dato": "Pidió pronósticos concretos, no una encuesta de peregrinos."
+    },
+    {
+      "pregunta": "¿Qué respondió el HRK cuando preguntó por el día del Azkena?",
+      "opciones": [
+        "Preguntó qué día iría Koi",
+        "Dijo que iría los tres días",
+        "Propuso ir al albergue",
+        "Pidió una hipoteca fija"
+      ],
+      "correcta": 0,
+      "dato": "Koi todavía no ha confirmado presencia ni catálogo."
     },
     {
       "pregunta": "¿Contra quién juega el Alavés el próximo partido registrado?",
@@ -55,40 +77,18 @@
         "Burgos"
       ],
       "correcta": 0,
-      "dato": "El partido está fijado para el 21 de noviembre a las 14:00."
+      "dato": "El partido está fijado para el 21 de noviembre a las 14:00, hora de Madrid."
     },
     {
-      "pregunta": "¿Qué tema económico abrió Dug en el chat?",
+      "pregunta": "¿Qué apodo de actividad laboral atribuyó Dug a Koi?",
       "opciones": [
-        "Vivienda e hipotecas",
-        "El precio del txakoli",
-        "Las fichas de la porra",
-        "La nómina del Bacterio"
+        "Tradicional y de Microsoft",
+        "Experto en albergues",
+        "Piloto de Ryanair",
+        "Catedrático de física"
       ],
       "correcta": 0,
-      "dato": "También pidió imaginar opiniones de compañeros y profesores."
-    },
-    {
-      "pregunta": "¿Qué dijo Koi en su último mensaje registrado de esta semana?",
-      "opciones": [
-        "El imperio nipón está en todas partes",
-        "¿Príncipes o peregrinos?",
-        "Voy al Azkena",
-        "Pásame el desayuno"
-      ],
-      "correcta": 0,
-      "dato": "El imperio sigue avanzando; sus mensajes, no tanto."
-    },
-    {
-      "pregunta": "¿Qué le ofreció el dueño del albergue a PheDiox?",
-      "opciones": [
-        "Una pregunta para la posteridad",
-        "Una suite",
-        "Un billete a Vitoria",
-        "Un menú de peregrino"
-      ],
-      "correcta": 0,
-      "dato": "No consta que hubiera suite; consta la frase."
+      "dato": "A Koi le llegaron licencias baratas de Office 2024 Pro Plus."
     }
   ]
 }

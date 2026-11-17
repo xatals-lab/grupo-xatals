@@ -138,5 +138,15 @@
       "hrk",
       "phediox"
     ]
+  },
+  {
+    "frase": "Porque vaya examen, señor Urrutia, vaya examen.",
+    "autor": "bacterio",
+    "opciones": [
+      "bacterio",
+      "monte",
+      "chino",
+      "maketo"
+    ]
   }
 ]

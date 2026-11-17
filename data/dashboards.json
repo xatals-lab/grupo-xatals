@@ -6,18 +6,18 @@
   {
    "id": "dug",
    "mensajes": 339,
-   "palabras": 4821,
+   "palabras": 4585,
    "insultos": 13,
-   "preguntas": 145,
+   "preguntas": 141,
    "exclamaciones": 12,
    "largos": 20,
-   "dias_sin_hablar": 4.0,
+   "dias_sin_hablar": 4.1,
    "mayor_silencio_dias": 7.7
   },
   {
    "id": "hrk",
    "mensajes": 211,
-   "palabras": 1535,
+   "palabras": 1302,
    "insultos": 7,
    "preguntas": 67,
    "exclamaciones": 13,
@@ -28,12 +28,12 @@
   {
    "id": "koi",
    "mensajes": 95,
-   "palabras": 457,
+   "palabras": 421,
    "insultos": 0,
    "preguntas": 3,
    "exclamaciones": 9,
    "largos": 0,
-   "dias_sin_hablar": 4.5,
+   "dias_sin_hablar": 4.6,
    "mayor_silencio_dias": 8.3
   }
  ],
@@ -223,26 +223,6 @@
  "palabras": {
   "dug": [
    [
-    "hermes",
-    134
-   ],
-   [
-    "file",
-    48
-   ],
-   [
-    "saved",
-    26
-   ],
-   [
-    "hermek",
-    26
-   ],
-   [
-    "image",
-    20
-   ],
-   [
     "email",
     19
    ],
@@ -277,32 +257,32 @@
    [
     "quinto",
     10
+   ],
+   [
+    "diego",
+    9
+   ],
+   [
+    "gasteiz",
+    9
+   ],
+   [
+    "quiero",
+    9
+   ],
+   [
+    "diiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiooooooooooooooooooooooosssssssssss",
+    9
+   ],
+   [
+    "etor",
+    9
    ]
   ],
   "hrk": [
    [
-    "hermes",
-    86
-   ],
-   [
-    "file",
-    71
-   ],
-   [
-    "saved",
-    37
-   ],
-   [
-    "image",
-    32
-   ],
-   [
     "ddddiiooooooossss",
     22
-   ],
-   [
-    "hermek",
-    16
    ],
    [
     "está",
@@ -335,25 +315,29 @@
    [
     "vacaciones",
     4
+   ],
+   [
+    "hecho",
+    4
+   ],
+   [
+    "huelga",
+    4
+   ],
+   [
+    "puta",
+    3
+   ],
+   [
+    "jefe",
+    3
+   ],
+   [
+    "diego",
+    3
    ]
   ],
   "koi": [
-   [
-    "file",
-    11
-   ],
-   [
-    "hermes",
-    7
-   ],
-   [
-    "saved",
-    6
-   ],
-   [
-    "image",
-    5
-   ],
    [
     "mañana",
     4
@@ -392,6 +376,22 @@
    ],
    [
     "dado",
+    2
+   ],
+   [
+    "cuenta",
+    2
+   ],
+   [
+    "cambiar",
+    2
+   ],
+   [
+    "permitido",
+    2
+   ],
+   [
+    "desahucio",
     2
    ]
   ]

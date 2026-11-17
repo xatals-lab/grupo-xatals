@@ -1,791 +1,978 @@
 {
- "juegos": [
-  {
-   "id": "servicios-minimos",
-   "plantilla": "pulsa",
-   "titulo": "Koi y los servicios mínimos",
-   "emoji": "🧑‍💼",
-   "resumen": "Caña y pintxo para ti; papeleo para Koi.",
-   "intro": "Cuando salen pintxos y cañas, pulsa. Cuando sale papeleo (anexos, libro de reclamaciones), NO: Koi pide servicios mínimos y se te cae la puntuación.",
-   "dificultad": 2,
-   "nuevo": true,
-   "duracion": 30,
-   "buenos": [
+  "juegos": [
     {
-     "e": "🍺"
+      "id": "servicios-minimos",
+      "plantilla": "pulsa",
+      "titulo": "Koi y los servicios mínimos",
+      "emoji": "🧑‍💼",
+      "resumen": "Caña y pintxo para ti; papeleo para Koi.",
+      "intro": "Cuando salen pintxos y cañas, pulsa. Cuando sale papeleo (anexos, libro de reclamaciones), NO: Koi pide servicios mínimos y se te cae la puntuación.",
+      "dificultad": 2,
+      "nuevo": false,
+      "duracion": 30,
+      "buenos": [
+        {
+          "e": "🍺"
+        },
+        {
+          "e": "🥘"
+        },
+        {
+          "e": "🍻"
+        }
+      ],
+      "malos": [
+        {
+          "e": "📎"
+        },
+        {
+          "e": "📋"
+        },
+        {
+          "e": "📑"
+        }
+      ],
+      "msg_ok": [
+        "¡Pintxo a salvo!",
+        "Caña cobrada.",
+        "Servicios máximos."
+      ],
+      "msg_ko": [
+        "Koi: esto no entra en mi horario.",
+        "Servicios mínimos activados.",
+        "Anexo firmado, ánimo hundido."
+      ],
+      "consigna": "Pulsa los buenos y no toques los malos"
     },
     {
-     "e": "🥘"
+      "id": "calimocho-pica",
+      "plantilla": "pulsa",
+      "titulo": "Calimocho contra pica",
+      "emoji": "🍷",
+      "resumen": "Calimocho sí. Pica es bebida de flojos.",
+      "intro": "Pulsa los calimochos. Si tocas una pica (cerveza con limón), te cae la fama de flojo del grupo.",
+      "dificultad": 2,
+      "nuevo": false,
+      "duracion": 30,
+      "buenos": [
+        {
+          "e": "🍷"
+        },
+        {
+          "e": "🥤"
+        }
+      ],
+      "malos": [
+        {
+          "e": "🍺🍋"
+        }
+      ],
+      "msg_ok": [
+        "¡Calimocho, como Dios manda!",
+        "Eso es un hombre.",
+        "Otro al bote."
+      ],
+      "msg_ko": [
+        "Pica: bebida de flojos.",
+        "Hoy te toca invitar por flojo.",
+        "Koi aplaude (pide pica)."
+      ],
+      "consigna": "Pulsa los buenos y no toques los malos"
     },
     {
-     "e": "🍻"
+      "id": "querejeta-destituye",
+      "plantilla": "pulsa",
+      "titulo": "Querejeta destituye",
+      "emoji": "👔",
+      "resumen": "Echa entrenadores antes de que se enfríe el palco.",
+      "intro": "Salen entrenadores del Alavés: pulsa para destituir, que Josean Querejeta no perdona. A Bordalás (el hombre de hierro, ya en el Getafe) no se le toca.",
+      "dificultad": 3,
+      "nuevo": false,
+      "duracion": 28,
+      "buenos": [
+        {
+          "e": "🧑‍🏫"
+        },
+        {
+          "e": "🧢"
+        },
+        {
+          "e": "📋"
+        }
+      ],
+      "malos": [
+        {
+          "e": "🦾"
+        }
+      ],
+      "msg_ok": [
+        "¡Destituido!",
+        "Rueda de prensa de despedida.",
+        "Otro al paro."
+      ],
+      "msg_ko": [
+        "Bordalás ni se inmuta.",
+        "El hombre de hierro te mira mal.",
+        "Eso se paga con pica."
+      ],
+      "consigna": "Pulsa los buenos y no toques los malos"
+    },
+    {
+      "id": "patadas-tejedor",
+      "plantilla": "pulsa",
+      "titulo": "Recreo con Tejedor",
+      "emoji": "⚽",
+      "resumen": "Pasa los balones y esquiva las patadas.",
+      "intro": "En el recreo, Tejedor acaba todos los partidos a patadas. Pulsa los balones para pasarlos y evita las espinillas.",
+      "dificultad": 3,
+      "nuevo": false,
+      "duracion": 28,
+      "buenos": [
+        {
+          "e": "⚽"
+        }
+      ],
+      "malos": [
+        {
+          "e": "🦵"
+        },
+        {
+          "e": "🥾"
+        }
+      ],
+      "msg_ok": [
+        "Pase a la red.",
+        "¡Qué control!",
+        "Tejedor se emociona."
+      ],
+      "msg_ko": [
+        "¡Patada en la espinilla!",
+        "Tejedor: 'ha sido fútbol'.",
+        "Falta, penalti y bronca."
+      ],
+      "consigna": "Pulsa los buenos y no toques los malos"
+    },
+    {
+      "id": "irabi-rodamientos",
+      "plantilla": "pulsa",
+      "titulo": "Irabi S.A.: turno de rodamientos",
+      "emoji": "⚙️",
+      "resumen": "Rodamientos para Héctor, correos con cariño no.",
+      "intro": "En la fábrica de Héctor en Bergara las condiciones son las más duras y los emails, directos. Pulsa los rodamientos. Los correos con cariño no existen: no los toques.",
+      "dificultad": 3,
+      "nuevo": false,
+      "duracion": 30,
+      "buenos": [
+        {
+          "e": "⚙️"
+        },
+        {
+          "e": "🔩"
+        },
+        {
+          "e": "🛠️"
+        }
+      ],
+      "malos": [
+        {
+          "e": "💌"
+        },
+        {
+          "e": "🌸"
+        }
+      ],
+      "msg_ok": [
+        "Rodamiento bien rodado.",
+        "HRK asiente sin decir nada.",
+        "Producción al máximo."
+      ],
+      "msg_ko": [
+        "Aquí no se manda cariño.",
+        "HRK pone cara de tierra embarrada.",
+        "Insulto de bienvenida."
+      ],
+      "consigna": "Pulsa los buenos y no toques los malos"
+    },
+    {
+      "id": "quien-era-quien",
+      "plantilla": "memoria",
+      "titulo": "¿Quién era quién en Marianistas?",
+      "emoji": "🧠",
+      "resumen": "Une cada personaje con lo que le define.",
+      "intro": "Encuentra las parejas: el personaje del cole y lo que le definía.",
+      "dificultad": 2,
+      "nuevo": false,
+      "consigna": "Une cada personaje con lo que le define",
+      "pares": [
+        {
+          "a": "Tejedor",
+          "b": "⚽ patadas"
+        },
+        {
+          "a": "Buxai",
+          "b": "✈️ Ryanair"
+        },
+        {
+          "a": "Abascal",
+          "b": "👕 camisetas"
+        },
+        {
+          "a": "El Bacterio",
+          "b": "🧪 «vaya examen»"
+        },
+        {
+          "a": "El Maketo",
+          "b": "📖 filosofía"
+        },
+        {
+          "a": "Aiksmann",
+          "b": "🖥️ informático"
+        },
+        {
+          "a": "El Rizos",
+          "b": "🌀 academia de física"
+        },
+        {
+          "a": "Arrilucea",
+          "b": "🚬 el pionero"
+        }
+      ]
+    },
+    {
+      "id": "diiios",
+      "plantilla": "aguanta",
+      "titulo": "El grito de PheDiox",
+      "emoji": "🗣️",
+      "resumen": "Estira el Diiiios hasta la zona verde.",
+      "intro": "Mantén pulsado para estirar el DIIIIOOOS y suelta cuando la aguja esté en la zona verde. Aquí sí se estira: en el audio de Hermek no.",
+      "dificultad": 3,
+      "nuevo": false,
+      "palabra": "Dios",
+      "rondas": 5,
+      "consigna": "Estira el Dios hasta la zona verde",
+      "msg_ok": [
+        "¡Ese Dios sí que sí!",
+        "PheDiox se quita el sombrero.",
+        "Voz de estadio."
+      ],
+      "msg_ko": [
+        "Dios se quedó corto.",
+        "Se te cortó la voz.",
+        "Eso no era ni un Dios de pueblo."
+      ]
+    },
+    {
+      "id": "busca-edortha",
+      "plantilla": "busca",
+      "titulo": "¿Dónde está Edortha Mari?",
+      "emoji": "🎸",
+      "resumen": "El desaparecido de las dos hijas, escondido entre carritos.",
+      "intro": "Edortha Mari desapareció del mapa al tener dos hijas. Encuéntralo entre carritos, peluches y biberones antes de que se esfume.",
+      "dificultad": 3,
+      "nuevo": false,
+      "objetivo": {
+        "e": "🎸",
+        "t": "Edortha Mari (el de la guitarra punk)"
+      },
+      "senuelos": [
+        {
+          "e": "👶"
+        },
+        {
+          "e": "🍼"
+        },
+        {
+          "e": "🛒"
+        },
+        {
+          "e": "🧸"
+        },
+        {
+          "e": "🚼"
+        },
+        {
+          "e": "🌳"
+        }
+      ],
+      "rondas": 5,
+      "tiempo": 14,
+      "msg_ko": [
+        "Se ha esfumado otra vez.",
+        "Dicen que lo vieron en un parque con un carrito."
+      ]
+    },
+    {
+      "id": "camiseta-abascal",
+      "plantilla": "busca",
+      "titulo": "La camiseta del Alavés del 98",
+      "emoji": "🎽",
+      "resumen": "Encuentra la camiseta entre las 40 de Abascal.",
+      "intro": "Daniel Abascal tiene todas las camisetas de fútbol posibles. Encuentra la del Alavés del 98 antes de que la guarde en la mochila.",
+      "dificultad": 4,
+      "nuevo": false,
+      "objetivo": {
+        "e": "🎽",
+        "t": "la camiseta del Alavés del 98"
+      },
+      "senuelos": [
+        {
+          "e": "👕"
+        }
+      ],
+      "rondas": 4,
+      "tiempo": 16,
+      "msg_ko": [
+        "Abascal ya la ha guardado en la mochila."
+      ]
+    },
+    {
+      "id": "aiksmann-tele",
+      "plantilla": "simon",
+      "titulo": "Aiksmann arregla la tele",
+      "emoji": "🖥️",
+      "resumen": "Repite la secuencia de cables como el último informático de 2003.",
+      "intro": "El informático de Marianistas reinicia el sistema con una secuencia de cables. Repítela sin equivocarte.",
+      "dificultad": 3,
+      "nuevo": false,
+      "rondas": 8,
+      "botones": [
+        {
+          "e": "🔌",
+          "c": "#ff2e93"
+        },
+        {
+          "e": "📺",
+          "c": "#00e5ff"
+        },
+        {
+          "e": "🖥️",
+          "c": "#39ff14"
+        },
+        {
+          "e": "💾",
+          "c": "#ffe500"
+        }
+      ],
+      "msg_ok": [
+        "Reiniciado.",
+        "Funciona con un clip.",
+        "Windows 98 aprueba."
+      ],
+      "msg_ko": [
+        "Pantalla azul.",
+        "Eso era el cable de la impresora."
+      ],
+      "consigna": "¡Ahora repite la secuencia!"
+    },
+    {
+      "id": "bihl-gimnasio",
+      "plantilla": "timing",
+      "titulo": "Bihl en el gimnasio",
+      "emoji": "🏋️",
+      "resumen": "Levanta pesas en el punto exacto, con humildad.",
+      "intro": "Bihl, el quinto hombre de la industria guipuzcoana, levanta todo con humildad. Para la aguja en la zona verde para levantar el peso. La zona se hace más pequeña.",
+      "dificultad": 3,
+      "nuevo": false,
+      "rondas": 5,
+      "zona": 36,
+      "consigna": "Para la aguja en la zona verde",
+      "msg_ok": [
+        "Levantado, y encima dice que no es para tanto.",
+        "Bihl se sonroja.",
+        "Peso muerto, pero vivo."
+      ],
+      "msg_ko": [
+        "Se te cae la barra.",
+        "Eso pesaba más que el examen del Bacterio."
+      ]
+    },
+    {
+      "id": "celedon",
+      "plantilla": "timing",
+      "titulo": "Bajar a Celedón",
+      "emoji": "🎈",
+      "resumen": "Frena la bajada en la zona buena, que es la Blanca.",
+      "intro": "Es la fiesta de la Blanca: Celedón baja de la torre. Para la aguja en la zona verde para frenar la bajada. Si te pasas, aterrizas en el pote equivocado.",
+      "dificultad": 2,
+      "nuevo": false,
+      "rondas": 5,
+      "zona": 38,
+      "consigna": "Frena a Celedón en la zona verde",
+      "msg_ok": [
+        "Aterrizaje perfecto en la plaza.",
+        "El pueblo aplaude con txapela.",
+        "Pote servido."
+      ],
+      "msg_ko": [
+        "Aterrizas en la fuente.",
+        "Celedón pide otra caña mientras cuelga."
+      ]
+    },
+    {
+      "id": "camino-primitivo",
+      "plantilla": "decide",
+      "titulo": "Camino Primitivo: ¿príncipes o peregrinos?",
+      "emoji": "🥾",
+      "resumen": "El albergue de la anécdota del PheDiox, versión juego.",
+      "intro": "Llegáis a un albergue precario del Camino Primitivo y el dueño pregunta: ¿príncipes o peregrinos? Decide bien.",
+      "dificultad": 2,
+      "nuevo": false,
+      "final": {
+        "ruina": "Os quedáis sin un euro y con ampollas.",
+        "bien": "Salís del Camino como príncipes y peregrinos a la vez.",
+        "normal": "Dormís en litera, pero con anécdota.",
+        "mal": "El dueño cuenta vuestra historia en el próximo albergue."
+      },
+      "escenas": [
+        {
+          "e": "🏚️",
+          "titulo": "El albergue",
+          "t": "El dueño os mira: ¿príncipes o peregrinos?",
+          "o": [
+            {
+              "t": "Príncipes",
+              "r": "Os cobra el triple por la manta real.",
+              "animo": 10,
+              "cartera": -20
+            },
+            {
+              "t": "Peregrinos",
+              "r": "Os da una litera y una sopa con fideos tristes.",
+              "animo": 5,
+              "cartera": -5
+            },
+            {
+              "t": "Las dos cosas",
+              "r": "Os mira, suspira y os pone en la litera de arriba con corona de cartón.",
+              "animo": 15,
+              "cartera": -10
+            }
+          ]
+        },
+        {
+          "e": "🛏️",
+          "titulo": "La litera",
+          "t": "El PheDiox pide categoría y baño privado en un sitio sin agua caliente.",
+          "o": [
+            {
+              "t": "Apoyarle en la reclamación",
+              "r": "Reclamáis a un monte. Os escucha un burro.",
+              "animo": 10,
+              "cartera": 0
+            },
+            {
+              "t": "Taparte con la manta",
+              "r": "Dormís mejor que el resto y sin pelea.",
+              "animo": 5,
+              "cartera": 0
+            },
+            {
+              "t": "Ofrecerle una caña de consuelo",
+              "r": "El dueño os la cobra. Vaya gastos.",
+              "animo": 5,
+              "cartera": -10
+            }
+          ]
+        },
+        {
+          "e": "🍷",
+          "titulo": "La cena",
+          "t": "Menú del peregrino: lentejas, pan duro y vino de garrafa.",
+          "o": [
+            {
+              "t": "Pedir calimocho",
+              "r": "El dueño os mira con respeto.",
+              "animo": 15,
+              "cartera": -5
+            },
+            {
+              "t": "Pedir pica",
+              "r": "Silencio total. Os llaman flojos tres veces.",
+              "animo": -10,
+              "cartera": -5
+            },
+            {
+              "t": "Mojar pan y callar",
+              "r": "Cena legendaria, calorías de oro.",
+              "animo": 10,
+              "cartera": 0
+            }
+          ]
+        },
+        {
+          "e": "🌄",
+          "titulo": "La subida",
+          "t": "Mañana, cuesta de 900 metros con mochila.",
+          "o": [
+            {
+              "t": "Subir cantando Diiiios",
+              "r": "Os oyen desde Oviedo.",
+              "animo": 15,
+              "cartera": 0
+            },
+            {
+              "t": "Coger un taxi",
+              "r": "Cuenta de 80 euros y vergüenza peregrina.",
+              "animo": -10,
+              "cartera": -30
+            },
+            {
+              "t": "Subir a paso de vitoriano",
+              "r": "Tranquilo, cortés, con paraguas.",
+              "animo": 10,
+              "cartera": 0
+            }
+          ]
+        },
+        {
+          "e": "📜",
+          "titulo": "El sellado",
+          "t": "El credencial pide un sello gracioso.",
+          "o": [
+            {
+              "t": "Pedir un sello de príncipe",
+              "r": "Os ponen una corona de tinta.",
+              "animo": 10,
+              "cartera": 0
+            },
+            {
+              "t": "Falsificar un sello",
+              "r": "El dueño os guiña un ojo y os cobra la tinta.",
+              "animo": 5,
+              "cartera": -10
+            },
+            {
+              "t": "Contarle la fábula del cole",
+              "r": "Os invita a una pica (que no queréis).",
+              "animo": 10,
+              "cartera": -5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "juicio-maketo",
+      "plantilla": "decide",
+      "titulo": "El examen oral del Maketo",
+      "emoji": "📖",
+      "resumen": "Sobrevive a filosofía hasta que se jubile en Navidades.",
+      "intro": "Miguel Valladolid, el Maketo, suspendió a casi todos en filosofía. Aguanta su examen oral hasta que se jubile.",
+      "dificultad": 3,
+      "nuevo": false,
+      "final": {
+        "ruina": "Te quedas sin nada, pero con un 4.",
+        "bien": "Aprobado raspadillo. Se jubila y te salva.",
+        "normal": "Un cinco pelado.",
+        "mal": "Suspendido. Hasta Navidades."
+      },
+      "escenas": [
+        {
+          "e": "❓",
+          "titulo": "Pregunta 1",
+          "t": "¿Qué es la verdad?",
+          "o": [
+            {
+              "t": "Contestar con una cita de Platón",
+              "r": "Le gusta, pero no lo muestra.",
+              "animo": 10,
+              "cartera": 0
+            },
+            {
+              "t": "Responder: depende de la cuadrilla",
+              "r": "Lo apunta como respuesta valiente.",
+              "animo": 5,
+              "cartera": 0
+            },
+            {
+              "t": "Quedarte callado",
+              "r": "Calla, observa y baja la nota.",
+              "animo": -10,
+              "cartera": 0
+            }
+          ]
+        },
+        {
+          "e": "🧠",
+          "titulo": "Pregunta 2",
+          "t": "¿Existe la libertad?",
+          "o": [
+            {
+              "t": "Citar a Sartre",
+              "r": "El Maketo asiente: 'bien, pero con matices'.",
+              "animo": 10,
+              "cartera": 0
+            },
+            {
+              "t": "Hablar de las cañas",
+              "r": "Se ríe sin querer.",
+              "animo": 15,
+              "cartera": 0
+            },
+            {
+              "t": "Pedir permiso para ir al baño",
+              "r": "Te lo concede y te apunta cinco minutos.",
+              "animo": -5,
+              "cartera": 0
+            }
+          ]
+        },
+        {
+          "e": "🕰️",
+          "titulo": "Casi Navidades",
+          "t": "Faltan 3 días para las vacaciones.",
+          "o": [
+            {
+              "t": "Rezar por su jubilación",
+              "r": "Se ve que la oración funciona.",
+              "animo": 15,
+              "cartera": 0
+            },
+            {
+              "t": "Hacerle la pelota",
+              "r": "Pone tu nombre en la lista de salvados.",
+              "animo": 10,
+              "cartera": -5
+            },
+            {
+              "t": "Reclamar nota",
+              "r": "Te baja medio punto por insistir.",
+              "animo": -10,
+              "cartera": 0
+            }
+          ]
+        },
+        {
+          "e": "🎄",
+          "titulo": "La jubilación",
+          "t": "El Maketo anuncia que se retira en Navidades.",
+          "o": [
+            {
+              "t": "Aplaudir",
+              "r": "Te mira con serenidad filosófica.",
+              "animo": 15,
+              "cartera": 0
+            },
+            {
+              "t": "Hacerle una tarta",
+              "r": "Cuesta 12 euros y funciona.",
+              "animo": 10,
+              "cartera": -12
+            },
+            {
+              "t": "Salir corriendo",
+              "r": "Tu carrera se oye en tres plantas.",
+              "animo": 10,
+              "cartera": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noche-electoral",
+      "plantilla": "decide",
+      "titulo": "Noche electoral de la cuadrilla",
+      "emoji": "🗳️",
+      "resumen": "Campaña, promesas y servicios mínimos de Koi.",
+      "intro": "Dug, HRK y Koi se presentan a unas elecciones imaginarias. Decide la campaña con humor (todo inventado, sin odio).",
+      "dificultad": 2,
+      "nuevo": false,
+      "final": {
+        "ruina": "Te has gastado todo en carteles.",
+        "bien": "Mayoría absoluta de la barra.",
+        "normal": "Pactáis con el camarero.",
+        "mal": "Koi pide recuento y servicios mínimos."
+      },
+      "escenas": [
+        {
+          "e": "📢",
+          "titulo": "El mitin",
+          "t": "Toca soltar la primera promesa.",
+          "o": [
+            {
+              "t": "Caña gratis los viernes",
+              "r": "Aplauso, y Koi pide la letra pequeña.",
+              "animo": 15,
+              "cartera": -20
+            },
+            {
+              "t": "Prometer mucho y cumplir lo que te dé la gana",
+              "r": "Estilo político clásico. Funciona.",
+              "animo": 10,
+              "cartera": 0
+            },
+            {
+              "t": "Prometer el fin de las picas",
+              "r": "Los flojos se ofenden.",
+              "animo": -5,
+              "cartera": 0
+            }
+          ]
+        },
+        {
+          "e": "🧑‍💼",
+          "titulo": "Koi pide",
+          "t": "Koi quiere ser portavoz pero solo en su horario.",
+          "o": [
+            {
+              "t": "Aceptar sus servicios mínimos",
+              "r": "Habla 4 minutos y se va.",
+              "animo": 5,
+              "cartera": 0
+            },
+            {
+              "t": "Ficharlo para calimocho",
+              "r": "Acepta con tres condiciones.",
+              "animo": 10,
+              "cartera": -10
+            },
+            {
+              "t": "Ignorarlo",
+              "r": "Pone un anexo.",
+              "animo": -10,
+              "cartera": 0
+            }
+          ]
+        },
+        {
+          "e": "🏭",
+          "titulo": "HRK y la industria",
+          "t": "HRK dice que la política es como Irabi: directo y sin cariño.",
+          "o": [
+            {
+              "t": "Adoptar su lema",
+              "r": "El electorado respeta el estilo.",
+              "animo": 10,
+              "cartera": 0
+            },
+            {
+              "t": "Pedir que suavice",
+              "r": "Os insulta con cariño.",
+              "animo": 5,
+              "cartera": 0
+            },
+            {
+              "t": "Poner a HRK de ministro",
+              "r": "Primera medida: más rodamientos.",
+              "animo": 10,
+              "cartera": -5
+            }
+          ]
+        },
+        {
+          "e": "📺",
+          "titulo": "El debate",
+          "t": "Salís en un debate con tres sillas y una pica.",
+          "o": [
+            {
+              "t": "Beber pica a escondidas",
+              "r": "Te pillan: flojo oficial.",
+              "animo": -15,
+              "cartera": 0
+            },
+            {
+              "t": "Brindar con calimocho",
+              "r": "El público se emociona.",
+              "animo": 15,
+              "cartera": -5
+            },
+            {
+              "t": "Hablar del Alavés",
+              "r": "Ganas por unanimidad.",
+              "animo": 15,
+              "cartera": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "principe-o-peregrino",
+      "plantilla": "decide",
+      "titulo": "PheDiox inspecciona el albergue",
+      "emoji": "🥾",
+      "resumen": "Cinco decisiones y una cama que no pasa la auditoría principesca.",
+      "intro": "PheDiox entra al albergue del Camino Primitivo y frunce el ceño. Decide cómo convierte una queja en leyenda de la cuadrilla.",
+      "dificultad": 2,
+      "escenas": [
+        {
+          "e": "🛏️",
+          "titulo": "La cama",
+          "t": "El colchón parece haber peregrinado más que vosotros. ¿Qué hace PheDiox?",
+          "o": [
+            {
+              "t": "Pide hablar con gerencia",
+              "r": "El dueño aparece con una concha y cero paciencia.",
+              "animo": 1,
+              "cartera": 0
+            },
+            {
+              "t": "Pregunta por la suite",
+              "r": "Le señalan una litera con vistas a la pared.",
+              "animo": -2,
+              "cartera": -1
+            },
+            {
+              "t": "Se tumba sin más",
+              "r": "Descubre que el suelo tenía mejores reseñas.",
+              "animo": 2,
+              "cartera": 1
+            }
+          ]
+        },
+        {
+          "e": "🚿",
+          "titulo": "La ducha",
+          "t": "Sale agua fría y una idea calentita: quejarse otra vez.",
+          "o": [
+            {
+              "t": "Pide agua templada",
+              "r": "Le ofrecen una manta y una reflexión.",
+              "animo": 1,
+              "cartera": 0
+            },
+            {
+              "t": "Se ducha vestido",
+              "r": "El albergue lo apunta como actividad cultural.",
+              "animo": -1,
+              "cartera": 1
+            },
+            {
+              "t": "Declara inaugurada la Antártida",
+              "r": "El dueño asiente: ya conoce a los peregrinos.",
+              "animo": 2,
+              "cartera": 0
+            }
+          ]
+        },
+        {
+          "e": "🥾",
+          "titulo": "La respuesta",
+          "t": "El dueño pregunta: «¿Príncipes o peregrinos?»",
+          "o": [
+            {
+              "t": "Responde peregrinos, pero con estándares",
+              "r": "El dueño le da una concha y una mirada larga.",
+              "animo": 2,
+              "cartera": 0
+            },
+            {
+              "t": "Pide el libro de reclamaciones",
+              "r": "Le entregan un mapa y le desean buen camino.",
+              "animo": -2,
+              "cartera": -1
+            },
+            {
+              "t": "Pide repetir la pregunta",
+              "r": "La frase ya queda para la posteridad.",
+              "animo": 1,
+              "cartera": 1
+            }
+          ]
+        },
+        {
+          "e": "🍞",
+          "titulo": "El desayuno",
+          "t": "Solo hay pan, café y silencio monástico.",
+          "o": [
+            {
+              "t": "Desayuna como un peregrino",
+              "r": "Por una vez, nadie exige buffet de hotel.",
+              "animo": 2,
+              "cartera": 1
+            },
+            {
+              "t": "Pregunta por huevos revueltos",
+              "r": "El dueño señala el camino de salida.",
+              "animo": -1,
+              "cartera": -1
+            },
+            {
+              "t": "Guarda pan para Koi",
+              "r": "Koi no aparece, pero el pan sí llega a meta.",
+              "animo": 1,
+              "cartera": 0
+            }
+          ]
+        },
+        {
+          "e": "🏁",
+          "titulo": "La salida",
+          "t": "Amanece y toca seguir andando.",
+          "o": [
+            {
+              "t": "Sale contando la anécdota",
+              "r": "Ya nadie recuerda la cama; todos recuerdan la frase.",
+              "animo": 2,
+              "cartera": 1
+            },
+            {
+              "t": "Deja una reseña solemne",
+              "r": "El albergue la enmarca junto a la concha.",
+              "animo": 0,
+              "cartera": -1
+            },
+            {
+              "t": "Pregunta si hay taxi",
+              "r": "El Camino le responde con una cuesta.",
+              "animo": -2,
+              "cartera": 0
+            }
+          ]
+        }
+      ],
+      "final": {
+        "ruina": "PheDiox ha declarado guerra a todos los colchones del Camino.",
+        "bien": "La cuadrilla sigue peregrinando y ya tiene frase oficial.",
+        "normal": "El albergue queda atrás; la anécdota, no.",
+        "mal": "PheDiox pide una estrella extra por el servicio de quejas."
+      },
+      "nuevo": true
+    },
+    {
+      "id": "silencio-catalogado",
+      "plantilla": "memoria",
+      "titulo": "El catálogo del silencio de Koi",
+      "emoji": "📦",
+      "resumen": "Empareja la cuadrilla con lo último que se sabe de ella.",
+      "intro": "El chat lleva unos días sin oír al Koi y SMC ya prepara una actualización. Empareja cada nombre con su rasgo antes de que publiquen la versión nueva.",
+      "dificultad": 3,
+      "pares": [
+        {
+          "a": "Koi",
+          "b": "Actualiza catálogos"
+        },
+        {
+          "a": "Dug",
+          "b": "CEO del grupo"
+        },
+        {
+          "a": "HRK",
+          "b": "Espía norkoreano"
+        },
+        {
+          "a": "PheDiox",
+          "b": "Príncipes o peregrinos"
+        },
+        {
+          "a": "Bacterio",
+          "b": "Vaya examen, señor Urrutia"
+        },
+        {
+          "a": "El Chino",
+          "b": "Daba leña en clase"
+        },
+        {
+          "a": "El Rizos",
+          "b": "Academia de física"
+        },
+        {
+          "a": "Wilhelm",
+          "b": "Partidas de rol"
+        }
+      ],
+      "nuevo": true
     }
-   ],
-   "malos": [
-    {
-     "e": "📎"
-    },
-    {
-     "e": "📋"
-    },
-    {
-     "e": "📑"
-    }
-   ],
-   "msg_ok": [
-    "¡Pintxo a salvo!",
-    "Caña cobrada.",
-    "Servicios máximos."
-   ],
-   "msg_ko": [
-    "Koi: esto no entra en mi horario.",
-    "Servicios mínimos activados.",
-    "Anexo firmado, ánimo hundido."
-   ],
-   "consigna": "Pulsa los buenos y no toques los malos"
-  },
-  {
-   "id": "calimocho-pica",
-   "plantilla": "pulsa",
-   "titulo": "Calimocho contra pica",
-   "emoji": "🍷",
-   "resumen": "Calimocho sí. Pica es bebida de flojos.",
-   "intro": "Pulsa los calimochos. Si tocas una pica (cerveza con limón), te cae la fama de flojo del grupo.",
-   "dificultad": 2,
-   "nuevo": true,
-   "duracion": 30,
-   "buenos": [
-    {
-     "e": "🍷"
-    },
-    {
-     "e": "🥤"
-    }
-   ],
-   "malos": [
-    {
-     "e": "🍺🍋"
-    }
-   ],
-   "msg_ok": [
-    "¡Calimocho, como Dios manda!",
-    "Eso es un hombre.",
-    "Otro al bote."
-   ],
-   "msg_ko": [
-    "Pica: bebida de flojos.",
-    "Hoy te toca invitar por flojo.",
-    "Koi aplaude (pide pica)."
-   ],
-   "consigna": "Pulsa los buenos y no toques los malos"
-  },
-  {
-   "id": "querejeta-destituye",
-   "plantilla": "pulsa",
-   "titulo": "Querejeta destituye",
-   "emoji": "👔",
-   "resumen": "Echa entrenadores antes de que se enfríe el palco.",
-   "intro": "Salen entrenadores del Alavés: pulsa para destituir, que Josean Querejeta no perdona. A Bordalás (el hombre de hierro, ya en el Getafe) no se le toca.",
-   "dificultad": 3,
-   "nuevo": true,
-   "duracion": 28,
-   "buenos": [
-    {
-     "e": "🧑‍🏫"
-    },
-    {
-     "e": "🧢"
-    },
-    {
-     "e": "📋"
-    }
-   ],
-   "malos": [
-    {
-     "e": "🦾"
-    }
-   ],
-   "msg_ok": [
-    "¡Destituido!",
-    "Rueda de prensa de despedida.",
-    "Otro al paro."
-   ],
-   "msg_ko": [
-    "Bordalás ni se inmuta.",
-    "El hombre de hierro te mira mal.",
-    "Eso se paga con pica."
-   ],
-   "consigna": "Pulsa los buenos y no toques los malos"
-  },
-  {
-   "id": "patadas-tejedor",
-   "plantilla": "pulsa",
-   "titulo": "Recreo con Tejedor",
-   "emoji": "⚽",
-   "resumen": "Pasa los balones y esquiva las patadas.",
-   "intro": "En el recreo, Tejedor acaba todos los partidos a patadas. Pulsa los balones para pasarlos y evita las espinillas.",
-   "dificultad": 3,
-   "nuevo": true,
-   "duracion": 28,
-   "buenos": [
-    {
-     "e": "⚽"
-    }
-   ],
-   "malos": [
-    {
-     "e": "🦵"
-    },
-    {
-     "e": "🥾"
-    }
-   ],
-   "msg_ok": [
-    "Pase a la red.",
-    "¡Qué control!",
-    "Tejedor se emociona."
-   ],
-   "msg_ko": [
-    "¡Patada en la espinilla!",
-    "Tejedor: 'ha sido fútbol'.",
-    "Falta, penalti y bronca."
-   ],
-   "consigna": "Pulsa los buenos y no toques los malos"
-  },
-  {
-   "id": "irabi-rodamientos",
-   "plantilla": "pulsa",
-   "titulo": "Irabi S.A.: turno de rodamientos",
-   "emoji": "⚙️",
-   "resumen": "Rodamientos para Héctor, correos con cariño no.",
-   "intro": "En la fábrica de Héctor en Bergara las condiciones son las más duras y los emails, directos. Pulsa los rodamientos. Los correos con cariño no existen: no los toques.",
-   "dificultad": 3,
-   "nuevo": true,
-   "duracion": 30,
-   "buenos": [
-    {
-     "e": "⚙️"
-    },
-    {
-     "e": "🔩"
-    },
-    {
-     "e": "🛠️"
-    }
-   ],
-   "malos": [
-    {
-     "e": "💌"
-    },
-    {
-     "e": "🌸"
-    }
-   ],
-   "msg_ok": [
-    "Rodamiento bien rodado.",
-    "HRK asiente sin decir nada.",
-    "Producción al máximo."
-   ],
-   "msg_ko": [
-    "Aquí no se manda cariño.",
-    "HRK pone cara de tierra embarrada.",
-    "Insulto de bienvenida."
-   ],
-   "consigna": "Pulsa los buenos y no toques los malos"
-  },
-  {
-   "id": "quien-era-quien",
-   "plantilla": "memoria",
-   "titulo": "¿Quién era quién en Marianistas?",
-   "emoji": "🧠",
-   "resumen": "Une cada personaje con lo que le define.",
-   "intro": "Encuentra las parejas: el personaje del cole y lo que le definía.",
-   "dificultad": 2,
-   "nuevo": true,
-   "consigna": "Une cada personaje con lo que le define",
-   "pares": [
-    {
-     "a": "Tejedor",
-     "b": "⚽ patadas"
-    },
-    {
-     "a": "Buxai",
-     "b": "✈️ Ryanair"
-    },
-    {
-     "a": "Abascal",
-     "b": "👕 camisetas"
-    },
-    {
-     "a": "El Bacterio",
-     "b": "🧪 «vaya examen»"
-    },
-    {
-     "a": "El Maketo",
-     "b": "📖 filosofía"
-    },
-    {
-     "a": "Aiksmann",
-     "b": "🖥️ informático"
-    },
-    {
-     "a": "El Rizos",
-     "b": "🌀 academia de física"
-    },
-    {
-     "a": "Arrilucea",
-     "b": "🚬 el pionero"
-    }
-   ]
-  },
-  {
-   "id": "diiios",
-   "plantilla": "aguanta",
-   "titulo": "El grito de PheDiox",
-   "emoji": "🗣️",
-   "resumen": "Estira el Diiiios hasta la zona verde.",
-   "intro": "Mantén pulsado para estirar el DIIIIOOOS y suelta cuando la aguja esté en la zona verde. Aquí sí se estira: en el audio de Hermek no.",
-   "dificultad": 3,
-   "nuevo": true,
-   "palabra": "Dios",
-   "rondas": 5,
-   "consigna": "Estira el Dios hasta la zona verde",
-   "msg_ok": [
-    "¡Ese Dios sí que sí!",
-    "PheDiox se quita el sombrero.",
-    "Voz de estadio."
-   ],
-   "msg_ko": [
-    "Dios se quedó corto.",
-    "Se te cortó la voz.",
-    "Eso no era ni un Dios de pueblo."
-   ]
-  },
-  {
-   "id": "busca-edortha",
-   "plantilla": "busca",
-   "titulo": "¿Dónde está Edortha Mari?",
-   "emoji": "🎸",
-   "resumen": "El desaparecido de las dos hijas, escondido entre carritos.",
-   "intro": "Edortha Mari desapareció del mapa al tener dos hijas. Encuéntralo entre carritos, peluches y biberones antes de que se esfume.",
-   "dificultad": 3,
-   "nuevo": true,
-   "objetivo": {
-    "e": "🎸",
-    "t": "Edortha Mari (el de la guitarra punk)"
-   },
-   "senuelos": [
-    {
-     "e": "👶"
-    },
-    {
-     "e": "🍼"
-    },
-    {
-     "e": "🛒"
-    },
-    {
-     "e": "🧸"
-    },
-    {
-     "e": "🚼"
-    },
-    {
-     "e": "🌳"
-    }
-   ],
-   "rondas": 5,
-   "tiempo": 14,
-   "msg_ko": [
-    "Se ha esfumado otra vez.",
-    "Dicen que lo vieron en un parque con un carrito."
-   ]
-  },
-  {
-   "id": "camiseta-abascal",
-   "plantilla": "busca",
-   "titulo": "La camiseta del Alavés del 98",
-   "emoji": "🎽",
-   "resumen": "Encuentra la camiseta entre las 40 de Abascal.",
-   "intro": "Daniel Abascal tiene todas las camisetas de fútbol posibles. Encuentra la del Alavés del 98 antes de que la guarde en la mochila.",
-   "dificultad": 4,
-   "nuevo": true,
-   "objetivo": {
-    "e": "🎽",
-    "t": "la camiseta del Alavés del 98"
-   },
-   "senuelos": [
-    {
-     "e": "👕"
-    }
-   ],
-   "rondas": 4,
-   "tiempo": 16,
-   "msg_ko": [
-    "Abascal ya la ha guardado en la mochila."
-   ]
-  },
-  {
-   "id": "aiksmann-tele",
-   "plantilla": "simon",
-   "titulo": "Aiksmann arregla la tele",
-   "emoji": "🖥️",
-   "resumen": "Repite la secuencia de cables como el último informático de 2003.",
-   "intro": "El informático de Marianistas reinicia el sistema con una secuencia de cables. Repítela sin equivocarte.",
-   "dificultad": 3,
-   "nuevo": true,
-   "rondas": 8,
-   "botones": [
-    {
-     "e": "🔌",
-     "c": "#ff2e93"
-    },
-    {
-     "e": "📺",
-     "c": "#00e5ff"
-    },
-    {
-     "e": "🖥️",
-     "c": "#39ff14"
-    },
-    {
-     "e": "💾",
-     "c": "#ffe500"
-    }
-   ],
-   "msg_ok": [
-    "Reiniciado.",
-    "Funciona con un clip.",
-    "Windows 98 aprueba."
-   ],
-   "msg_ko": [
-    "Pantalla azul.",
-    "Eso era el cable de la impresora."
-   ],
-   "consigna": "¡Ahora repite la secuencia!"
-  },
-  {
-   "id": "bihl-gimnasio",
-   "plantilla": "timing",
-   "titulo": "Bihl en el gimnasio",
-   "emoji": "🏋️",
-   "resumen": "Levanta pesas en el punto exacto, con humildad.",
-   "intro": "Bihl, el quinto hombre de la industria guipuzcoana, levanta todo con humildad. Para la aguja en la zona verde para levantar el peso. La zona se hace más pequeña.",
-   "dificultad": 3,
-   "nuevo": true,
-   "rondas": 5,
-   "zona": 36,
-   "consigna": "Para la aguja en la zona verde",
-   "msg_ok": [
-    "Levantado, y encima dice que no es para tanto.",
-    "Bihl se sonroja.",
-    "Peso muerto, pero vivo."
-   ],
-   "msg_ko": [
-    "Se te cae la barra.",
-    "Eso pesaba más que el examen del Bacterio."
-   ]
-  },
-  {
-   "id": "celedon",
-   "plantilla": "timing",
-   "titulo": "Bajar a Celedón",
-   "emoji": "🎈",
-   "resumen": "Frena la bajada en la zona buena, que es la Blanca.",
-   "intro": "Es la fiesta de la Blanca: Celedón baja de la torre. Para la aguja en la zona verde para frenar la bajada. Si te pasas, aterrizas en el pote equivocado.",
-   "dificultad": 2,
-   "nuevo": true,
-   "rondas": 5,
-   "zona": 38,
-   "consigna": "Frena a Celedón en la zona verde",
-   "msg_ok": [
-    "Aterrizaje perfecto en la plaza.",
-    "El pueblo aplaude con txapela.",
-    "Pote servido."
-   ],
-   "msg_ko": [
-    "Aterrizas en la fuente.",
-    "Celedón pide otra caña mientras cuelga."
-   ]
-  },
-  {
-   "id": "camino-primitivo",
-   "plantilla": "decide",
-   "titulo": "Camino Primitivo: ¿príncipes o peregrinos?",
-   "emoji": "🥾",
-   "resumen": "El albergue de la anécdota del PheDiox, versión juego.",
-   "intro": "Llegáis a un albergue precario del Camino Primitivo y el dueño pregunta: ¿príncipes o peregrinos? Decide bien.",
-   "dificultad": 2,
-   "nuevo": true,
-   "final": {
-    "ruina": "Os quedáis sin un euro y con ampollas.",
-    "bien": "Salís del Camino como príncipes y peregrinos a la vez.",
-    "normal": "Dormís en litera, pero con anécdota.",
-    "mal": "El dueño cuenta vuestra historia en el próximo albergue."
-   },
-   "escenas": [
-    {
-     "e": "🏚️",
-     "titulo": "El albergue",
-     "t": "El dueño os mira: ¿príncipes o peregrinos?",
-     "o": [
-      {
-       "t": "Príncipes",
-       "r": "Os cobra el triple por la manta real.",
-       "animo": 10,
-       "cartera": -20
-      },
-      {
-       "t": "Peregrinos",
-       "r": "Os da una litera y una sopa con fideos tristes.",
-       "animo": 5,
-       "cartera": -5
-      },
-      {
-       "t": "Las dos cosas",
-       "r": "Os mira, suspira y os pone en la litera de arriba con corona de cartón.",
-       "animo": 15,
-       "cartera": -10
-      }
-     ]
-    },
-    {
-     "e": "🛏️",
-     "titulo": "La litera",
-     "t": "El PheDiox pide categoría y baño privado en un sitio sin agua caliente.",
-     "o": [
-      {
-       "t": "Apoyarle en la reclamación",
-       "r": "Reclamáis a un monte. Os escucha un burro.",
-       "animo": 10,
-       "cartera": 0
-      },
-      {
-       "t": "Taparte con la manta",
-       "r": "Dormís mejor que el resto y sin pelea.",
-       "animo": 5,
-       "cartera": 0
-      },
-      {
-       "t": "Ofrecerle una caña de consuelo",
-       "r": "El dueño os la cobra. Vaya gastos.",
-       "animo": 5,
-       "cartera": -10
-      }
-     ]
-    },
-    {
-     "e": "🍷",
-     "titulo": "La cena",
-     "t": "Menú del peregrino: lentejas, pan duro y vino de garrafa.",
-     "o": [
-      {
-       "t": "Pedir calimocho",
-       "r": "El dueño os mira con respeto.",
-       "animo": 15,
-       "cartera": -5
-      },
-      {
-       "t": "Pedir pica",
-       "r": "Silencio total. Os llaman flojos tres veces.",
-       "animo": -10,
-       "cartera": -5
-      },
-      {
-       "t": "Mojar pan y callar",
-       "r": "Cena legendaria, calorías de oro.",
-       "animo": 10,
-       "cartera": 0
-      }
-     ]
-    },
-    {
-     "e": "🌄",
-     "titulo": "La subida",
-     "t": "Mañana, cuesta de 900 metros con mochila.",
-     "o": [
-      {
-       "t": "Subir cantando Diiiios",
-       "r": "Os oyen desde Oviedo.",
-       "animo": 15,
-       "cartera": 0
-      },
-      {
-       "t": "Coger un taxi",
-       "r": "Cuenta de 80 euros y vergüenza peregrina.",
-       "animo": -10,
-       "cartera": -30
-      },
-      {
-       "t": "Subir a paso de vitoriano",
-       "r": "Tranquilo, cortés, con paraguas.",
-       "animo": 10,
-       "cartera": 0
-      }
-     ]
-    },
-    {
-     "e": "📜",
-     "titulo": "El sellado",
-     "t": "El credencial pide un sello gracioso.",
-     "o": [
-      {
-       "t": "Pedir un sello de príncipe",
-       "r": "Os ponen una corona de tinta.",
-       "animo": 10,
-       "cartera": 0
-      },
-      {
-       "t": "Falsificar un sello",
-       "r": "El dueño os guiña un ojo y os cobra la tinta.",
-       "animo": 5,
-       "cartera": -10
-      },
-      {
-       "t": "Contarle la fábula del cole",
-       "r": "Os invita a una pica (que no queréis).",
-       "animo": 10,
-       "cartera": -5
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "juicio-maketo",
-   "plantilla": "decide",
-   "titulo": "El examen oral del Maketo",
-   "emoji": "📖",
-   "resumen": "Sobrevive a filosofía hasta que se jubile en Navidades.",
-   "intro": "Miguel Valladolid, el Maketo, suspendió a casi todos en filosofía. Aguanta su examen oral hasta que se jubile.",
-   "dificultad": 3,
-   "nuevo": true,
-   "final": {
-    "ruina": "Te quedas sin nada, pero con un 4.",
-    "bien": "Aprobado raspadillo. Se jubila y te salva.",
-    "normal": "Un cinco pelado.",
-    "mal": "Suspendido. Hasta Navidades."
-   },
-   "escenas": [
-    {
-     "e": "❓",
-     "titulo": "Pregunta 1",
-     "t": "¿Qué es la verdad?",
-     "o": [
-      {
-       "t": "Contestar con una cita de Platón",
-       "r": "Le gusta, pero no lo muestra.",
-       "animo": 10,
-       "cartera": 0
-      },
-      {
-       "t": "Responder: depende de la cuadrilla",
-       "r": "Lo apunta como respuesta valiente.",
-       "animo": 5,
-       "cartera": 0
-      },
-      {
-       "t": "Quedarte callado",
-       "r": "Calla, observa y baja la nota.",
-       "animo": -10,
-       "cartera": 0
-      }
-     ]
-    },
-    {
-     "e": "🧠",
-     "titulo": "Pregunta 2",
-     "t": "¿Existe la libertad?",
-     "o": [
-      {
-       "t": "Citar a Sartre",
-       "r": "El Maketo asiente: 'bien, pero con matices'.",
-       "animo": 10,
-       "cartera": 0
-      },
-      {
-       "t": "Hablar de las cañas",
-       "r": "Se ríe sin querer.",
-       "animo": 15,
-       "cartera": 0
-      },
-      {
-       "t": "Pedir permiso para ir al baño",
-       "r": "Te lo concede y te apunta cinco minutos.",
-       "animo": -5,
-       "cartera": 0
-      }
-     ]
-    },
-    {
-     "e": "🕰️",
-     "titulo": "Casi Navidades",
-     "t": "Faltan 3 días para las vacaciones.",
-     "o": [
-      {
-       "t": "Rezar por su jubilación",
-       "r": "Se ve que la oración funciona.",
-       "animo": 15,
-       "cartera": 0
-      },
-      {
-       "t": "Hacerle la pelota",
-       "r": "Pone tu nombre en la lista de salvados.",
-       "animo": 10,
-       "cartera": -5
-      },
-      {
-       "t": "Reclamar nota",
-       "r": "Te baja medio punto por insistir.",
-       "animo": -10,
-       "cartera": 0
-      }
-     ]
-    },
-    {
-     "e": "🎄",
-     "titulo": "La jubilación",
-     "t": "El Maketo anuncia que se retira en Navidades.",
-     "o": [
-      {
-       "t": "Aplaudir",
-       "r": "Te mira con serenidad filosófica.",
-       "animo": 15,
-       "cartera": 0
-      },
-      {
-       "t": "Hacerle una tarta",
-       "r": "Cuesta 12 euros y funciona.",
-       "animo": 10,
-       "cartera": -12
-      },
-      {
-       "t": "Salir corriendo",
-       "r": "Tu carrera se oye en tres plantas.",
-       "animo": 10,
-       "cartera": 0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "noche-electoral",
-   "plantilla": "decide",
-   "titulo": "Noche electoral de la cuadrilla",
-   "emoji": "🗳️",
-   "resumen": "Campaña, promesas y servicios mínimos de Koi.",
-   "intro": "Dug, HRK y Koi se presentan a unas elecciones imaginarias. Decide la campaña con humor (todo inventado, sin odio).",
-   "dificultad": 2,
-   "nuevo": true,
-   "final": {
-    "ruina": "Te has gastado todo en carteles.",
-    "bien": "Mayoría absoluta de la barra.",
-    "normal": "Pactáis con el camarero.",
-    "mal": "Koi pide recuento y servicios mínimos."
-   },
-   "escenas": [
-    {
-     "e": "📢",
-     "titulo": "El mitin",
-     "t": "Toca soltar la primera promesa.",
-     "o": [
-      {
-       "t": "Caña gratis los viernes",
-       "r": "Aplauso, y Koi pide la letra pequeña.",
-       "animo": 15,
-       "cartera": -20
-      },
-      {
-       "t": "Prometer mucho y cumplir lo que te dé la gana",
-       "r": "Estilo político clásico. Funciona.",
-       "animo": 10,
-       "cartera": 0
-      },
-      {
-       "t": "Prometer el fin de las picas",
-       "r": "Los flojos se ofenden.",
-       "animo": -5,
-       "cartera": 0
-      }
-     ]
-    },
-    {
-     "e": "🧑‍💼",
-     "titulo": "Koi pide",
-     "t": "Koi quiere ser portavoz pero solo en su horario.",
-     "o": [
-      {
-       "t": "Aceptar sus servicios mínimos",
-       "r": "Habla 4 minutos y se va.",
-       "animo": 5,
-       "cartera": 0
-      },
-      {
-       "t": "Ficharlo para calimocho",
-       "r": "Acepta con tres condiciones.",
-       "animo": 10,
-       "cartera": -10
-      },
-      {
-       "t": "Ignorarlo",
-       "r": "Pone un anexo.",
-       "animo": -10,
-       "cartera": 0
-      }
-     ]
-    },
-    {
-     "e": "🏭",
-     "titulo": "HRK y la industria",
-     "t": "HRK dice que la política es como Irabi: directo y sin cariño.",
-     "o": [
-      {
-       "t": "Adoptar su lema",
-       "r": "El electorado respeta el estilo.",
-       "animo": 10,
-       "cartera": 0
-      },
-      {
-       "t": "Pedir que suavice",
-       "r": "Os insulta con cariño.",
-       "animo": 5,
-       "cartera": 0
-      },
-      {
-       "t": "Poner a HRK de ministro",
-       "r": "Primera medida: más rodamientos.",
-       "animo": 10,
-       "cartera": -5
-      }
-     ]
-    },
-    {
-     "e": "📺",
-     "titulo": "El debate",
-     "t": "Salís en un debate con tres sillas y una pica.",
-     "o": [
-      {
-       "t": "Beber pica a escondidas",
-       "r": "Te pillan: flojo oficial.",
-       "animo": -15,
-       "cartera": 0
-      },
-      {
-       "t": "Brindar con calimocho",
-       "r": "El público se emociona.",
-       "animo": 15,
-       "cartera": -5
-      },
-      {
-       "t": "Hablar del Alavés",
-       "r": "Ganas por unanimidad.",
-       "animo": 15,
-       "cartera": 0
-      }
-     ]
-    }
-   ]
-  }
- ]
+  ]
 }
