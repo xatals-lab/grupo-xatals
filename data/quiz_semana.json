@@ -1,14 +1,94 @@
 {
   "semana": "2026-W47",
-  "titulo": "Quiz de la semana: los del cole y la cuadrilla",
+  "titulo": "Príncipes, peregrinos y silencios del Koi",
   "preguntas": [
-    {"pregunta": "¿Cómo le llamaban a Dug los profesores en el cole?", "opciones": ["Señor Urrutia", "Señor Guevara", "Don Diego", "El Gallego"], "correcta": 0, "dato": "Y así nació el «vaya examen, señor Urrutia, vaya examen» con el Bacterio."},
-    {"pregunta": "¿A qué se dedica hoy Buxai?", "opciones": ["Policía local", "Piloto de Ryanair", "Cocinero", "Árbitro"], "correcta": 1, "dato": "Se pegó con toda la clase y ahora te pide que te abroches el cinturón."},
-    {"pregunta": "¿Qué profesor se jubiló en Navidades y salvó a la clase en filosofía?", "opciones": ["El Chino", "El Bacterio", "El Maketo (Valladolid)", "Jesús Monte"], "correcta": 2, "dato": "Había suspendido a casi todos."},
-    {"pregunta": "¿Quién es el informático de Marianistas?", "opciones": ["Wilhelm", "Aiksmann (Iker)", "Bihl", "Arrilucea"], "correcta": 1, "dato": "Un puesto que parecía extinguido desde 2003."},
-    {"pregunta": "¿Quién tiene la colección de camisetas de fútbol?", "opciones": ["Tejedor", "Besga", "Abascal", "Bihl"], "correcta": 2, "dato": "Su padre, don Agustín Abascal, era profesor del cole."},
-    {"pregunta": "¿Quién desapareció del panorama al casarse y tener dos hijas?", "opciones": ["Edortha Mari (Eduardo)", "Iker", "El Rizos", "Guillermo"], "correcta": 0, "dato": "Dicen que lo vieron en un parque con un carrito."},
-    {"pregunta": "¿Qué frase pide Koi para todo lo que no es su horario?", "opciones": ["Horas extra", "Servicios mínimos", "Un convenio", "Un anexo"], "correcta": 1, "dato": "En SMC, por protocolo."},
-    {"pregunta": "¿Quién fue el primero en probar el tabaco y traer revistas prohibidas?", "opciones": ["Besga", "Arrilucea", "Buxai", "Wilhelm"], "correcta": 1, "dato": "El pionero de lo prohibido."}
+    {
+      "pregunta": "¿Quién se quejó del primer albergue del Camino Primitivo?",
+      "opciones": [
+        "PheDiox",
+        "Dug",
+        "El HRK",
+        "El dueño"
+      ],
+      "correcta": 0,
+      "dato": "El dueño respondió con una pregunta que ya merece placa."
+    },
+    {
+      "pregunta": "¿Qué le dijo el dueño del albergue al grupo?",
+      "opciones": [
+        "¿Príncipes o peregrinos?",
+        "¿Txakoli o agua?",
+        "¿Hay desayuno?",
+        "¿Venís del Alavés?"
+      ],
+      "correcta": 0,
+      "dato": "La cama era precaria; la respuesta, de cinco estrellas."
+    },
+    {
+      "pregunta": "¿Quién contó la anécdota del Camino?",
+      "opciones": [
+        "El HRK",
+        "Koi",
+        "Dug",
+        "PheDiox"
+      ],
+      "correcta": 0,
+      "dato": "La contó el HRK el 17 de noviembre."
+    },
+    {
+      "pregunta": "¿Qué festival preguntó el HRK por Koi?",
+      "opciones": [
+        "Azkena Rock Festival",
+        "La Blanca",
+        "Jazzaldia",
+        "Sonorama"
+      ],
+      "correcta": 0,
+      "dato": "La pregunta era qué día de los tres iría Koi."
+    },
+    {
+      "pregunta": "¿Contra quién juega el Alavés el próximo partido registrado?",
+      "opciones": [
+        "RC Deportivo",
+        "Eibar",
+        "Mirandés",
+        "Burgos"
+      ],
+      "correcta": 0,
+      "dato": "El partido está fijado para el 21 de noviembre a las 14:00."
+    },
+    {
+      "pregunta": "¿Qué tema económico abrió Dug en el chat?",
+      "opciones": [
+        "Vivienda e hipotecas",
+        "El precio del txakoli",
+        "Las fichas de la porra",
+        "La nómina del Bacterio"
+      ],
+      "correcta": 0,
+      "dato": "También pidió imaginar opiniones de compañeros y profesores."
+    },
+    {
+      "pregunta": "¿Qué dijo Koi en su último mensaje registrado de esta semana?",
+      "opciones": [
+        "El imperio nipón está en todas partes",
+        "¿Príncipes o peregrinos?",
+        "Voy al Azkena",
+        "Pásame el desayuno"
+      ],
+      "correcta": 0,
+      "dato": "El imperio sigue avanzando; sus mensajes, no tanto."
+    },
+    {
+      "pregunta": "¿Qué le ofreció el dueño del albergue a PheDiox?",
+      "opciones": [
+        "Una pregunta para la posteridad",
+        "Una suite",
+        "Un billete a Vitoria",
+        "Un menú de peregrino"
+      ],
+      "correcta": 0,
+      "dato": "No consta que hubiera suite; consta la frase."
+    }
   ]
 }
