@@ -1,0 +1,14 @@
+[
+  {"frase": "Esto no entra en mi horario: servicios mínimos.", "autor": "koi", "opciones": ["koi", "hrk", "dug", "bacterio"]},
+  {"frase": "Vaya examen, señor Urrutia, vaya examen.", "autor": "bacterio", "opciones": ["bacterio", "chino", "monte", "maketo"]},
+  {"frase": "Yo en Iravi lo teníamos resuelto antes del café.", "autor": "hrk", "opciones": ["hrk", "koi", "buxai", "besga"]},
+  {"frase": "Os lo dije: a la quinta caña ya sois filósofos.", "autor": "maketo", "opciones": ["maketo", "monte", "rizos", "dug"]},
+  {"frase": "Señores pasajeros, abróchense las cañas.", "autor": "buxai", "opciones": ["buxai", "tejedor", "bihl", "aiksmann"]},
+  {"frase": "Eso lo arreglo yo con un clip y un disquete.", "autor": "aiksmann", "opciones": ["aiksmann", "wilhelm", "hrk", "abascal"]},
+  {"frase": "Tengo la camiseta del Alavés del 98, pero no la toques.", "autor": "abascal", "opciones": ["abascal", "tejedor", "besga", "bihl"]},
+  {"frase": "Pásame el balón que acabamos como siempre: a patadas.", "autor": "tejedor", "opciones": ["tejedor", "buxai", "bihl", "koi"]},
+  {"frase": "Tiro un 20 y os destrozo la partida.", "autor": "wilhelm", "opciones": ["wilhelm", "aiksmann", "hrk", "rizos"]},
+  {"frase": "No es para tanto, solo levanto un poco de peso.", "autor": "bihl", "opciones": ["bihl", "tejedor", "buxai", "abascal"]},
+  {"frase": "Yo fui el primero en probarlo, y lo dejé por aburrimiento.", "autor": "arrilucea", "opciones": ["arrilucea", "besga", "rizos", "dug"]},
+  {"frase": "Pues tiene su aquel, aunque no lo recomiendo.", "autor": "besga", "opciones": ["besga", "arrilucea", "koi", "monte"]}
+]

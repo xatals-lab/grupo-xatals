@@ -1,0 +1,69 @@
+{
+  "cuadrilla": [
+    {"id": "dug", "nombre": "Dug", "emoji": "🧔", "frases_barra": ["Yo con una caña me apaño, lo digo siempre y luego pido cuatro.", "Esto lo arreglo yo con un Excel y un txakoli.", "Señor Urrutia, vaya barra, vaya barra."]},
+    {"id": "hrk", "nombre": "HRK (Héctor)", "emoji": "🕶️", "frases_barra": ["Yo ahora no puedo, tengo una reunión de Iravi S.A. con un calimocho.", "Tirad vosotros, yo llego en cinco minutos (son cuarenta).", "Esto en Iravi lo teníamos resuelto antes del café."]},
+    {"id": "koi", "nombre": "Koi (Íñigo)", "emoji": "🧑‍💼", "frases_barra": ["Esto no entra en mi horario: servicios mínimos.", "Yo en SMC lo hago por protocolo, pero con una pica me ablando.", "Paso lista y luego pido el libro de reclamaciones."]}
+  ],
+  "invitados": [
+    {"id": "tejedor", "nombre": "Álvaro Tejedor", "emoji": "⚽", "rol": "El futbolista nato que acaba todo a patadas", "entrada": "Entra Tejedor, con 41 años y cara de 20, con un balón bajo el brazo y las espinilleras puestas.", "opciones": [
+      {"texto": "Retarle a un 3 contra 3 en la barra", "resultado": "Acabáis a patadas con las banquetas. El camarero llama a Querejeta.", "animo": 15, "cartera": -15},
+      {"texto": "Invitarle a una caña para calmarlo", "resultado": "Se la bebe de un trago y dice que va a calentar. Nunca se ha sabido para qué.", "animo": 5, "cartera": -5},
+      {"texto": "Esconder los balones del bar", "resultado": "Te mira, te perdona y se pone a driblear con una bandeja de pintxos.", "animo": -5, "cartera": 0}]},
+    {"id": "arrilucea", "nombre": "Iulen Arrilucea", "emoji": "🚬", "rol": "El pionero de lo prohibido", "entrada": "Aparece Arrilucea y anuncia que ha vuelto a ser el primero en probar algo que todavía no existe.", "opciones": [
+      {"texto": "Preguntarle qué es lo nuevo", "resultado": "Te enseña una app que aún no ha salido y que ya ha desinstalado.", "animo": 10, "cartera": -5},
+      {"texto": "Decirle que eso en el cole ya lo hacía él", "resultado": "Te aplaude, te firma una revista de 1998 y se va por la puerta con aire de leyenda.", "animo": 15, "cartera": 0},
+      {"texto": "Pedirle una calada del pasado", "resultado": "Sacas la cabeza por la ventana nostálgico y el camarero te echa un trapo.", "animo": 5, "cartera": -10}]},
+    {"id": "besga", "nombre": "Jasón Besga", "emoji": "🧥", "rol": "El elegante polémico", "entrada": "Entra Besga, impecable, con un traje que no pega con nada del bar, y suelta una opinión que nadie ha pedido.", "opciones": [
+      {"texto": "Aplaudir su opinión en alto", "resultado": "Se crece, da otra más fuerte y el bar entero se divide en tres bandos.", "animo": 10, "cartera": -10},
+      {"texto": "Preguntarle dónde compra los trajes", "resultado": "Se emociona y te habla veinte minutos de tejidos. Aprendes mucho y no entiendes nada.", "animo": 5, "cartera": -5},
+      {"texto": "Manchar su chaqueta 'sin querer'", "resultado": "Su mirada vale por mil declaraciones. Pagas la tintorería.", "animo": -10, "cartera": -20}]},
+    {"id": "buxai", "nombre": "Álvaro Bujanda (Buxai)", "emoji": "✈️", "rol": "Piloto de Ryanair y pendenciero", "entrada": "Llega Buxai, piloto de Ryanair, con la maleta de cabina y los puños listos desde el aeropuerto.", "opciones": [
+      {"texto": "Recibirle con una caja de bombones", "resultado": "Se queda en silencio, se emociona y recuerda al padre en la arboleda. Os abrazáis.", "animo": 20, "cartera": -10},
+      {"texto": "Decirle que su vuelo llega con retraso", "resultado": "Te señala, se arremanga y el camarero apaga la tele de la liga.", "animo": 5, "cartera": -15},
+      {"texto": "Pedirle que anuncie el menú por megafonía", "resultado": "Anuncia 'señores pasajeros, sus cañas' y el bar le aplaude.", "animo": 15, "cartera": -5}]},
+    {"id": "abascal", "nombre": "Daniel Abascal", "emoji": "👕", "rol": "El coleccionista de camisetas", "entrada": "Entra Abascal con una camiseta del Alavés de 1998 y otras 40 en la mochila, 'por si acaso'.", "opciones": [
+      {"texto": "Pedirle la del Alavés de la UEFA", "resultado": "La saca, la huele con cariño y no te la deja ni tocar. Aun así, subes la moral.", "animo": 15, "cartera": 0},
+      {"texto": "Apostar a que no tiene la de Albacete", "resultado": "La tiene. Y con el sobre original. Pagas la ronda.", "animo": 5, "cartera": -20},
+      {"texto": "Intercambiar tu camiseta", "resultado": "Te cambia la tuya por tres polos de promoción y siente que ha hecho el negocio del siglo.", "animo": 0, "cartera": 5}]},
+    {"id": "bacterio", "nombre": "El Bacterio", "emoji": "🧪", "rol": "El profesor de física y química", "entrada": "Entra el Bacterio con bata blanca, aspecto de científico de la NASA, y mira la barra como si fuera un examen.", "opciones": [
+      {"texto": "Decirle 'vaya examen, señor Urrutia'", "resultado": "Frunce el ceño, suspira y dice que aún así te habría aprobado con un cinco. La barra aplaude.", "animo": 20, "cartera": 0},
+      {"texto": "Invitarle a un txakoli", "resultado": "Lo analiza por espectrometría y concluye que está bueno. Pagáis a medias.", "animo": 10, "cartera": -10},
+      {"texto": "Preguntarle por la fórmula del calimocho", "resultado": "Lo explica con pizarra, flechas y derivadas. Nadie lo entiende, todos lo anotan.", "animo": 5, "cartera": -5}]},
+    {"id": "monte", "nombre": "Jesús Monte", "emoji": "📚", "rol": "Serio pero comprometido", "entrada": "Aparece Jesús Monte, serio pero comprometidísimo, y pregunta si habéis hecho los deberes.", "opciones": [
+      {"texto": "Decir que sí, que están en la mochila", "resultado": "Te pide verlos. Te escabulles hacia el baño con éxito parcial.", "animo": 5, "cartera": 0},
+      {"texto": "Entregarle una servilleta con la respuesta", "resultado": "Te la corrige con rotulador rojo y te pone un 6. Se te llena el pecho de orgullo.", "animo": 15, "cartera": 0},
+      {"texto": "Invitarle a una caña", "resultado": "Acepta, pero te exige un resumen de lo conversado. Ya tienes tarea.", "animo": 0, "cartera": -5}]},
+    {"id": "chino", "nombre": "El Chino", "emoji": "📏", "rol": "El profesor que daba leña por todos lados", "entrada": "Entra el Chino, el profesor que daba leña por todos lados, y la barra se queda en silencio.", "opciones": [
+      {"texto": "Ponerse en pie en señal de respeto", "resultado": "Te ordena sentarte, luego levantarte, luego sentarte. Salís los dos sudando.", "animo": 5, "cartera": 0},
+      {"texto": "Pedirle una explicación de 2º de la ESO", "resultado": "Pasa media hora recordando quién repitió curso. Bihl se esconde bajo la mesa.", "animo": 15, "cartera": 0},
+      {"texto": "Intentar sobornarle con una pica", "resultado": "La rechaza con una mirada que te baja diez puntos de moral. Pero se la bebe después.", "animo": -5, "cartera": -10}]},
+    {"id": "maketo", "nombre": "Miguel Valladolid (el Maketo)", "emoji": "📖", "rol": "El profesor de filosofía que suspendió a casi todos", "entrada": "Entra el Maketo, el profesor de filosofía que suspendió a casi todos, con cara de examen oral.", "opciones": [
+      {"texto": "Felicitarle por jubilarse en Navidades", "resultado": "Se emociona, dice que fue su mejor decisión y se pide un vermú. Os salva el curso otra vez.", "animo": 20, "cartera": -5},
+      {"texto": "Debatir sobre el sentido del bar", "resultado": "Tres horas de Platón y una caña. Sales con más preguntas que respuestas.", "animo": 5, "cartera": -10},
+      {"texto": "Esconderte tras el menú", "resultado": "Te ve, te saluda por tu apellido y te pone nota mental. Un 4.", "animo": -10, "cartera": 0}]},
+    {"id": "rizos", "nombre": "El Rizos", "emoji": "🌀", "rol": "Amigo legendario del cole", "entrada": "Aparece el Rizos, con la melena al viento y una historia que empieza con 'tú no sabes lo que pasó'.", "opciones": [
+      {"texto": "Pedirle que cuente la historia completa", "resultado": "Dura 47 minutos y acaba con el camarero llorando de risa.", "animo": 20, "cartera": -10},
+      {"texto": "Cortarle y pedir otra ronda", "resultado": "Se ofende dos segundos, se pide su caña y sigue contando igual.", "animo": 5, "cartera": -10},
+      {"texto": "Imitar su melena con una servilleta", "resultado": "Todo el bar te aplaude y él te abraza el pelo.", "animo": 15, "cartera": 0}]},
+    {"id": "wilhelm", "nombre": "El Wilhelm", "emoji": "🎲", "rol": "Jugador de rol y juegos de mesa", "entrada": "Entra el Wilhelm con tres bolsas de dados y un manual de reglas de 400 páginas.", "opciones": [
+      {"texto": "Jugar una partida rápida", "resultado": "Tiras un 1. El bar pierde por derrota crítica. Pero te lo pasas fenomenal.", "animo": 15, "cartera": -10},
+      {"texto": "Retarle a piedra, papel o tijera", "resultado": "Te gana siempre porque lleva una ficha de 20 caras en el bolsillo.", "animo": 5, "cartera": -5},
+      {"texto": "Preguntarle por las reglas de la ronda", "resultado": "Empieza el capítulo 1. Te da tiempo a pedirte otra ronda.", "animo": 0, "cartera": -10}]},
+    {"id": "phediox", "nombre": "PheDiox", "emoji": "⚡", "rol": "Leyenda del cole que grita con ánimo", "entrada": "Entra PheDiox y, sin saludar, suelta un 'Diiiiiiiiiooooooosss' que hace temblar las jarras.", "opciones": [
+      {"texto": "Responderle con un 'Diiiioooos' más largo", "resultado": "Los vasos se agrietan. El camarero pide silencio y un aplauso.", "animo": 20, "cartera": -10},
+      {"texto": "Pedirle que lo repita para grabarlo", "resultado": "Lo repite, pero con otro matiz. Os dobláis de la risa, aunque ya nadie oye.", "animo": 15, "cartera": 0},
+      {"texto": "Taparte los oídos", "resultado": "Te llama sensible. El Wilhelm te defiende a dados.", "animo": -5, "cartera": 0}]},
+    {"id": "bihl", "nombre": "Bihl (Bilherme)", "emoji": "🏋️", "rol": "El quinto hombre de la industria guipuzcoana", "entrada": "Entra Bihl, hecho una mole, humilde como siempre, con una mano en el bolsillo y la otra levantando una banqueta.", "opciones": [
+      {"texto": "Preguntarle por el gimnasio", "resultado": "Dice que no es para tanto, levanta la barra con un dedo y se sonroja.", "animo": 10, "cartera": 0},
+      {"texto": "Nombrarle el quinto hombre de la barra", "resultado": "Acepta el cargo con un brindis y por fin hay quien aguanta las turras de HRK.", "animo": 15, "cartera": -5},
+      {"texto": "Retarle a un pulso", "resultado": "Te rompe dos dedos en teoría y los arregla con cariño en la práctica.", "animo": -5, "cartera": -5}]},
+    {"id": "aiksmann", "nombre": "Aiksmann (Iker)", "emoji": "🖥️", "rol": "El informático de Marianistas", "entrada": "Entra Aiksmann, el informático del cole, con un cable en la mano y un disquete en el bolsillo.", "opciones": [
+      {"texto": "Pedirle que arregle la tele del bar", "resultado": "La arregla en dos minutos con un clip. El camarero casi le da las llaves.", "animo": 15, "cartera": 5},
+      {"texto": "Preguntarle si aún usa Windows 98", "resultado": "No responde, pero sus ojos tienen un brillo nostálgico muy sospechoso.", "animo": 5, "cartera": 0},
+      {"texto": "Jugar una partida de mesa con él", "resultado": "Te gana en rol, en mesa y en lógica. Pagas tú.", "animo": 5, "cartera": -10}]},
+    {"id": "edortha", "nombre": "Edortha Mari (Eduardo)", "emoji": "🎸", "rol": "El desaparecido de las dos hijas", "entrada": "La puerta se abre un segundo. Parece que ha entrado Edortha Mari. Nadie lo ve. Nadie lo oye. La caña desaparece de la mesa.", "opciones": [
+      {"texto": "Gritar su nombre en alto", "resultado": "Solo responde el eco. Alguien dice haberlo visto en un parque con un carrito.", "animo": 10, "cartera": 0},
+      {"texto": "Dejarle una caña por si acaso", "resultado": "A la mañana siguiente está vacía. Misterio resuelto a medias.", "animo": 15, "cartera": -5},
+      {"texto": "Ponerle un cartel de 'Se busca'", "resultado": "Aparece de pronto, lo lee, se ríe y desaparece otra vez. Es una leyenda.", "animo": 20, "cartera": 0}]}
+  ]
+}
