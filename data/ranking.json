@@ -1,11 +1,4 @@
 {
-  "records": [
-    {
-      "jugador": "hrk",
-      "puntos": 1234,
-      "fecha": "2026-11-17",
-      "juego": "recreo"
-    }
-  ],
+  "records": [],
   "quiz": []
 }
