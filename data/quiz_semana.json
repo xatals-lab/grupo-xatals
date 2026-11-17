@@ -1,14 +1,101 @@
 {
   "semana": "2026-W47",
-  "titulo": "Quiz de la semana: Don Héctor, el cole y la cuadrilla",
+  "titulo": "Príncipes, peregrinos y el rastro de Koi",
   "preguntas": [
-    {"pregunta": "¿Cómo se escribe la empresa de Héctor (HRK), la fábrica de rodamientos de Bergara?", "opciones": ["Iravi S.A.", "Rodamientos Bergara S.L.", "Irabi S.A.", "Ibarra y Hermanos"], "correcta": 2, "dato": "Irabi, con b. Y que nadie se atreva a escribirlo con v."},
-    {"pregunta": "¿Qué dos cosas fue Héctor Viribay (Don Héctor) antes de ser maquinista de Renfe?", "opciones": ["Abogado con bufete propio", "Delegado de clase", "Piloto de Ryanair", "Informático del cole"], "correcta": [0, 1], "dato": "Del bufete de la nada al tren: giro de 180 grados."},
-    {"pregunta": "¿Qué lema pegó Viribay en los carteles de su campaña?", "opciones": ["Viribay, el futuro es hoy", "Votando a Viribay, ganamos todos", "Con Viribay, ni un paso atrás", "Yo también soy Viribay"], "correcta": 1, "dato": "Parecía la campaña de Aznar, pero con rotulador."},
-    {"pregunta": "¿Quiénes eran profesores del cole? Marca todos.", "opciones": ["El Bacterio", "El Chino", "Tejedor", "El Maketo"], "correcta": [0, 1, 3], "dato": "Tejedor era el futbolista, no el profesor."},
-    {"pregunta": "¿Quién tiene la colección de camisetas de fútbol?", "opciones": ["Besga", "Bihl", "Buxai", "Abascal"], "correcta": 3, "dato": "Su padre, don Agustín Abascal, era profesor del cole."},
-    {"pregunta": "¿Qué bebida es 'de flojos' según la cuadrilla?", "opciones": ["Calimocho", "Txakoli", "Pica", "Sidra"], "correcta": 2, "dato": "La pica es cerveza con limón. Y la pide el más flojo del grupo."},
-    {"pregunta": "¿Qué cosas son ciertas de Buxai? Marca todas.", "opciones": ["Se pegó con toda la clase", "Es piloto de Ryanair", "Tiene la colección de camisetas", "Su padre traía bombones a la arboleda"], "correcta": [0, 1, 3], "dato": "Las camisetas son de Abascal."},
-    {"pregunta": "¿Qué le dijo el Bacterio a Dug cuando fue a pedirle que subiera la nota?", "opciones": ["Aprobado raspadillo, señor Guevara", "Siéntese, señor Dug", "Vaya examen, señor Urrutia", "Suspenso, señor Koi"], "correcta": 2, "dato": "Urrutia es el apellido de Dug en el cole."}
+    {
+      "pregunta": "¿Quién contó la anécdota del Camino Primitivo?",
+      "opciones": [
+        "Dug",
+        "Héctor (HRK)",
+        "Koi",
+        "PheDiox"
+      ],
+      "correcta": 1,
+      "dato": "Héctor contó el episodio del primer albergue."
+    },
+    {
+      "pregunta": "¿Quién se quejó del albergue?",
+      "opciones": [
+        "PheDiox",
+        "Dug",
+        "Koi",
+        "El dueño"
+      ],
+      "correcta": 0,
+      "dato": "PheDiox protestó al llegar al alojamiento precario."
+    },
+    {
+      "pregunta": "¿Qué preguntó el dueño?",
+      "opciones": [
+        "¿Quién paga la cena?",
+        "¿Dónde está Koi?",
+        "¿Príncipes o peregrinos?",
+        "¿Queréis otra cama?"
+      ],
+      "correcta": 2,
+      "dato": "La frase quedó como remate del Camino."
+    },
+    {
+      "pregunta": "¿Qué compartió Héctor sobre el Azkena?",
+      "opciones": [
+        "Una foto de Mendizorroza",
+        "El cartel por días",
+        "Una lista de alojamientos",
+        "Una encuesta de entradas"
+      ],
+      "correcta": 1,
+      "dato": "Héctor enlazó el cartel por días del festival."
+    },
+    {
+      "pregunta": "¿Qué pidió Dug analizar sobre Koi?",
+      "opciones": [
+        "Su actividad por semanas",
+        "Sus días y horas de participación",
+        "Su colección de camisetas",
+        "Su asistencia al Camino"
+      ],
+      "correcta": [
+        0,
+        1
+      ],
+      "dato": "Dug pidió un gráfico semanal y un análisis de días y horas."
+    },
+    {
+      "pregunta": "¿Qué temas sacó Dug en el debate de vivienda?",
+      "opciones": [
+        "Ahorro y sacrificios",
+        "Compra de casa",
+        "Ayudas a la vivienda",
+        "Las tres primeras"
+      ],
+      "correcta": [
+        0,
+        1,
+        2
+      ],
+      "dato": "El hilo trató esos tres aspectos de la vivienda."
+    },
+    {
+      "pregunta": "¿A quién pidió Dug imaginar opiniones sobre el debate?",
+      "opciones": [
+        "A los jugadores del Alavés",
+        "A compañeros y profesores de Marianistas",
+        "A los organizadores del Azkena",
+        "Al dueño del albergue"
+      ],
+      "correcta": 1,
+      "dato": "Dug pidió imaginar qué opinarían compañeros y profesores."
+    },
+    {
+      "pregunta": "¿Qué hizo Koi en el grupo durante el hilo reciente?",
+      "opciones": [
+        "Confirmó el día del Azkena",
+        "Contó la historia del albergue",
+        "Su participación fue escasa",
+        "Pidió cambiar la fecha del partido"
+      ],
+      "correcta": 2,
+      "dato": "Héctor preguntó por Koi, y Dug pidió revisar su actividad."
+    }
   ]
 }

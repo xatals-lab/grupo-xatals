@@ -138,5 +138,29 @@
   {
     "tema": "bar",
     "texto": "Peregrinos o príncipes, decía el albergue. En el Casco Viejo la pregunta equivalente es: ¿pintxo o reserva?"
+  },
+  {
+    "tema": "camino primitivo",
+    "texto": "PheDiox vio el albergue y pidió hablar con recepción. El dueño le dio una pregunta: «¿Príncipes o peregrinos?»"
+  },
+  {
+    "tema": "koi y azkena",
+    "texto": "Héctor pregunta qué día va Koi al Azkena. La organización ya lo busca por megafonía."
+  },
+  {
+    "tema": "koi en el chat",
+    "texto": "Dug pidió un gráfico de participación de Koi. La línea más alta sale cuando preguntan por qué no escribe."
+  },
+  {
+    "tema": "vivienda",
+    "texto": "Dug abrió el debate de vivienda; Koi lleva días sin contestar. A este paso, el silencio también tendrá entrada propia."
+  },
+  {
+    "tema": "phediox",
+    "texto": "PheDiox cambia de obsesión cada semana; en el Camino cambió de peregrino a príncipe antes de deshacer la mochila."
+  },
+  {
+    "tema": "marianistas",
+    "texto": "Dug pidió opiniones imaginadas de los viejos de Marianistas. Koi aportó la suya en formato habitual: ausencia."
   }
 ]

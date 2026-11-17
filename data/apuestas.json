@@ -1,59 +1,53 @@
 {
-  "jornada": "Alavés - RC Deportivo",
-  "partido": "Alavés vs RC Deportivo",
+  "jornada": "RC Deportivo",
+  "partido": "Alavés - RC Deportivo",
   "fecha": "2026-11-21 14:00",
   "fichas_iniciales": 100,
   "mercados": [
     {
-      "id": "1",
+      "id": "depor-alaves-1",
       "grupo": "1x2",
       "texto": "Gana el Alavés",
-      "cuota": 2.1,
-      "prob": 0.45
+      "cuota": 2.4,
+      "prob": 0.42
     },
     {
-      "id": "x",
+      "id": "depor-empate-x",
       "grupo": "1x2",
       "texto": "Empate",
-      "cuota": 3.1,
+      "cuota": 3.2,
+      "prob": 0.28
+    },
+    {
+      "id": "depor-alaves-2",
+      "grupo": "1x2",
+      "texto": "Gana el RC Deportivo",
+      "cuota": 3.4,
       "prob": 0.3
     },
     {
-      "id": "2",
-      "grupo": "1x2",
-      "texto": "Gana el RC Deportivo",
-      "cuota": 3.8,
-      "prob": 0.25
-    },
-    {
-      "id": "koi_llega",
-      "texto": "Koi llega a Mendizorroza antes del descanso",
-      "cuota": 4.5,
-      "prob": 0.35
-    },
-    {
-      "id": "hrk_desayuno",
-      "texto": "El HRK pregunta por el desayuno aunque sea partido de tarde",
-      "cuota": 2.2,
-      "prob": 0.75
-    },
-    {
-      "id": "bordalas",
-      "texto": "Bordalás ve el partido y pide que se juegue en un pasillo",
-      "cuota": 5.0,
-      "prob": 0.2
-    },
-    {
-      "id": "querejeta",
-      "texto": "Querejeta cambia al entrenador antes del postre",
-      "cuota": 8.0,
+      "id": "koi-contesta",
+      "texto": "Koi confirma el día del Azkena antes del pitido inicial",
+      "cuota": 8,
       "prob": 0.12
     },
     {
-      "id": "phediox",
-      "texto": "PheDiox cambia de ideología antes del pitido final",
-      "cuota": 3.0,
-      "prob": 0.4
+      "id": "phediox-queja",
+      "texto": "PheDiox protesta por algo en un albergue imaginario",
+      "cuota": 1.4,
+      "prob": 0.72
+    },
+    {
+      "id": "hrk-seis",
+      "texto": "El HRK responde con menos de seis palabras",
+      "cuota": 1.8,
+      "prob": 0.6
+    },
+    {
+      "id": "dug-grafico-x",
+      "texto": "Dug pide otro gráfico de actividad de Koi",
+      "cuota": 2.2,
+      "prob": 0.38
     }
   ]
 }

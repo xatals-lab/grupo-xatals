@@ -158,5 +158,15 @@
       "monte",
       "hrk"
     ]
+  },
+  {
+    "frase": "El Koi lleva días sin intervenir en este chat.",
+    "autor": "dug",
+    "opciones": [
+      "dug",
+      "hrk",
+      "koi",
+      "phediox"
+    ]
   }
 ]

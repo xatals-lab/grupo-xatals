@@ -1,24 +1,124 @@
 {
   "palabras": [
-    {"eu": "Kaixo", "es": "hola", "chiste": "Así saludaba el Bacterio antes de repartir un examen imposible."},
-    {"eu": "Agur", "es": "adiós", "chiste": "Lo que dice Koi a las 17:00 clavadas, servicios mínimos cumplidos."},
-    {"eu": "Eskerrik asko", "es": "muchas gracias", "chiste": "Lo que no dijo Tejedor tras la patada."},
-    {"eu": "Bai", "es": "sí", "chiste": "Lo único que contesta un vitoriano cuando no quiere comprometerse."},
-    {"eu": "Ez", "es": "no", "chiste": "Respuesta de HRK a cualquier reunión sin calimocho."},
-    {"eu": "Euria", "es": "lluvia", "chiste": "En Vitoria, euria hay siempre; lo raro es el sol."},
-    {"eu": "Lagunak", "es": "amigos", "chiste": "Los que te ayudan a mudarte... a la barra."},
-    {"eu": "Kuadrilla", "es": "cuadrilla", "chiste": "Institución sagrada: tres amigos, un calimocho y un chat."},
-    {"eu": "Pintxoa", "es": "pincho", "chiste": "Koi pide servicios mínimos, pero un pintxo no lo rechaza."},
-    {"eu": "Txakolina", "es": "chacolí", "chiste": "El vino que Hermek ya no puede mencionar más de una vez por mensaje."},
-    {"eu": "Kalimotxoa", "es": "calimocho", "chiste": "Bebida oficial de la cuadrilla. La pica es de flojos."},
-    {"eu": "Gora Alavés!", "es": "¡Arriba el Alavés!", "chiste": "Se grita con fe y se sufre con realismo."},
-    {"eu": "Ostirala", "es": "viernes", "chiste": "Día en que Hermek actualiza la web y Koi desaparece."},
-    {"eu": "Txapela", "es": "boina", "chiste": "Lo que se pone Celedón... y el que dice 'ya me voy' a las 2 de la mañana."},
-    {"eu": "Ederra!", "es": "¡precioso!", "chiste": "Lo que dice un vitoriano cuando algo le gusta muchísimo: 'no está mal'."},
-    {"eu": "Aupa!", "es": "¡hala! / ¡ánimo!", "chiste": "Saludo, grito de guerra y aviso de que llega Buxai."},
-    {"eu": "Bikain!", "es": "¡excelente!", "chiste": "Nota máxima del Bacterio. No existe, pero suena bien."},
-    {"eu": "Mila esker", "es": "mil gracias", "chiste": "Lo que le debes a Koi por aparecer una vez al mes."},
-    {"eu": "Gaizki", "es": "mal", "chiste": "Cómo salió el examen del Maketo."},
-    {"eu": "Ondo", "es": "bien", "chiste": "Cómo dice HRK que va todo en Irabi, aunque se caiga una nave."}
+    {
+      "eu": "Kaixo",
+      "es": "hola",
+      "chiste": "Así saludaba el Bacterio antes de repartir un examen imposible."
+    },
+    {
+      "eu": "Agur",
+      "es": "adiós",
+      "chiste": "Lo que dice Koi a las 17:00 clavadas, servicios mínimos cumplidos."
+    },
+    {
+      "eu": "Eskerrik asko",
+      "es": "muchas gracias",
+      "chiste": "Lo que no dijo Tejedor tras la patada."
+    },
+    {
+      "eu": "Bai",
+      "es": "sí",
+      "chiste": "Lo único que contesta un vitoriano cuando no quiere comprometerse."
+    },
+    {
+      "eu": "Ez",
+      "es": "no",
+      "chiste": "Respuesta de HRK a cualquier reunión sin calimocho."
+    },
+    {
+      "eu": "Euria",
+      "es": "lluvia",
+      "chiste": "En Vitoria, euria hay siempre; lo raro es el sol."
+    },
+    {
+      "eu": "Lagunak",
+      "es": "amigos",
+      "chiste": "Los que te ayudan a mudarte... a la barra."
+    },
+    {
+      "eu": "Kuadrilla",
+      "es": "cuadrilla",
+      "chiste": "Institución sagrada: tres amigos, un calimocho y un chat."
+    },
+    {
+      "eu": "Pintxoa",
+      "es": "pincho",
+      "chiste": "Koi pide servicios mínimos, pero un pintxo no lo rechaza."
+    },
+    {
+      "eu": "Txakolina",
+      "es": "chacolí",
+      "chiste": "El vino que Hermek ya no puede mencionar más de una vez por mensaje."
+    },
+    {
+      "eu": "Kalimotxoa",
+      "es": "calimocho",
+      "chiste": "Bebida oficial de la cuadrilla. La pica es de flojos."
+    },
+    {
+      "eu": "Gora Alavés!",
+      "es": "¡Arriba el Alavés!",
+      "chiste": "Se grita con fe y se sufre con realismo."
+    },
+    {
+      "eu": "Ostirala",
+      "es": "viernes",
+      "chiste": "Día en que Hermek actualiza la web y Koi desaparece."
+    },
+    {
+      "eu": "Txapela",
+      "es": "boina",
+      "chiste": "Lo que se pone Celedón... y el que dice 'ya me voy' a las 2 de la mañana."
+    },
+    {
+      "eu": "Ederra!",
+      "es": "¡precioso!",
+      "chiste": "Lo que dice un vitoriano cuando algo le gusta muchísimo: 'no está mal'."
+    },
+    {
+      "eu": "Aupa!",
+      "es": "¡hala! / ¡ánimo!",
+      "chiste": "Saludo, grito de guerra y aviso de que llega Buxai."
+    },
+    {
+      "eu": "Bikain!",
+      "es": "¡excelente!",
+      "chiste": "Nota máxima del Bacterio. No existe, pero suena bien."
+    },
+    {
+      "eu": "Mila esker",
+      "es": "mil gracias",
+      "chiste": "Lo que le debes a Koi por aparecer una vez al mes."
+    },
+    {
+      "eu": "Gaizki",
+      "es": "mal",
+      "chiste": "Cómo salió el examen del Maketo."
+    },
+    {
+      "eu": "Ondo",
+      "es": "bien",
+      "chiste": "Cómo dice HRK que va todo en Irabi, aunque se caiga una nave."
+    },
+    {
+      "eu": "Ostatua",
+      "es": "alojamiento",
+      "chiste": "PheDiox pidió uno con estrellas; le dieron una pregunta."
+    },
+    {
+      "eu": "Bidea",
+      "es": "camino",
+      "chiste": "Koi lo encuentra si no hay que desviarse hacia el coche."
+    },
+    {
+      "eu": "Ohea",
+      "es": "cama",
+      "chiste": "La del albergue era sencilla; PheDiox pidió hablar con dirección."
+    },
+    {
+      "eu": "Galdera",
+      "es": "pregunta",
+      "chiste": "La del dueño dejó a la cuadrilla callada: «¿Príncipes o peregrinos?»"
+    }
   ]
 }
