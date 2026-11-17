@@ -1,0 +1,18 @@
+{
+  "titulo": "Recursos de información para los tres Xatals",
+  "eu": "Informazio-iturriak hiru Xatalentzat",
+  "intro": "Para estar informados como Dios manda (y poder discutir en el bar con argumentos... o con titulares).",
+  "grupos": [
+    {"nombre": "Alavés y Álava", "emoji": "💙", "eu": "Gora Alavés!", "enlaces": [
+      {"titulo": "El Correo (Álava)", "url": "https://www.elcorreo.com/alava/", "nota": "La actualidad de Vitoria y Álava, y todo el Alavés."},
+      {"titulo": "Noticias de Álava", "url": "https://www.noticiasdealava.eus/", "nota": "Periódico alavés: política, sociedad y Mendizorroza."},
+      {"titulo": "Deportivo Alavés (web oficial)", "url": "https://www.deportivoalaves.com/", "nota": "Calendario, plantilla y la ansiedad de cada jornada."},
+      {"titulo": "LaLiga", "url": "https://www.laliga.com/", "nota": "Clasificación y resultados en directo."}]},
+    {"nombre": "Prensa deportiva española", "emoji": "📰", "eu": "Kirol prentsa", "enlaces": [
+      {"titulo": "Marca", "url": "https://www.marca.com/", "nota": "El clásico de los kioscos."},
+      {"titulo": "AS", "url": "https://as.com/", "nota": "Fútbol, más fútbol y polémicas arbitrales."},
+      {"titulo": "Mundo Deportivo", "url": "https://www.mundodeportivo.com/", "nota": "Con acento catalán."},
+      {"titulo": "Sport", "url": "https://www.sport.es/", "nota": "Fútbol desde Barcelona."},
+      {"titulo": "Relevo", "url": "https://www.relevo.com/", "nota": "Deporte con tono moderno."}]}
+  ]
+}

@@ -20,7 +20,7 @@
     ]
   },
   {
-    "frase": "Yo en Iravi lo teníamos resuelto antes del café.",
+    "frase": "Yo en Irabi lo teníamos resuelto antes del café.",
     "autor": "hrk",
     "opciones": [
       "hrk",
@@ -147,6 +147,16 @@
       "monte",
       "chino",
       "maketo"
+    ]
+  },
+  {
+    "frase": "Votando a Viribay, ganamos todos.",
+    "autor": "viribay",
+    "opciones": [
+      "viribay",
+      "besga",
+      "monte",
+      "hrk"
     ]
   }
 ]

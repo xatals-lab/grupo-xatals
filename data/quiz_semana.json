@@ -1,94 +1,14 @@
 {
   "semana": "2026-W47",
-  "titulo": "La semana de los peregrinos con hipoteca",
+  "titulo": "Quiz de la semana: Don Héctor, el cole y la cuadrilla",
   "preguntas": [
-    {
-      "pregunta": "¿Qué frase soltó el dueño del albergue a PheDiox?",
-      "opciones": [
-        "¿Príncipes o peregrinos?",
-        "¿Pensión completa o media?",
-        "¿Traéis saco o quejas?",
-        "¿Esto es un hotel de cuatro estrellas?"
-      ],
-      "correcta": 0,
-      "dato": "La queja de PheDiox ya tiene respuesta oficial del Camino."
-    },
-    {
-      "pregunta": "¿Qué festival mencionó el HRK al compartir el cartel por días?",
-      "opciones": [
-        "Azkena Rock Festival",
-        "Sonorama",
-        "BBK Live",
-        "Viña Rock"
-      ],
-      "correcta": 0,
-      "dato": "El HRK pidió además adivinar qué día irá Koi."
-    },
-    {
-      "pregunta": "¿Con quién hizo el Camino Primitivo el HRK?",
-      "opciones": [
-        "Koi y PheDiox",
-        "Dug y el Rizos",
-        "Dug y Koi",
-        "Wilhelm y Buxai"
-      ],
-      "correcta": 0,
-      "dato": "El albergue sobrevivió a una inspección de príncipes."
-    },
-    {
-      "pregunta": "¿Qué cuestión planteó Dug sobre vivienda?",
-      "opciones": [
-        "La compra de casa sin ayudas y el coste hipotecario",
-        "El alquiler de un castillo",
-        "La hipoteca del albergue",
-        "Comprar una casa en Mendizorroza"
-      ],
-      "correcta": 0,
-      "dato": "El debate empezó antes de que apareciera la manta del peregrino."
-    },
-    {
-      "pregunta": "¿A qué se refería Dug al preguntar por el voto de cada uno?",
-      "opciones": [
-        "A las elecciones generales de España",
-        "A una votación del Azkena",
-        "A elegir el menú del albergue",
-        "A la presidencia del grupo"
-      ],
-      "correcta": 0,
-      "dato": "Pidió pronósticos concretos, no una encuesta de peregrinos."
-    },
-    {
-      "pregunta": "¿Qué respondió el HRK cuando preguntó por el día del Azkena?",
-      "opciones": [
-        "Preguntó qué día iría Koi",
-        "Dijo que iría los tres días",
-        "Propuso ir al albergue",
-        "Pidió una hipoteca fija"
-      ],
-      "correcta": 0,
-      "dato": "Koi todavía no ha confirmado presencia ni catálogo."
-    },
-    {
-      "pregunta": "¿Contra quién juega el Alavés el próximo partido registrado?",
-      "opciones": [
-        "RC Deportivo",
-        "Eibar",
-        "Mirandés",
-        "Burgos"
-      ],
-      "correcta": 0,
-      "dato": "El partido está fijado para el 21 de noviembre a las 14:00, hora de Madrid."
-    },
-    {
-      "pregunta": "¿Qué apodo de actividad laboral atribuyó Dug a Koi?",
-      "opciones": [
-        "Tradicional y de Microsoft",
-        "Experto en albergues",
-        "Piloto de Ryanair",
-        "Catedrático de física"
-      ],
-      "correcta": 0,
-      "dato": "A Koi le llegaron licencias baratas de Office 2024 Pro Plus."
-    }
+    {"pregunta": "¿Cómo se escribe la empresa de Héctor (HRK), la fábrica de rodamientos de Bergara?", "opciones": ["Iravi S.A.", "Rodamientos Bergara S.L.", "Irabi S.A.", "Ibarra y Hermanos"], "correcta": 2, "dato": "Irabi, con b. Y que nadie se atreva a escribirlo con v."},
+    {"pregunta": "¿Qué dos cosas fue Héctor Viribay (Don Héctor) antes de ser maquinista de Renfe?", "opciones": ["Abogado con bufete propio", "Delegado de clase", "Piloto de Ryanair", "Informático del cole"], "correcta": [0, 1], "dato": "Del bufete de la nada al tren: giro de 180 grados."},
+    {"pregunta": "¿Qué lema pegó Viribay en los carteles de su campaña?", "opciones": ["Viribay, el futuro es hoy", "Votando a Viribay, ganamos todos", "Con Viribay, ni un paso atrás", "Yo también soy Viribay"], "correcta": 1, "dato": "Parecía la campaña de Aznar, pero con rotulador."},
+    {"pregunta": "¿Quiénes eran profesores del cole? Marca todos.", "opciones": ["El Bacterio", "El Chino", "Tejedor", "El Maketo"], "correcta": [0, 1, 3], "dato": "Tejedor era el futbolista, no el profesor."},
+    {"pregunta": "¿Quién tiene la colección de camisetas de fútbol?", "opciones": ["Besga", "Bihl", "Buxai", "Abascal"], "correcta": 3, "dato": "Su padre, don Agustín Abascal, era profesor del cole."},
+    {"pregunta": "¿Qué bebida es 'de flojos' según la cuadrilla?", "opciones": ["Calimocho", "Txakoli", "Pica", "Sidra"], "correcta": 2, "dato": "La pica es cerveza con limón. Y la pide el más flojo del grupo."},
+    {"pregunta": "¿Qué cosas son ciertas de Buxai? Marca todas.", "opciones": ["Se pegó con toda la clase", "Es piloto de Ryanair", "Tiene la colección de camisetas", "Su padre traía bombones a la arboleda"], "correcta": [0, 1, 3], "dato": "Las camisetas son de Abascal."},
+    {"pregunta": "¿Qué le dijo el Bacterio a Dug cuando fue a pedirle que subiera la nota?", "opciones": ["Aprobado raspadillo, señor Guevara", "Siéntese, señor Dug", "Vaya examen, señor Urrutia", "Suspenso, señor Koi"], "correcta": 2, "dato": "Urrutia es el apellido de Dug en el cole."}
   ]
 }

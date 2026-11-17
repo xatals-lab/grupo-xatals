@@ -56,8 +56,8 @@ async function chuta() {
   await tween(520, p => { bola.position.lerpVectors(p0, fin, p); bola.position.y = p0.y + (fin.y - p0.y) * p + Math.sin(p * Math.PI) * .45; bola.rotation.x -= .4; });
   await keeper;
   if (parada) { sonido(140, .2); msg(["🧤 Tejedor la para y te mira con cara de 20 años.", "🧤 Paradón. 'Eso es fútbol', dice.", "🧤 Parada. Se oye 'Diiiios' desde el fondo."][Math.floor(Math.random() * 3)]); await tween(500, p => { bola.position.z = -10 + p * 3; bola.position.y = .11 + Math.sin(p * Math.PI) * .5; }); }
-  else if (fuera) { sonido(120, .25); msg(poste ? "💥 ¡AL POSTE! Se oye hasta en Mendizorroza." : "🚀 Fuera. Al segundo patio, junto al Bacterio."); await tween(450, p => { bola.position.z = -10 - p * 4; bola.position.y = fin.y + p * 1.5; }); }
-  else { sonido(820, .25); confeti(); ST.yo++; ST.pts += 200 + (ty > 1.5 && Math.abs(tx) > 1 ? 100 : 0); msg(["⚽ ¡GOOOL! Tejedor no se lo cree.", "⚽ ¡Gol! Tejedor acaba pateando la valla.", "⚽ ¡Golazo! Hasta la torre con la cruz se emociona."][Math.floor(Math.random() * 3)]); await tween(450, p => { bola.position.z = -10 - p * .6; bola.position.y = Math.max(.11, fin.y * (1 - p)); }); }
+  else if (fuera) { sonido(120, .25); msg(poste ? "💥 ¡AL POSTE! Se oye hasta en Mendizorroza." : "🚀 Fuera. Ai ama! Al segundo patio, junto al Bacterio, que ya se ríe."); await tween(450, p => { bola.position.z = -10 - p * 4; bola.position.y = fin.y + p * 1.5; }); }
+  else { sonido(820, .25); confeti(); ST.yo++; ST.pts += 200 + (ty > 1.5 && Math.abs(tx) > 1 ? 100 : 0); msg(["⚽ ¡GOOOL! Tejedor no se lo cree.", "⚽ ¡Gol! Tejedor acaba pateando la valla. Cuarenta y uno y sin paciencia.", "⚽ ¡Golazo! Hasta la torre con la cruz se emociona."][Math.floor(Math.random() * 3)]); await tween(450, p => { bola.position.z = -10 - p * .6; bola.position.y = Math.max(.11, fin.y * (1 - p)); }); }
   marc(); await esperar(1100); await turnoParada();
 }
 async function turnoParada() {
@@ -65,16 +65,16 @@ async function turnoParada() {
   const t0 = performance.now(); while (ST.eleccion == null && performance.now() - t0 < 2800) await esperar(30);
   const el = ST.eleccion ?? 1; ST.fase = ""; $("botonesP").style.display = "none";
   const tercio = [0, 0, 1, 2, 2, 0, 2, 1][Math.floor(Math.random() * 8)], alto = Math.random() < .3;
-  const fin = new THREE.Vector3((tercio - 1) * 1.15, alto ? 1.75 : .6 + Math.random() * .6, 10);
+  const meta = new THREE.Vector3((tercio - 1) * 1.15, alto ? 1.75 : .6 + Math.random() * .6, 10);
   const p0 = bola.position.clone();
   await tween(500, p => { tejedor.g.position.z = 1.2 + p * 1.5; tejedor.pi.rotation.x = Math.sin(p * Math.PI * 2) * .9; tejedor.pd.rotation.x = -Math.sin(p * Math.PI * 2) * .9; });
   tejedor.pd.rotation.x = -1.2; sonido(260, .1);
   const dive = tween(420, p => { const q = ease(p), dx = (el - 1) * 1.0; cam.position.x = dx * q; guantes.position.set(0, .1 * Math.sin(p * Math.PI), 0); cam.rotation.z = -(el - 1) * .22 * q; if (el !== 1) cam.rotation.z += 0; });
-  await tween(480, p => { bola.position.lerpVectors(p0, fin, p); bola.position.y = p0.y + (fin.y - p0.y) * p + Math.sin(p * Math.PI) * .3; bola.rotation.x += .35; });
+  await tween(480, p => { bola.position.lerpVectors(p0, meta, p); bola.position.y = p0.y + (meta.y - p0.y) * p + Math.sin(p * Math.PI) * .3; bola.rotation.x += .35; });
   await dive;
   const para = el === tercio && (!alto || Math.random() < .7);
   if (para) { ST.pts += 150; sonido(700, .2); confeti(); msg(["🧤 ¡PARADÓN! Tejedor se agarra la cabeza.", "🧤 ¡Paradón! 'Ha sido un golpe de suerte', dice.", "🧤 ¡Parada! Ya eres leyenda de Marianistas."][Math.floor(Math.random() * 3)]); await tween(400, p => { bola.position.z = 10 - p * 1.8; bola.position.y = .5 + Math.sin(p * Math.PI) * .6; }); }
-  else { ST.el++; sonido(150, .25); msg(["💥 Tejedor te la mete y celebra a patadas.", "💥 Gol de Tejedor. Se queja del césped de cemento.", "💥 Gol. Y encima dice 'ha sido fútbol'."][Math.floor(Math.random() * 3)]); await tween(400, p => { bola.position.z = 10 + p * .7; }); }
+  else { ST.el++; sonido(150, .25); msg(["💥 Tejedor te la mete y celebra a patadas. Aupa, viejoven.", "💥 Gol de Tejedor. Se queja del césped de cemento.", "💥 Gol. Y encima dice 'ha sido fútbol'."][Math.floor(Math.random() * 3)]); await tween(400, p => { bola.position.z = 10 + p * .7; }); }
   cam.position.x = 0; cam.rotation.z = 0; marc(); await esperar(1200);
   ST.ronda++; const quedan = 5 - ST.ronda;
   if (ST.ronda >= 5 || ST.yo - ST.el > quedan || ST.el - ST.yo > quedan) return fin();

@@ -2,7 +2,7 @@ document.documentElement.classList.add("js");
 const SITE_URL="https://educadug.github.io/grupo-xatals/";
 const SALT="xatals-2026";
 const JUGADORES={dug:"Dug",hrk:"HRK (Héctor)",koi:"Koi (Íñigo)"};
-const NAV=[["index.html","Inicio"],["juegos.html","Juegos"],["paneles.html","Paneles"],["quizsemana.html","Quiz semanal"],["records.html","Hall of Fame"],["chistes.html","Chistes"],["semana.html","Esta semana"]];
+const NAV=[["index.html","Inicio"],["juegos.html","Juegos"],["paneles.html","Paneles"],["quizsemana.html","Quiz semanal"],["records.html","Hall of Fame"],["chistes.html","Chistes"],["semana.html","Esta semana"],["recursos.html","Recursos"]];
 const AGRUPA={"bar.html":"juegos.html","recreo.html":"juegos.html","futbol.html":"juegos.html","examen.html":"juegos.html","apuestas.html":"juegos.html","quiz.html":"juegos.html","mj.html":"juegos.html"};
 function pintaCabecera(){
   let actual=location.pathname.split("/").pop()||"index.html";actual=AGRUPA[actual]||actual;
@@ -10,6 +10,7 @@ function pintaCabecera(){
   h.innerHTML='<a class="logo" href="index.html">XATALS</a><nav>'+NAV.map(([u,t])=>`<a href="${u}" class="${u===actual?"on":""}">${t}</a>`).join("")+"</nav>";
   document.body.prepend(h);
   const f=document.createElement("footer");f.textContent="Grupo Xatals · todo exagerado e inventado con cariño · lo actualiza Hermek cada viernes";document.body.append(f);
+  fetch("data/euskera.json?v="+Date.now()).then(r=>r.json()).then(d=>{const w=azar(d.palabras);const p=document.createElement("p");p.className="euskera";p.innerHTML=`🗣️ <b>Gaurko hitza</b> (palabra del día): <b>${w.eu}</b> = ${w.es}. <i>${w.chiste||""}</i>`;f.prepend(p);}).catch(()=>{});
   document.querySelectorAll(".card").forEach(c=>{
     c.addEventListener("mousemove",e=>{const r=c.getBoundingClientRect();c.style.setProperty("--ry",((e.clientX-r.left)/r.width-.5)*14+"deg");c.style.setProperty("--rx",(-((e.clientY-r.top)/r.height-.5))*14+"deg");});
     c.addEventListener("mouseleave",()=>{c.style.setProperty("--rx","0deg");c.style.setProperty("--ry","0deg");});
@@ -29,6 +30,8 @@ const azar=a=>a[Math.floor(Math.random()*a.length)];
 function baraja(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 const acota=(n,a=0,b=100)=>Math.max(a,Math.min(b,n));
 const esperar=ms=>new Promise(r=>setTimeout(r,ms));
+const EU_OK=["Ederra!","Aupa!","Bikain!","Zorionak!","Gora zu!","Ene ba!"],EU_KO=["Ai ama!","Gaizki...","Ez da posible!","Ostras, bai ba!","Aizu!"];
+const euOk=()=>Math.random()<.45?azar(EU_OK)+" ":"";const euKo=()=>Math.random()<.45?azar(EU_KO)+" ":"";
 /* ---- scores: no server. A game ends with a signed code the player sends to Hermek, who records it. ---- */
 function hash(s){let h=5381;for(let i=0;i<s.length;i++)h=((h<<5)+h+s.charCodeAt(i))>>>0;return h.toString(16);}
 function semanaISO(d=new Date()){const t=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()));const n=t.getUTCDay()||7;t.setUTCDate(t.getUTCDate()+4-n);const y=new Date(Date.UTC(t.getUTCFullYear(),0,1));return t.getUTCFullYear()+"-W"+String(Math.ceil(((t-y)/864e5+1)/7)).padStart(2,"0");}

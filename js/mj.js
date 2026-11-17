@@ -15,7 +15,7 @@ const arena=$("arena"),hud=$("hud"),msg=$("msg"),rec=$("rec");
 let pts=0,activo=false;
 const setHud=t=>hud.innerHTML=t;
 const say=t=>msg.textContent=t;
-function fin(p,texto){activo=false;pts=Math.max(0,Math.round(p));say(texto||"Fin");$("start").disabled=false;$("start").textContent="↻ Otra vez";if(pts>0)confeti();panelRecord(rec,"mj-"+G.id,pts,"Puntos de "+G.titulo);}
+function fin(p,texto){activo=false;pts=Math.max(0,Math.round(p));say((pts>0?euOk():euKo())+(texto||"Fin"));$("start").disabled=false;$("start").textContent="↻ Otra vez";if(pts>0)confeti();panelRecord(rec,"mj-"+G.id,pts,"Puntos de "+G.titulo);}
 $("start").onclick=()=>{rec.innerHTML="";arena.innerHTML="";$("start").disabled=true;activo=true;pts=0;TPL[G.plantilla](G);};
 const TPL={
 /* ---- pulsa: tap the good ones, avoid the bad ones ---- */
@@ -93,6 +93,60 @@ simon(g){
   async function ronda(){if(!activo)return;if(seq.length>=R)return fin(pts+300,"¡Memoria de elefante vitoriano!");seq.push(Math.floor(Math.random()*B.length));aceptando=false;pos=0;setHud(`<span>Ronda ${seq.length}/${R}</span><span>${pts} PTS</span>`);say(g.consigna_ver||"Mira la secuencia...");await esperar(500);for(const i of seq)await luz(i);say(g.consigna||"¡Ahora tú!");aceptando=true;}
   btns.forEach(b=>b.onclick=async()=>{if(!aceptando||!activo)return;const i=+b.dataset.i;await luz(i);if(i!==seq[pos]){aceptando=false;return fin(pts,g.msg_ko?azar(g.msg_ko):"Te has equivocado");}pos++;if(pos===seq.length){pts+=100*seq.length;aceptando=false;say(g.msg_ok?azar(g.msg_ok):"¡Bien!");await esperar(700);ronda();}});
   say("Pulsa y mira");ronda();
+},
+/* ---- ritmo: notes fall in 4 lanes, hit them on the line (arrows / A S D F / tap the pads) ---- */
+ritmo(g){
+  const L=g.carriles||["⬅","⬇","⬆","➡"],T=g.duracion||30,N=g.notas||["🎸"];let t=T,combo=0,notas=[],cd=0;
+  arena.innerHTML=`<div class="ritmo">${L.map((l,i)=>`<div class="carril" data-i="${i}"></div>`).join("")}<div class="linea"></div></div><div class="pads">${L.map((l,i)=>`<button class="pad" data-i="${i}">${l}</button>`).join("")}</div>`;
+  const car=[...arena.querySelectorAll(".carril")];
+  function golpe(i){if(!activo)return;const n=notas.filter(x=>x.i===i&&x.y>66&&x.y<96).sort((a,b)=>b.y-a.y)[0];
+    if(n){n.el.remove();notas=notas.filter(x=>x!==n);combo++;pts+=100+Math.min(combo,10)*10;sonido(500+i*120,.07);if(combo%8===0&&g.msg_ok)say(azar(g.msg_ok));}
+    else{combo=0;pts=Math.max(0,pts-20);sonido(120,.08);if(g.msg_ko)say(azar(g.msg_ko));}pintar();}
+  function pintar(){setHud(`<span>⏱ ${Math.ceil(t)}s</span><span>Combo x${combo}</span><span>${pts} PTS</span>`);}
+  arena.querySelectorAll(".pad").forEach(b=>{b.addEventListener("pointerdown",e=>{e.preventDefault();golpe(+b.dataset.i);});});
+  const teclas={ArrowLeft:0,ArrowDown:1,ArrowUp:2,ArrowRight:3,a:0,s:1,d:2,f:3};
+  const kd=e=>{if(!activo){document.removeEventListener("keydown",kd);return;}if(e.key in teclas){e.preventDefault();golpe(teclas[e.key]);}};document.addEventListener("keydown",kd);
+  const iv=setInterval(()=>{if(!activo){clearInterval(iv);return;}t-=.03;cd-=.03;const v=.95+(T-t)*.03;
+    if(cd<=0&&t>1.5){const i=Math.floor(Math.random()*L.length);const el=document.createElement("div");el.className="nota";el.textContent=azar(N);car[i].append(el);notas.push({i,y:-8,el});cd=Math.max(.32,.62-(T-t)*.006);}
+    notas.forEach(n=>{n.y+=v;n.el.style.top=n.y+"%";});
+    const fuera=notas.filter(n=>n.y>100);if(fuera.length){fuera.forEach(n=>n.el.remove());notas=notas.filter(n=>n.y<=100);combo=0;}
+    pintar();if(t<=0){clearInterval(iv);document.removeEventListener("keydown",kd);fin(pts,"Se acabó el concierto.");}},30);
+  say(g.consigna||"Pulsa cada nota cuando cruce la línea");pintar();
+},
+/* ---- runner: 3 lanes, dodge the bad stuff, grab the good stuff ---- */
+runner(g){
+  let carril=1,vidas=3,t=g.duracion||35,items=[],cd=0;const T=t;
+  arena.innerHTML=`<div class="pista"><div class="yo" id="yo">${g.jugador?g.jugador.e:"🏃"}</div></div><div class="pads"><button class="pad" id="rl">⬅</button><button class="pad" id="rr">➡</button></div>`;
+  const pista=arena.querySelector(".pista"),yo=$("yo");
+  const col=i=>(16.5+i*33.3)+"%";const pon=()=>yo.style.left=col(carril);pon();
+  const mover=d=>{if(!activo)return;carril=Math.max(0,Math.min(2,carril+d));pon();sonido(380,.04);};
+  $("rl").onclick=()=>mover(-1);$("rr").onclick=()=>mover(1);
+  const kd=e=>{if(!activo){document.removeEventListener("keydown",kd);return;}if(e.key==="ArrowLeft"||e.key==="a")mover(-1);if(e.key==="ArrowRight"||e.key==="d")mover(1);};document.addEventListener("keydown",kd);
+  let sx=null;pista.addEventListener("pointerdown",e=>sx=e.clientX);pista.addEventListener("pointerup",e=>{if(sx==null)return;const dx=e.clientX-sx;if(Math.abs(dx)>25)mover(dx<0?-1:1);sx=null;});
+  const pintar=()=>setHud(`<span>${"❤".repeat(vidas)}</span><span>⏱ ${Math.ceil(t)}s</span><span>${Math.round(pts)} PTS</span>`);
+  const iv=setInterval(()=>{if(!activo){clearInterval(iv);return;}t-=.03;cd-=.03;pts+=.4;const v=1.1+(T-t)*.035;
+    if(cd<=0){const bueno=Math.random()<.4;const it=azar(bueno?g.buenos:g.malos);const el=document.createElement("div");el.className="obj";el.textContent=it.e;const i=Math.floor(Math.random()*3);el.style.left=col(i);pista.append(el);items.push({el,i,y:-10,bueno});cd=Math.max(.35,.8-(T-t)*.008);}
+    items.forEach(o=>{o.y+=v;o.el.style.top=o.y+"%";o.el.style.transform=`translateX(-50%) scale(${.5+o.y/100})`;
+      if(!o.hit&&o.y>78&&o.y<96&&o.i===carril){o.hit=true;o.el.remove();if(o.bueno){pts+=60;sonido(740,.08);if(g.msg_ok)say(azar(g.msg_ok));}else{vidas--;pts=Math.max(0,pts-30);sonido(120,.2);pista.classList.add("shake");setTimeout(()=>pista.classList.remove("shake"),250);if(g.msg_ko)say(azar(g.msg_ko));}}});
+    items=items.filter(o=>{if(o.y>104||o.hit){o.el.remove();return false;}return true;});
+    pintar();if(vidas<=0||t<=0){clearInterval(iv);document.removeEventListener("keydown",kd);fin(pts,vidas<=0?"Te han machacado.":"Llegas a la meta, sudando.");}},30);
+  say(g.consigna||"Cambia de carril: coge lo bueno, esquiva lo malo");pintar();
+},
+/* ---- apila: stack the blocks; every miss trims the tower ---- */
+apila(g){
+  const NIV=g.niveles||[];let nivel=0,ancho=44,izq=28,x=0,dir=1,perf=0;const piezas=[];
+  arena.innerHTML=`<div class="torre" id="torre"></div><p style="text-align:center"><button class="rosa" id="suelta">⬇ SUELTA</button></p>`;
+  const torre=$("torre");let pieza=null,iv=0;
+  function nueva(){const el=document.createElement("div");el.className="bloque3d";el.textContent=g.bloque?g.bloque.e:"🧱";el.style.width=ancho+"%";el.style.bottom=(nivel*13)+"%";torre.append(el);pieza=el;x=0;dir=1;
+    say(NIV[nivel]||`Piso ${nivel+1}`);setHud(`<span>Piso ${nivel+1}</span><span>${pts} PTS</span>`);}
+  iv=setInterval(()=>{if(!activo||!pieza){return;}x+=dir*(1.1+nivel*.28);if(x>100-ancho){x=100-ancho;dir=-1}if(x<0){x=0;dir=1}pieza.style.left=x+"%";},16);
+  $("suelta").onclick=()=>{if(!activo||!pieza)return;const ini=Math.max(x,izq),fin2=Math.min(x+ancho,izq+ancho),sol=fin2-ini;
+    if(sol<=1){clearInterval(iv);pieza.style.opacity=.4;sonido(120,.3);return fin(pts,g.msg_ko?azar(g.msg_ko):"Se cae la torre.");}
+    const perfecto=Math.abs(x-izq)<1.6;if(perfecto){perf++;pts+=50;sonido(900,.1);say(g.msg_ok?azar(g.msg_ok):"¡Perfecto!");}else sonido(520,.08);
+    pts+=100;ancho=perfecto?ancho:sol;izq=perfecto?izq:ini;pieza.style.left=izq+"%";pieza.style.width=ancho+"%";nivel++;pieza=null;
+    if(nivel>=12){clearInterval(iv);return fin(pts+300,"¡Torre completa! Hasta Celedón tiene vértigo.");}setTimeout(nueva,160);};
+  document.addEventListener("keydown",e=>{if(e.key===" "&&activo){e.preventDefault();$("suelta")&&$("suelta").click();}});
+  nueva();
 }
 };
 })().catch(e=>{document.getElementById("mj").textContent="No he podido cargar el minijuego.";console.error(e)});

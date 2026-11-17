@@ -13,7 +13,7 @@ function meters(){
 }
 function esc(inv){
   const e=document.getElementById("escena");
-  e.innerHTML=`<div class="guest"><h2>${inv.emoji} ${inv.nombre}</h2><div class="pill">${inv.rol}</div><p>${inv.entrada}</p></div>`+inv.opciones.map((o,i)=>`<button data-i="${i}">${o.texto}</button>`).join("");
+  e.innerHTML=`<div class="guest"><h2>${inv.emoji} ${inv.nombre}</h2><div class="pill">${inv.rol}</div><p>${inv.entrada}</p>${inv.pulla?`<p style="color:#ff8bc2"><i>${inv.pulla}</i></p>`:""}</div>`+inv.opciones.map((o,i)=>`<button data-i="${i}">${o.texto}</button>`).join("");
   e.querySelectorAll("button").forEach(b=>b.onclick=()=>elige(inv,inv.opciones[+b.dataset.i]));
 }
 function elige(inv,o){
