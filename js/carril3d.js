@@ -73,7 +73,7 @@ export function iniciar(cont, cfg, cb) {
   function puerta() {
     const q = pregs[E.qi++ % pregs.length]; const g = new THREE.Group(); const ops = q.opciones.slice(0, 3);
     ops.forEach((t, i) => { const b = new THREE.Mesh(new THREE.PlaneGeometry(2.2, 1.1), new THREE.MeshBasicMaterial({ map: cartel(t), transparent: true })); b.position.set(LANES[i], 3.1, 0); g.add(b); for (const dx of [-1.05, 1.05]) { const p = new THREE.Mesh(new THREE.CylinderGeometry(.06, .06, 3.1, 6), mat({ color: 0x888 })); p.position.set(LANES[i] + dx, 1.55, 0); g.add(p); } });
-    g.position.z = -100; escena.add(g); E.puertas.push({ g, z: -100, q, hecho: false }); pregEl.textContent = "🚦 " + q.pregunta; pregEl.classList.add("on");
+    g.position.z = -100; escena.add(g); E.puertas.push({ g, z: -100, q, hecho: false }); pregEl.innerHTML = (cfg.sujeto ? `<small style="color:#ffe500">PREGUNTAS SOBRE ${cfg.sujeto.toUpperCase()}</small><br>` : "") + "🚦 " + q.pregunta; pregEl.classList.add("on");
   }
   function fin(texto) { if (!E.activo) return; E.activo = false; document.removeEventListener("keydown", kd); cb.fin(E.pts, texto); setTimeout(destruir, 400); }
   function destruir() { E.vivo = false; ui.remove(); renderer.dispose(); renderer.domElement.remove(); }
@@ -83,7 +83,7 @@ export function iniciar(cont, cfg, cb) {
   const reloj = new THREE.Clock(); let hudT = 0;
   function paso(dt) {
     const tt = reloj.elapsedTime;
-    if (E.activo) { E.t -= dt; E.cd -= dt; E.cdPuerta -= dt; E.boost = Math.max(0, E.boost - dt); E.lento = Math.max(0, E.lento - dt); E.v = (16 + (cfg.duracion - E.t) * .22) * (E.boost > 0 ? 1.45 : 1) * (E.lento > 0 ? .55 : 1);
+    if (E.activo) { E.t -= dt; E.cd -= dt; E.cdPuerta -= dt; E.boost = Math.max(0, E.boost - dt); E.lento = Math.max(0, E.lento - dt); const cerca = E.puertas.some(p => !p.hecho && p.z > -75); E.v = (11 + (cfg.duracion - E.t) * .1) * (E.boost > 0 ? 1.35 : 1) * (E.lento > 0 ? .6 : 1) * (cerca ? .6 : 1);   // slower, and slower still while reading a gate
       if (E.cd <= 0 && !E.puertas.some(p => p.z < -35)) { spawn(); E.cd = Math.max(.55, 1.15 - (cfg.duracion - E.t) * .012); }
       if (pregs.length && E.cdPuerta <= 0 && E.t > 6) { puerta(); E.cdPuerta = 11; } }
     const mov = E.v * dt; tex.offset.y -= mov / 7.5;
