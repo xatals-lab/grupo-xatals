@@ -178,5 +178,15 @@
       "buxai",
       "wilhelm"
     ]
+  },
+  {
+    "autor": "dug",
+    "frase": "Hermekue, todas esas anécdotas que te estamos contando las estás memorizando para futura referencia, no?",
+    "opciones": [
+      "dug",
+      "hrk",
+      "koi",
+      "tejedor"
+    ]
   }
 ]

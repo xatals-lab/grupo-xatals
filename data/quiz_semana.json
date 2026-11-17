@@ -1,101 +1,93 @@
 {
-  "semana": "2026-W47",
-  "titulo": "Príncipes, peregrinos y el rastro de Koi",
   "preguntas": [
     {
-      "pregunta": "¿Quién contó la anécdota del Camino Primitivo?",
+      "correcta": 1,
       "opciones": [
         "Dug",
         "Héctor (HRK)",
         "Koi",
         "PheDiox"
       ],
-      "correcta": 1,
-      "dato": "Héctor contó el episodio del primer albergue."
+      "pregunta": "¿Quién contó la anécdota del Camino Primitivo?"
     },
     {
-      "pregunta": "¿Quién se quejó del albergue?",
-      "opciones": [
-        "PheDiox",
-        "Dug",
-        "Koi",
-        "El dueño"
-      ],
       "correcta": 0,
-      "dato": "PheDiox protestó al llegar al alojamiento precario."
-    },
-    {
-      "pregunta": "¿Qué preguntó el dueño?",
       "opciones": [
-        "¿Quién paga la cena?",
-        "¿Dónde está Koi?",
         "¿Príncipes o peregrinos?",
-        "¿Queréis otra cama?"
+        "¿Pica o txakoli?",
+        "¿Habitación o establo?",
+        "¿Quién ha perdido el mapa?"
       ],
+      "pregunta": "¿Qué dijo el dueño del albergue?"
+    },
+    {
       "correcta": 2,
-      "dato": "La frase quedó como remate del Camino."
+      "opciones": [
+        "Koi",
+        "HRK",
+        "PheDiox",
+        "Dug"
+      ],
+      "pregunta": "¿Quién protestó al llegar al albergue precario?"
     },
     {
-      "pregunta": "¿Qué compartió Héctor sobre el Azkena?",
-      "opciones": [
-        "Una foto de Mendizorroza",
-        "El cartel por días",
-        "Una lista de alojamientos",
-        "Una encuesta de entradas"
-      ],
-      "correcta": 1,
-      "dato": "Héctor enlazó el cartel por días del festival."
-    },
-    {
-      "pregunta": "¿Qué pidió Dug analizar sobre Koi?",
-      "opciones": [
-        "Su actividad por semanas",
-        "Sus días y horas de participación",
-        "Su colección de camisetas",
-        "Su asistencia al Camino"
-      ],
       "correcta": [
-        0,
-        1
+        1,
+        2
       ],
-      "dato": "Dug pidió un gráfico semanal y un análisis de días y horas."
+      "opciones": [
+        "Dug y Koi",
+        "Koi y PheDiox",
+        "HRK y PheDiox",
+        "Dug y HRK"
+      ],
+      "pregunta": "¿Quiénes hicieron el Camino con Héctor?"
     },
     {
-      "pregunta": "¿Qué temas sacó Dug en el debate de vivienda?",
+      "correcta": 1,
       "opciones": [
-        "Ahorro y sacrificios",
-        "Compra de casa",
-        "Ayudas a la vivienda",
-        "Las tres primeras"
+        "Eibar",
+        "RC Deportivo",
+        "Mirandés",
+        "Burgos"
       ],
+      "pregunta": "¿Qué equipo juega contra el Alavés el 21 de noviembre?"
+    },
+    {
+      "correcta": 2,
+      "opciones": [
+        "12:00",
+        "13:00",
+        "14:00",
+        "16:15"
+      ],
+      "pregunta": "¿A qué hora está previsto el partido, hora de Madrid?"
+    },
+    {
       "correcta": [
         0,
         1,
         2
       ],
-      "dato": "El hilo trató esos tres aspectos de la vivienda."
+      "opciones": [
+        "Dug",
+        "Héctor (HRK)",
+        "Koi",
+        "Nadie todavía"
+      ],
+      "pregunta": "¿Quiénes tienen pronóstico registrado para ese partido?"
     },
     {
-      "pregunta": "¿A quién pidió Dug imaginar opiniones sobre el debate?",
-      "opciones": [
-        "A los jugadores del Alavés",
-        "A compañeros y profesores de Marianistas",
-        "A los organizadores del Azkena",
-        "Al dueño del albergue"
-      ],
       "correcta": 1,
-      "dato": "Dug pidió imaginar qué opinarían compañeros y profesores."
-    },
-    {
-      "pregunta": "¿Qué hizo Koi en el grupo durante el hilo reciente?",
       "opciones": [
-        "Confirmó el día del Azkena",
-        "Contó la historia del albergue",
-        "Su participación fue escasa",
-        "Pidió cambiar la fecha del partido"
+        "¿Peregrinos o recepcionistas?",
+        "¿Príncipes o peregrinos?",
+        "¿Suite o Mendizorroza?",
+        "¿Txakoli o desayuno?"
       ],
-      "correcta": 2,
-      "dato": "Héctor preguntó por Koi, y Dug pidió revisar su actividad."
+      "pregunta": "¿Qué frase resume el dilema del albergue?"
     }
-  ]
+  ],
+  "semana": "2026-W47",
+  "titulo": "¿Príncipes o peregrinos? El examen semanal"
 }

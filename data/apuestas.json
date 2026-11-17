@@ -1,53 +1,53 @@
 {
-  "jornada": "RC Deportivo",
-  "partido": "Alavés - RC Deportivo",
-  "fecha": "2026-11-21 14:00",
+  "fecha": "2026-11-21T14:00:00+01:00",
   "fichas_iniciales": 100,
+  "jornada": "2026-11-21",
   "mercados": [
     {
-      "id": "depor-alaves-1",
+      "cuota": 2.1,
       "grupo": "1x2",
-      "texto": "Gana el Alavés",
-      "cuota": 2.4,
-      "prob": 0.42
+      "id": "resultado-1",
+      "prob": 0.45,
+      "texto": "Gana el Alavés"
     },
     {
-      "id": "depor-empate-x",
-      "grupo": "1x2",
-      "texto": "Empate",
       "cuota": 3.2,
-      "prob": 0.28
-    },
-    {
-      "id": "depor-alaves-2",
       "grupo": "1x2",
-      "texto": "Gana el RC Deportivo",
-      "cuota": 3.4,
-      "prob": 0.3
+      "id": "resultado-x",
+      "prob": 0.3,
+      "texto": "Empate"
     },
     {
-      "id": "koi-contesta",
-      "texto": "Koi confirma el día del Azkena antes del pitido inicial",
-      "cuota": 8,
-      "prob": 0.12
+      "cuota": 3.8,
+      "grupo": "1x2",
+      "id": "resultado-2",
+      "prob": 0.25,
+      "texto": "Gana el RC Deportivo"
     },
     {
-      "id": "phediox-queja",
-      "texto": "PheDiox protesta por algo en un albergue imaginario",
-      "cuota": 1.4,
-      "prob": 0.72
+      "cuota": 4,
+      "id": "paraguas-arbitro",
+      "prob": 0.3,
+      "texto": "El árbitro consulta el pronóstico antes del saque"
     },
     {
-      "id": "hrk-seis",
-      "texto": "El HRK responde con menos de seis palabras",
-      "cuota": 1.8,
-      "prob": 0.6
+      "cuota": 12,
+      "id": "koi-grada",
+      "prob": 0.05,
+      "texto": "Koi aparece en Mendizorroza sin que nadie le lleve el carnet"
     },
     {
-      "id": "dug-grafico-x",
-      "texto": "Dug pide otro gráfico de actividad de Koi",
-      "cuota": 2.2,
-      "prob": 0.38
+      "cuota": 2.5,
+      "id": "pica-descanso",
+      "prob": 0.4,
+      "texto": "Alguien pide pica en el descanso y pierde el respeto de la grada"
+    },
+    {
+      "cuota": 3,
+      "id": "gol-celebrado",
+      "prob": 0.25,
+      "texto": "El Alavés marca y la cuadrilla celebra como si no lloviera"
     }
-  ]
+  ],
+  "partido": "Alavés-RC Deportivo"
 }

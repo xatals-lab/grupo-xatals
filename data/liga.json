@@ -1,5 +1,12 @@
 {
-  "partidos": [],
+  "partidos": [
+    {
+      "rival": "RC Deportivo",
+      "fecha": "2026-11-21",
+      "resultado": "",
+      "pronosticos": []
+    }
+  ],
   "ranking": [],
   "comentarios": {}
 }
