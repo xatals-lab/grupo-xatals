@@ -1,8 +1,8 @@
 """Generates the static HTML pages (run: python make_pages.py). Code only: Hermek never needs to touch this."""
 HEAD = ('<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">'
         '<title>{t} · Grupo Xatals</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
-        '<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Press+Start+2P&display=swap" rel="stylesheet">'
-        '<link rel="stylesheet" href="css/style.css"><script src="js/common.js"></script></head><body><main>\n')
+        '<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Press+Start+2P&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">'
+        '<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/premium.css"><script src="js/common.js"></script></head><body><main>\n')
 
 def card(href, em, title, text, nuevo=False):
     n = '<span class="nuevo">NUEVO</span>' if nuevo else ""
@@ -24,7 +24,15 @@ PAGES = {
 <h1>GRUPO XATALS</h1><p>Dug · HRK · Koi · y media cuadrilla del cole armando lío</p><a class="btn rosa" href="juegos.html">▶ Jugar</a><a class="btn cian" href="quizsemana.html">Quiz de la semana</a></div>
 <div class="ticker"><span id="tk">Cargando bulos de la cuadrilla…</span></div>
 <div id="semana" class="panel rev">Cargando novedades…</div>
-<div class="grid">{card("recreo.html","🥊","Buxai en el recreo","Puñetazos, esquivas y bombones.",True)}{card("quizsemana.html","🧠","Quiz de la semana","¿Quién se acuerda de todo lo que hemos dicho?",True)}{card("records.html","🏆","Hall of Fame","Quién manda en la cuadrilla, con corona incluida.")}</div>""",
+<div class="bento">
+<div class="bloque s4"><a class="card destacado" href="futbol.html"><span class="nuevo">3D</span><span class="vista">⚽</span><span class="em">⚽</span><h3>Tejedor al fútbol en 3D</h3><p>Penaltis en el patio de cemento del cole, con el edificio de Santa María al fondo. Cinco tiras tú, cinco paras tú.</p></a></div>
+<div class="bloque"><a class="card" href="quizsemana.html"><span class="em">🧠</span><h3>Quiz de la semana</h3><p>¿Quién se acuerda de todo lo que hemos dicho?</p></a></div>
+<div class="bloque"><a class="card" href="paneles.html"><span class="em">📊</span><h3>Paneles</h3><p>Datos reales del chat: horas, días y silencios de Koi.</p></a></div>
+<div class="bloque"><a class="card" href="records.html"><span class="em">🏆</span><h3>Hall of Fame</h3><p>Quién manda en la cuadrilla, con corona.</p></a></div>
+<div class="bloque"><a class="card" href="recreo.html"><span class="em">🥊</span><h3>Buxai en el recreo</h3><p>Puñetazos, esquivas y bombones.</p></a></div>
+<div class="bloque s3"><a class="card" href="juegos.html"><span class="em">🕹️</span><h3>Todos los juegos</h3><p>Más de 20 y creciendo: Hermek inventa más cada viernes con vuestras anécdotas.</p></a></div>
+<div class="bloque s3"><a class="card" href="chistes.html"><span class="em">😂</span><h3>Chistes</h3><p>La máquina de la cuadrilla, por temas.</p></a></div>
+</div>""",
  '<script>cargaJSON("semana").then(s=>{document.getElementById("semana").innerHTML="<h3>📰 "+s.titulo+" <span class=\'pill\'>"+s.actualizado+"</span></h3>"+s.resumen+" <a href=\'semana.html\'>Ver más</a>";}).catch(()=>{document.getElementById("semana").remove()});cargaJSON("chistes").then(c=>{const t=baraja(c).slice(0,8).map(x=>x.texto).join("  ★  ");document.getElementById("tk").textContent=t+"  ★  "+t;}).catch(()=>{});</script>'),
 "juegos": ("Juegos", f'<h1>Juegos</h1><div class="grid">{games_cards}</div><h2>🔥 Más juegos de la cuadrilla</h2><p>Hermek se inventa más cada semana con vuestras anécdotas.</p><div class="grid" id="mjs"></div>', '<script src="js/juegos.js"></script>'),
 "bar": ("El Bar", """<h1>🍺 El Bar</h1>
@@ -41,11 +49,10 @@ PAGES = {
 <div class="fighters"><div class="big" id="tu">🧔</div><div class="big" id="bx">😤</div></div><div class="msg" id="msg">Pulsa EMPEZAR</div></div>
 <p><button id="izq">⬅ Esquiva izq.</button><button id="der">Esquiva der. ➡</button><button class="rosa" id="pega">👊 PEGA</button><button class="cian" id="start">▶ EMPEZAR</button></p><div id="rec"></div>""", '<script src="js/recreo.js"></script>'),
 "futbol": ("Tejedor al fútbol", """<h1>⚽ Tejedor al fútbol</h1>
-<p>Tanda de penaltis contra Tejedor, que con 41 años tiene cuerpo de 20 y acaba todo a patadas. Para la barra de potencia y puntería con <b>Espacio</b> o el botón. Después paras tú. Va a ser difícil.</p>
-<div class="arena" id="arena"><div class="hud"><span id="marc">TÚ 0 - 0 TEJEDOR</span><span id="ronda">Ronda 1/5</span></div>
-<div class="fighters"><div class="big" id="porter">🧤</div><div class="big">⚽</div></div>
-<div style="padding:0 1rem 1rem"><div class="bar"><i id="medidor" style="width:0"></i></div><div class="msg" id="msg">Pulsa EMPEZAR</div></div></div>
-<p><button class="sec" id="b0">⬅ Izq.</button><button class="sec" id="b1">⬆ Centro</button><button class="sec" id="b2">Der. ➡</button><button class="rosa" id="para">⚽ CHUTA</button><button class="cian" id="start">▶ EMPEZAR</button></p><div id="rec"></div>""", '<script src="js/futbol.js"></script>'),
+<p>Penaltis en el patio de cemento del cole contra Tejedor: cinco tiras tú y cinco paras tú. Él lee tu disparo casi siempre. Las escuadras no las llega a parar, pero se te pueden ir.</p>
+<div class="arena" id="arena3d"><div class="hud"><span id="marc">TÚ 0 - 0 TEJEDOR</span><span id="ronda">Ronda 1/5</span></div>
+<div id="lienzo3d" class="lienzo3d"></div><div class="msg" id="msg">Cargando el patio…</div><p id="modo" style="text-align:center;margin:.2rem"></p></div>
+<p><button class="rosa" id="tirar" style="display:none">⚽ TIRAR</button><span id="botonesP" style="display:none"><button class="sec" id="b0">⬅ Izq.</button><button class="sec" id="b1">⬆ Centro</button><button class="sec" id="b2">Der. ➡</button></span><button class="cian" id="start">▶ EMPEZAR</button></p><div id="rec"></div>""", '<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script><script type="module" src="js/futbol3d.js"></script>'),
 "examen": ("Copiar al Bacterio", """<h1>🧪 Copiar al Bacterio</h1>
 <p>Mantén <b>COPIAR</b> (o la tecla Espacio) para ver el examen de Koi. Cuando el Bacterio se gira, <b>suelta</b>. Si te pilla copiando: <i>vaya examen, señor Urrutia</i>.</p>
 <div class="arena" id="arena"><div class="hud"><span>COPIADO <div class="bar" style="width:160px"><i id="cop"></i></div></span><span id="tiempo">60</span><span>SOSPECHA <div class="bar mal" style="width:140px"><i id="sos"></i></div></span></div>
