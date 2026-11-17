@@ -17,14 +17,14 @@ const setHud=t=>hud.innerHTML=t;
 const say=t=>msg.textContent=t;
 function fin(p,texto){activo=false;pts=Math.max(0,Math.round(p));say((pts>0?euOk():euKo())+(texto||"Fin"));$("start").disabled=false;$("start").textContent="↻ Otra vez";if(pts>0)confeti();panelRecord(rec,"mj-"+G.id,pts,"Puntos de "+G.titulo);}
 const AYUDA={
- pulsa:["👆","Toca los BUENOS y no toques los MALOS","Cada acierto suma puntos. Cada fallo resta. Se acelera según pasa el tiempo."],
- timing:["⏹","Toca PARA cuando la aguja esté en la zona VERDE","La zona se hace más pequeña en cada ronda."],
- aguanta:["🗣","MANTÉN pulsado el botón y SUELTA en la zona verde","Mientras mantienes, la palabra se estira. Suelta justo en la zona."],
- busca:["🔍","Encuentra el objetivo entre todos y TÓCALO","Si fallas, pierdes puntos. El tiempo corre."],
- simon:["🧠","MIRA la secuencia y REPÍTELA tocando los botones","Cada ronda es más larga."],
- ritmo:["🎸","Toca la columna cuando la nota cruce la LÍNEA AMARILLA","Encadena notas seguidas para subir el combo."],
+ pulsa:["👆","TOCA lo bueno que sale de los agujeros y NO toques lo malo","Cada acierto suma puntos. Cada fallo resta. Se acelera con el tiempo."],
+ timing:["⏹","TOCA la pantalla para parar la bola sobre la zona VERDE","La zona se hace más pequeña en cada ronda."],
+ aguanta:["🗣","MANTÉN pulsado para hinchar el globo y SUELTA cuando toque el anillo verde","Mientras mantienes, la palabra se estira. Suelta justo en el anillo."],
+ busca:["🔍","Encuentra el objetivo entre toda la multitud y TÓCALO","La cámara se mueve sola. Si fallas, pierdes puntos y el tiempo corre."],
+ simon:["🧠","MIRA qué plataformas se iluminan y REPÍTELO tocándolas","Cada ronda es más larga."],
+ ritmo:["🎸","Las notas vienen hacia ti: pulsa su carril cuando crucen la LÍNEA AMARILLA","Encadena notas seguidas para subir el combo."],
  runner:["↔️","DESLIZA a izquierda o derecha para cambiar de carril","Coge lo bueno, esquiva lo malo. Tienes 3 vidas."],
- apila:["⬇️","Toca SUELTA para colocar el bloque justo encima del anterior","Lo que sobresale se pierde. ¡Llega al piso 12!"],
+ apila:["⬇️","TOCA la pantalla para soltar el bloque justo encima del anterior","Lo que sobresale se cae. ¡Llega al piso 12!"],
  carril3d:["🚆","DESLIZA a izquierda o derecha (o toca los lados) para cambiar de vía","Coge lo bueno, esquiva lo malo y, cuando veas los carteles, ELIGE la vía con la respuesta correcta para acelerar."]};
 function ayuda(cb,forzar){const k="xatals_ayuda_"+G.plantilla;if(!forzar&&localStorage.getItem(k)){cb();return;}const a=G.ayuda||AYUDA[G.plantilla]||["🎮","Sigue las instrucciones","¡Suerte!"];
   const m=document.createElement("div");m.className="modal";m.innerHTML=`<div class="modal-in" style="text-align:center"><div style="font-size:4rem">${a[0]}</div><h2>Cómo se juega</h2><p style="font-size:1.2rem"><b>${a[1]}</b></p><p>${a[2]}</p><button class="rosa" id="entendido">¡Entendido, a jugar!</button></div>`;document.body.append(m);
@@ -168,4 +168,9 @@ carril3d(g){
   import("./carril3d.js").then(m=>m.iniciar($("c3d"),g,{hud:setHud,say,fin})).catch(e=>{console.error(e);say("Tu navegador no puede abrir el 3D. Prueba con Chrome o Safari actualizados.");fin(0,"3D no disponible");});
 }
 };
+/* every template now runs in 3D (js/juegos3d.js, js/carril3d.js); the old 2D version stays only as a fallback if WebGL is unavailable */
+for(const k of ["pulsa","apila","busca","ritmo","simon","timing","aguanta"]){const viejo=TPL[k];TPL[k]=(g)=>{arena.innerHTML='<div id="c3d" class="lienzo3d"></div>';
+  import("./juegos3d.js").then(m=>m[k]($("c3d"),g,{hud:setHud,say,fin})).catch(e=>{console.error(e);arena.innerHTML="";viejo(g);});};}
+{const viejoRunner=TPL.runner;TPL.runner=(g)=>{TPL.carril3d({...g,tema:g.tema||"calle"});};}
+
 })().catch(e=>{document.getElementById("mj").textContent="No he podido cargar el minijuego.";console.error(e)});

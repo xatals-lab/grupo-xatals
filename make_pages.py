@@ -16,7 +16,6 @@ GAMES = [
     ("examen.html", "🧪", "Copiar al Bacterio", "3D: copia a Koi mientras el Bacterio no mira.", True),
     ("examen-maketo.html", "📖", "El examen del Maketo", "3D: filosofía imposible. Suspendes siempre... hasta que se jubila.", True),
     ("mus.html", "🃏", "Mus en el Bar Kupula", "2º Bachillerato: Dug y HRK contra el Rizos y Wilhelm. Con Koi de camarero.", True),
-    ("bar.html", "🍺", "El Bar", "La cuadrilla en la barra y los del cole entrando uno a uno.", False),
     ("apuestas.html", "🎰", "Apuestas del Alavés", "Cuotas absurdas y fichas ficticias.", False),
 ]
 games_cards = "\n".join(card(*g) for g in GAMES)
