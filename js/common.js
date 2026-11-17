@@ -2,8 +2,8 @@ document.documentElement.classList.add("js");
 const SITE_URL="https://educadug.github.io/grupo-xatals/";
 const SALT="xatals-2026";
 const JUGADORES={dug:"Dug",hrk:"HRK (Héctor)",koi:"Koi (Íñigo)"};
-const NAV=[["index.html","Inicio"],["juegos.html","Juegos"],["quizsemana.html","Quiz semanal"],["records.html","Hall of Fame"],["chistes.html","Chistes"],["semana.html","Esta semana"]];
-const AGRUPA={"bar.html":"juegos.html","recreo.html":"juegos.html","futbol.html":"juegos.html","examen.html":"juegos.html","apuestas.html":"juegos.html","quiz.html":"juegos.html"};
+const NAV=[["index.html","Inicio"],["juegos.html","Juegos"],["paneles.html","Paneles"],["quizsemana.html","Quiz semanal"],["records.html","Hall of Fame"],["chistes.html","Chistes"],["semana.html","Esta semana"]];
+const AGRUPA={"bar.html":"juegos.html","recreo.html":"juegos.html","futbol.html":"juegos.html","examen.html":"juegos.html","apuestas.html":"juegos.html","quiz.html":"juegos.html","mj.html":"juegos.html"};
 function pintaCabecera(){
   let actual=location.pathname.split("/").pop()||"index.html";actual=AGRUPA[actual]||actual;
   const h=document.createElement("header");h.className="top";
@@ -38,4 +38,7 @@ function panelRecord(el,juego,puntos,etiqueta){
     el.querySelector("#cp").onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(c);el.querySelector("#cp").textContent="✅ Copiado";};}
   sel.onchange=act;act();
 }
-document.addEventListener("DOMContentLoaded",pintaCabecera);
+/* ---- arcade feel: retro beeps (mutable) and confetti ---- */
+let _ac=null;function sonido(f,d=.1){if(localStorage.getItem("xatals_mute")==="1")return;try{_ac=_ac||new (window.AudioContext||window.webkitAudioContext)();const o=_ac.createOscillator(),g=_ac.createGain();o.type="square";o.frequency.value=f;g.gain.value=.05;o.connect(g);g.connect(_ac.destination);o.start();o.stop(_ac.currentTime+d);}catch(e){}}
+function confeti(){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;const c=document.createElement("canvas");c.style.cssText="position:fixed;inset:0;pointer-events:none;z-index:120";c.width=innerWidth;c.height=innerHeight;document.body.append(c);const x=c.getContext("2d"),cols=["#ffe500","#ff2e93","#00e5ff","#39ff14","#fff"];const p=Array.from({length:120},()=>({x:innerWidth/2,y:innerHeight*.6,vx:(Math.random()-.5)*14,vy:-Math.random()*16-4,s:4+Math.random()*6,c:azar(cols),r:Math.random()*6}));let n=0;(function f(){x.clearRect(0,0,c.width,c.height);p.forEach(q=>{q.x+=q.vx;q.y+=q.vy;q.vy+=.45;q.r+=.2;x.fillStyle=q.c;x.save();x.translate(q.x,q.y);x.rotate(q.r);x.fillRect(-q.s/2,-q.s/2,q.s,q.s*.6);x.restore();});if(++n<110)requestAnimationFrame(f);else c.remove();})();}
+document.addEventListener("DOMContentLoaded",()=>{pintaCabecera();const m=document.createElement("button");m.className="sec mute";m.title="Sonido";const u=()=>m.textContent=localStorage.getItem("xatals_mute")==="1"?"🔇":"🔊";u();m.onclick=()=>{localStorage.setItem("xatals_mute",localStorage.getItem("xatals_mute")==="1"?"0":"1");u();};document.querySelector("header.top").append(m);});

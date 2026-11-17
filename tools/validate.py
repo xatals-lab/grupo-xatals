@@ -1,5 +1,5 @@
 """Validates the data files so a bad weekly update never reaches the live site. Exit 1 on any error."""
-import json, sys, os
+import json, sys, os, re
 D = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
 err = []
 def load(n):
@@ -7,7 +7,7 @@ def load(n):
         return json.load(open(os.path.join(D, n + ".json"), encoding="utf-8"))
     except Exception as e:
         err.append(f"{n}.json: {e}"); return None
-p, a, f, c, s, rk, qs = (load(n) for n in ("personajes", "apuestas", "frases", "chistes", "semana", "ranking", "quiz_semana"))
+p, a, f, c, s, rk, qs, mj = (load(n) for n in ("personajes", "apuestas", "frases", "chistes", "semana", "ranking", "quiz_semana", "minijuegos"))
 ids = set()
 if p:
     for x in p.get("cuadrilla", []) + p.get("invitados", []):

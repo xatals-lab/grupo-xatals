@@ -1,0 +1,399 @@
+{
+ "generado": "2026-11-17",
+ "desde": "2026-07-27",
+ "total": 645,
+ "personas": [
+  {
+   "id": "dug",
+   "mensajes": 339,
+   "palabras": 4821,
+   "insultos": 13,
+   "preguntas": 145,
+   "exclamaciones": 12,
+   "largos": 20,
+   "dias_sin_hablar": 4.0,
+   "mayor_silencio_dias": 7.7
+  },
+  {
+   "id": "hrk",
+   "mensajes": 211,
+   "palabras": 1535,
+   "insultos": 7,
+   "preguntas": 67,
+   "exclamaciones": 13,
+   "largos": 1,
+   "dias_sin_hablar": 5.0,
+   "mayor_silencio_dias": 14.0
+  },
+  {
+   "id": "koi",
+   "mensajes": 95,
+   "palabras": 457,
+   "insultos": 0,
+   "preguntas": 3,
+   "exclamaciones": 9,
+   "largos": 0,
+   "dias_sin_hablar": 4.5,
+   "mayor_silencio_dias": 8.3
+  }
+ ],
+ "horas": {
+  "dug": [
+   5,
+   10,
+   0,
+   3,
+   5,
+   4,
+   9,
+   10,
+   27,
+   29,
+   37,
+   24,
+   13,
+   25,
+   20,
+   5,
+   7,
+   10,
+   9,
+   3,
+   9,
+   23,
+   33,
+   19
+  ],
+  "hrk": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   2,
+   0,
+   7,
+   9,
+   17,
+   17,
+   30,
+   28,
+   13,
+   6,
+   2,
+   10,
+   1,
+   17,
+   24,
+   8,
+   18,
+   1
+  ],
+  "koi": [
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2,
+   5,
+   13,
+   9,
+   10,
+   8,
+   3,
+   9,
+   7,
+   3,
+   6,
+   1,
+   0,
+   7,
+   1,
+   5,
+   4
+  ]
+ },
+ "dias": {
+  "dug": [
+   43,
+   48,
+   59,
+   39,
+   53,
+   51,
+   46
+  ],
+  "hrk": [
+   28,
+   59,
+   36,
+   24,
+   14,
+   23,
+   27
+  ],
+  "koi": [
+   14,
+   20,
+   17,
+   12,
+   9,
+   8,
+   15
+  ]
+ },
+ "semanas": [
+  {
+   "semana": "2026-W35",
+   "dug": 7,
+   "hrk": 8,
+   "koi": 4
+  },
+  {
+   "semana": "2026-W36",
+   "dug": 16,
+   "hrk": 6,
+   "koi": 3
+  },
+  {
+   "semana": "2026-W37",
+   "dug": 7,
+   "hrk": 4,
+   "koi": 1
+  },
+  {
+   "semana": "2026-W38",
+   "dug": 7,
+   "hrk": 8,
+   "koi": 2
+  },
+  {
+   "semana": "2026-W39",
+   "dug": 3,
+   "hrk": 2,
+   "koi": 4
+  },
+  {
+   "semana": "2026-W40",
+   "dug": 3,
+   "hrk": 0,
+   "koi": 4
+  },
+  {
+   "semana": "2026-W41",
+   "dug": 35,
+   "hrk": 12,
+   "koi": 7
+  },
+  {
+   "semana": "2026-W42",
+   "dug": 10,
+   "hrk": 8,
+   "koi": 3
+  },
+  {
+   "semana": "2026-W43",
+   "dug": 8,
+   "hrk": 7,
+   "koi": 4
+  },
+  {
+   "semana": "2026-W44",
+   "dug": 17,
+   "hrk": 12,
+   "koi": 7
+  },
+  {
+   "semana": "2026-W45",
+   "dug": 18,
+   "hrk": 4,
+   "koi": 5
+  },
+  {
+   "semana": "2026-W46",
+   "dug": 30,
+   "hrk": 25,
+   "koi": 7
+  }
+ ],
+ "palabras": {
+  "dug": [
+   [
+    "hermes",
+    134
+   ],
+   [
+    "file",
+    48
+   ],
+   [
+    "saved",
+    26
+   ],
+   [
+    "hermek",
+    26
+   ],
+   [
+    "image",
+    20
+   ],
+   [
+    "email",
+    19
+   ],
+   [
+    "héctor",
+    17
+   ],
+   [
+    "puedes",
+    15
+   ],
+   [
+    "opinas",
+    14
+   ],
+   [
+    "vitoria",
+    13
+   ],
+   [
+    "íñigo",
+    13
+   ],
+   [
+    "está",
+    11
+   ],
+   [
+    "chat",
+    11
+   ],
+   [
+    "quinto",
+    10
+   ]
+  ],
+  "hrk": [
+   [
+    "hermes",
+    86
+   ],
+   [
+    "file",
+    71
+   ],
+   [
+    "saved",
+    37
+   ],
+   [
+    "image",
+    32
+   ],
+   [
+    "ddddiiooooooossss",
+    22
+   ],
+   [
+    "hermek",
+    16
+   ],
+   [
+    "está",
+    8
+   ],
+   [
+    "kabroi",
+    7
+   ],
+   [
+    "artaburu",
+    5
+   ],
+   [
+    "marikoi",
+    4
+   ],
+   [
+    "aupa",
+    4
+   ],
+   [
+    "cómo",
+    4
+   ],
+   [
+    "poca",
+    4
+   ],
+   [
+    "vacaciones",
+    4
+   ]
+  ],
+  "koi": [
+   [
+    "file",
+    11
+   ],
+   [
+    "hermes",
+    7
+   ],
+   [
+    "saved",
+    6
+   ],
+   [
+    "image",
+    5
+   ],
+   [
+    "mañana",
+    4
+   ],
+   [
+    "creo",
+    3
+   ],
+   [
+    "fino",
+    2
+   ],
+   [
+    "estar",
+    2
+   ],
+   [
+    "cosa",
+    2
+   ],
+   [
+    "antigua",
+    2
+   ],
+   [
+    "entiendo",
+    2
+   ],
+   [
+    "hecho",
+    2
+   ],
+   [
+    "clic",
+    2
+   ],
+   [
+    "dado",
+    2
+   ]
+  ]
+ }
+}

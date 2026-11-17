@@ -26,7 +26,7 @@ PAGES = {
 <div id="semana" class="panel rev">Cargando novedades…</div>
 <div class="grid">{card("recreo.html","🥊","Buxai en el recreo","Puñetazos, esquivas y bombones.",True)}{card("quizsemana.html","🧠","Quiz de la semana","¿Quién se acuerda de todo lo que hemos dicho?",True)}{card("records.html","🏆","Hall of Fame","Quién manda en la cuadrilla, con corona incluida.")}</div>""",
  '<script>cargaJSON("semana").then(s=>{document.getElementById("semana").innerHTML="<h3>📰 "+s.titulo+" <span class=\'pill\'>"+s.actualizado+"</span></h3>"+s.resumen+" <a href=\'semana.html\'>Ver más</a>";}).catch(()=>{document.getElementById("semana").remove()});cargaJSON("chistes").then(c=>{const t=baraja(c).slice(0,8).map(x=>x.texto).join("  ★  ");document.getElementById("tk").textContent=t+"  ★  "+t;}).catch(()=>{});</script>'),
-"juegos": ("Juegos", f'<h1>Juegos</h1><div class="grid">{games_cards}</div>', ""),
+"juegos": ("Juegos", f'<h1>Juegos</h1><div class="grid">{games_cards}</div><h2>🔥 Más juegos de la cuadrilla</h2><p>Hermek se inventa más cada semana con vuestras anécdotas.</p><div class="grid" id="mjs"></div>', '<script src="js/juegos.js"></script>'),
 "bar": ("El Bar", """<h1>🍺 El Bar</h1>
 <div class="panel"><div class="seats" id="seats"></div></div>
 <div class="panel meters"><div class="meter">😄 ÁNIMO<div class="bar"><i id="mAnimo"></i></div></div><div class="meter">💶 <b id="mCartera"></b> €</div><div class="meter">🍻 RONDA <b id="mRonda"></b>/<span id="mTotal"></span></div></div>
@@ -52,6 +52,9 @@ PAGES = {
 <div class="fighters"><div class="big">🧑‍🎓</div><div class="big" id="bac">🧪</div><div class="big">🧑‍💼</div></div><div class="msg" id="msg">Pulsa EMPEZAR</div></div>
 <p><button class="rosa" id="copia">👀 COPIAR (mantén)</button><button class="cian" id="start">▶ EMPEZAR</button></p><div id="rec"></div>""", '<script src="js/examen.js"></script>'),
 "quizsemana": ("Quiz de la semana", '<h1>🧠 Quiz de la semana</h1><div id="app" class="panel">Cargando…</div><div id="rec"></div>', '<script src="js/quizsemana.js"></script>'),
+"mj": ("Minijuego", """<h1 id="titulo"></h1><span class="pill" id="estrellas"></span><p id="intro"></p>
+<div id="mj"><div class="arena"><div class="hud" id="hud"></div><div id="arena" style="padding:.6rem"></div><div class="msg" id="msg">Pulsa EMPEZAR</div></div><p><button class="cian" id="start">▶ EMPEZAR</button></p><div id="rec"></div></div>""", '<script src="js/mj.js"></script>'),
+"paneles": ("Paneles", '<h1>📊 Paneles de la cuadrilla</h1><p>Datos reales del chat, recalculados por Hermek cada viernes. Todo medido, nada inventado (salvo los chistes).</p><div id="app">Cargando…</div>', '<script src="js/paneles.js"></script>'),
 "records": ("Hall of Fame", '<h1>🏆 Hall of Fame</h1><div id="app">Cargando…</div>', '<script src="js/records.js"></script>'),
 }
 for name, (title, body, script) in PAGES.items():

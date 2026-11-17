@@ -1,7 +1,8 @@
 /* Hall of Fame: reads data/ranking.json (Hermek records the signed score codes). Competition is asynchronous on purpose. */
 (async()=>{
-const r=await cargaJSON("ranking"),app=document.getElementById("app");
+const [r,mjs]=await Promise.all([cargaJSON("ranking"),cargaJSON("minijuegos")]),app=document.getElementById("app");
 const JUEGOS={recreo:["🥊","Buxai en el recreo"],futbol:["⚽","Tejedor al fútbol"],examen:["🧪","Copiar al Bacterio"],bar:["🍺","El Bar"],apuestas:["🎰","Apuestas"],frases:["🎤","¿Quién lo dijo?"]};
+mjs.juegos.forEach(g=>JUEGOS["mj-"+g.id]=[g.emoji,g.titulo]);
 const nom=j=>JUGADORES[j]||j;
 const medalla=["🥇","🥈","🥉"];
 const wins={};
