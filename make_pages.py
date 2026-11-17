@@ -1,5 +1,7 @@
+import re, time
+VER = time.strftime("%Y%m%d%H%M")
 """Generates the static HTML pages (run: python make_pages.py). Code only: Hermek never needs to touch this."""
-HEAD = ('<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">'
+HEAD = ('<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"><meta name="theme-color" content="#07070a"><meta name="robots" content="noindex,nofollow">'
         '<title>{t} · Grupo Xatals</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
         '<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Press+Start+2P&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">'
         '<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/premium.css"><script src="js/common.js"></script><script src="js/xp.js"></script></head><body><main>\n')
@@ -16,7 +18,6 @@ GAMES = [
     ("mus.html", "🃏", "Mus en el Bar Kupula", "2º Bachillerato: Dug y HRK contra el Rizos y Wilhelm. Con Koi de camarero.", True),
     ("bar.html", "🍺", "El Bar", "La cuadrilla en la barra y los del cole entrando uno a uno.", False),
     ("apuestas.html", "🎰", "Apuestas del Alavés", "Cuotas absurdas y fichas ficticias.", False),
-    ("quiz.html", "🎤", "¿Quién lo dijo?", "Adivina quién soltó cada frase.", False),
 ]
 games_cards = "\n".join(card(*g) for g in GAMES)
 
@@ -55,26 +56,26 @@ PAGES = {
 "recreo": ("Buxai en el recreo", """<h1>🥊 Buxai en el recreo</h1>
 <p>Buxai se pelea con todos. Cuando se prepara, <b>esquiva</b> (deslizando, ← → o botones). Cuando se queda abierto, <b>pega</b> (toca, Espacio o botón). Cuidado: cuando le ganas, te la devuelve por la espalda. Y los profes vigilan el patio.</p>
 <div class="arena" id="arena3d"><div class="hud"><span>TÚ <div class="bar" style="width:120px"><i id="hpTu"></i></div></span><span id="pts">0 PTS</span><span>BUXAI <div class="bar mal" style="width:120px"><i id="hpBx"></i></div></span></div>
-<div id="lienzo3d" class="lienzo3d"></div><div class="msg" id="msg">Cargando el patio…</div></div>
-<p><button id="izq">⬅ Esquiva izq.</button><button id="der">Esquiva der. ➡</button><button class="rosa" id="pega">👊 PEGA</button><button class="cian" id="start">▶ EMPEZAR</button></p><div id="rec"></div>""", '<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script><script type="module" src="js/recreo3d.js"></script>'),
+<div id="lienzo3d" class="lienzo3d"><div class="ctl3d"><button id="izq">⬅</button><button class="rosa" id="pega">👊</button><button id="der">➡</button></div></div><div class="msg" id="msg">Cargando el patio…</div></div>
+<p><button class="cian" id="start">▶ EMPEZAR</button></p><div id="rec"></div>""", '<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script><script type="module" src="js/recreo3d.js"></script>'),
 "futbol": ("Tejedor al fútbol", """<h1>⚽ Tejedor al fútbol</h1>
 <p>Penaltis en el patio de cemento del cole contra Tejedor: cinco tiras tú y cinco paras tú. Él lee tu disparo casi siempre. Las escuadras no las llega a parar, pero se te pueden ir.</p>
 <div class="arena" id="arena3d"><div class="hud"><span id="marc">TÚ 0 - 0 TEJEDOR</span><span id="ronda">Ronda 1/5</span></div>
-<div id="lienzo3d" class="lienzo3d"></div><div class="msg" id="msg">Cargando el patio…</div><p id="modo" style="text-align:center;margin:.2rem"></p></div>
-<p><button class="rosa" id="tirar" style="display:none">⚽ TIRAR</button><span id="botonesP" style="display:none"><button class="sec" id="b0">⬅ Izq.</button><button class="sec" id="b1">⬆ Centro</button><button class="sec" id="b2">Der. ➡</button></span><button class="cian" id="start">▶ EMPEZAR</button></p><div id="rec"></div>""", '<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script><script type="module" src="js/futbol3d.js"></script>'),
+<div id="lienzo3d" class="lienzo3d"><div class="ctl3d"><button class="rosa" id="tirar" style="display:none">⚽ TIRAR</button><span id="botonesP" style="display:none"><button class="sec" id="b0">⬅</button><button class="sec" id="b1">⬆</button><button class="sec" id="b2">➡</button></span></div></div><div class="msg" id="msg">Cargando el patio…</div><p id="modo" style="text-align:center;margin:.2rem"></p></div>
+<p><button class="cian" id="start">▶ EMPEZAR</button></p><div id="rec"></div>""", '<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script><script type="module" src="js/futbol3d.js"></script>'),
 "examen": ("Copiar al Bacterio", """<h1>🧪 Copiar al Bacterio</h1>
 <p>Estás en tu pupitre de Santa María. Mantén <b>COPIAR</b> (o la tecla Espacio) para mirar el examen de Koi. Cuando el Bacterio se gira, <b>suelta</b>. Si te pilla: «vaya examen, señor Urrutia».</p>
 <div class="arena"><div class="hud"><span>COPIADO <div class="bar" style="width:150px"><i id="cop"></i></div></span><span id="tiempo">60s</span><span>SOSPECHA <div class="bar mal" style="width:130px"><i id="sos"></i></div></span></div>
-<div id="lienzo3d" class="lienzo3d"></div><div class="msg" id="msg">Cargando el aula…</div></div>
-<p><button class="rosa" id="copia">👀 COPIAR (mantén)</button><button class="cian" id="start">▶ EMPEZAR</button></p><div id="rec"></div>""", '<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script><script>window.MODO_EXAMEN="bacterio"</script><script type="module" src="js/examen3d.js"></script>'),
+<div id="lienzo3d" class="lienzo3d"><div class="ctl3d"><button class="rosa" id="copia">👀 COPIAR (mantén)</button></div></div><div class="msg" id="msg">Cargando el aula…</div></div>
+<p><button class="cian" id="start">▶ EMPEZAR</button></p><div id="rec"></div>""", '<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script><script>window.MODO_EXAMEN="bacterio"</script><script type="module" src="js/examen3d.js"></script>'),
 "examen-maketo": ("Examen de filosofía", """<h1>📖 Examen de filosofía de Miguel Valladolid</h1>
 <p>El Maketo suspendió a casi todos. Aquí también: es imposible aprobar. Aguanta las seis preguntas orales... hasta que lleguen las Navidades.</p>
 <div class="arena"><div class="hud"><span>EXAMEN ORAL</span><span>FILOSOFÍA · 2º BACHILLERATO</span></div>
 <div id="lienzo3d" class="lienzo3d"></div><div class="msg" id="msg">Cargando el aula…</div><div id="preg" style="padding:.6rem 1rem 1rem"></div></div>
 <p><button class="cian" id="start">▶ EMPEZAR EL EXAMEN</button></p><div id="rec"></div>""", '<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script><script>window.MODO_EXAMEN="maketo"</script><script type="module" src="js/examen3d.js"></script>'),
-"quizsemana": ("Quiz de la semana", '<h1>🧠 Quiz de la semana</h1><div id="app" class="panel">Cargando…</div><div id="rec"></div>', '<script src="js/quizsemana.js"></script>'),
+"quizsemana": ("Quiz de la semana", '<h1>🧠 Quiz de la semana</h1><div id="app" class="panel">Cargando…</div><div id="rec"></div><p><a class="btn sec" href="quiz.html">🎤 Otro quiz: ¿Quién lo dijo?</a></p>', '<script src="js/quizsemana.js"></script>'),
 "mj": ("Minijuego", """<h1 id="titulo"></h1><span class="pill" id="estrellas"></span><p id="intro"></p>
-<div id="mj"><div class="arena"><div class="hud" id="hud"></div><div id="arena" style="padding:.6rem"></div><div class="msg" id="msg">Pulsa EMPEZAR</div></div><p><button class="cian" id="start">▶ EMPEZAR</button></p><div id="rec"></div></div>""", '<script src="js/mj.js"></script>'),
+<div id="mj"><div class="arena"><div class="hud" id="hud"></div><div id="arena" style="padding:.6rem"></div><div class="msg" id="msg">Pulsa EMPEZAR</div></div><p><button class="cian" id="start">▶ EMPEZAR</button></p><div id="rec"></div></div>""", '<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script><script src="js/mj.js"></script>'),
 "paneles": ("Paneles", '<h1>📊 Paneles de la cuadrilla</h1><p>Datos reales del chat, recalculados por Hermek cada viernes. Todo medido, nada inventado (salvo los chistes).</p><div id="app">Cargando…</div>', '<script src="js/paneles.js"></script>'),
 "recursos": ("Recursos", '<h1 id="tit">Recursos</h1><div id="app">Cargando…</div>', '<script src="js/recursos.js"></script>'),
 "mus": ("Mus en el Bar Kupula", """<h1>🃏 Mus en el Bar Kupula</h1><span class="pill">2º DE BACHILLERATO</span>
@@ -87,5 +88,7 @@ PAGES = {
 }
 for name, (title, body, script) in PAGES.items():
     with open(name + ".html", "w", encoding="utf-8") as fh:
-        fh.write(HEAD.format(t=title) + body + "\n</main>" + script + "</body></html>\n")
+        html = HEAD.format(t=title) + body + "\n</main>" + script + "</body></html>\n"
+        html = re.sub(r'((?:src|href)="(?:js|css)/[^"?]+)"', r'\1?v=' + VER + '"', html)      # cache-busting for phones
+        fh.write(html)
     print("wrote", name + ".html")

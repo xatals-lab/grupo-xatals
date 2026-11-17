@@ -16,7 +16,21 @@ let pts=0,activo=false;
 const setHud=t=>hud.innerHTML=t;
 const say=t=>msg.textContent=t;
 function fin(p,texto){activo=false;pts=Math.max(0,Math.round(p));say((pts>0?euOk():euKo())+(texto||"Fin"));$("start").disabled=false;$("start").textContent="↻ Otra vez";if(pts>0)confeti();panelRecord(rec,"mj-"+G.id,pts,"Puntos de "+G.titulo);}
-$("start").onclick=()=>{rec.innerHTML="";arena.innerHTML="";$("start").disabled=true;activo=true;pts=0;TPL[G.plantilla](G);};
+const AYUDA={
+ pulsa:["👆","Toca los BUENOS y no toques los MALOS","Cada acierto suma puntos. Cada fallo resta. Se acelera según pasa el tiempo."],
+ timing:["⏹","Toca PARA cuando la aguja esté en la zona VERDE","La zona se hace más pequeña en cada ronda."],
+ aguanta:["🗣","MANTÉN pulsado el botón y SUELTA en la zona verde","Mientras mantienes, la palabra se estira. Suelta justo en la zona."],
+ busca:["🔍","Encuentra el objetivo entre todos y TÓCALO","Si fallas, pierdes puntos. El tiempo corre."],
+ simon:["🧠","MIRA la secuencia y REPÍTELA tocando los botones","Cada ronda es más larga."],
+ ritmo:["🎸","Toca la columna cuando la nota cruce la LÍNEA AMARILLA","Encadena notas seguidas para subir el combo."],
+ runner:["↔️","DESLIZA a izquierda o derecha para cambiar de carril","Coge lo bueno, esquiva lo malo. Tienes 3 vidas."],
+ apila:["⬇️","Toca SUELTA para colocar el bloque justo encima del anterior","Lo que sobresale se pierde. ¡Llega al piso 12!"],
+ carril3d:["🚆","DESLIZA a izquierda o derecha (o toca los lados) para cambiar de vía","Coge lo bueno, esquiva lo malo y, cuando veas los carteles, ELIGE la vía con la respuesta correcta para acelerar."]};
+function ayuda(cb,forzar){const k="xatals_ayuda_"+G.plantilla;if(!forzar&&localStorage.getItem(k)){cb();return;}const a=G.ayuda||AYUDA[G.plantilla]||["🎮","Sigue las instrucciones","¡Suerte!"];
+  const m=document.createElement("div");m.className="modal";m.innerHTML=`<div class="modal-in" style="text-align:center"><div style="font-size:4rem">${a[0]}</div><h2>Cómo se juega</h2><p style="font-size:1.2rem"><b>${a[1]}</b></p><p>${a[2]}</p><button class="rosa" id="entendido">¡Entendido, a jugar!</button></div>`;document.body.append(m);
+  m.querySelector("#entendido").onclick=()=>{localStorage.setItem(k,"1");m.remove();cb();};}
+const ab=document.createElement("button");ab.className="sec";ab.textContent="❓ Cómo se juega";ab.onclick=()=>ayuda(()=>{},true);$("start").after(ab);
+$("start").onclick=()=>ayuda(()=>{rec.innerHTML="";arena.innerHTML="";$("start").disabled=true;activo=true;pts=0;TPL[G.plantilla](G);});
 const TPL={
 /* ---- pulsa: tap the good ones, avoid the bad ones ---- */
 pulsa(g){
@@ -147,6 +161,11 @@ apila(g){
     if(nivel>=12){clearInterval(iv);return fin(pts+300,"¡Torre completa! Hasta Celedón tiene vértigo.");}setTimeout(nueva,160);};
   document.addEventListener("keydown",e=>{if(e.key===" "&&activo){e.preventDefault();$("suelta")&&$("suelta").click();}});
   nueva();
+},
+/* ---- carril3d: console-style 3D lane game (see js/carril3d.js) ---- */
+carril3d(g){
+  arena.innerHTML=`<div id="c3d" class="lienzo3d"></div>`;
+  import("./carril3d.js").then(m=>m.iniciar($("c3d"),g,{hud:setHud,say,fin})).catch(e=>{console.error(e);say("Tu navegador no puede abrir el 3D. Prueba con Chrome o Safari actualizados.");fin(0,"3D no disponible");});
 }
 };
 })().catch(e=>{document.getElementById("mj").textContent="No he podido cargar el minijuego.";console.error(e)});

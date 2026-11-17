@@ -31,7 +31,7 @@ function vistaParada() { cam.position.set(0, 1.3, 10.55); cam.lookAt(0, 1.0, 3);
 function enGol(e) { const r = renderer.domElement.getBoundingClientRect(); ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1); ray.setFromCamera(ndc, cam); const t = new THREE.Vector3(); ray.ray.intersectPlane(new THREE.Plane(new THREE.Vector3(0, 0, 1), 10), t); return t; }
 
 const cv = renderer.domElement; cv.style.touchAction = "none";
-cv.addEventListener("pointerdown", e => { if (ST.fase === "apunta") { ST.apuntando = true; mueve(e); sonido(480, .05); } else if (ST.fase === "para") ST.x0 = e.clientX; });
+cv.addEventListener("pointerdown", e => { if (ST.fase === "apunta") { ST.apuntando = true; mueve(e); sonido(480, .05); } else if (ST.fase === "para") { const r = cv.getBoundingClientRect(), fx = (e.clientX - r.left) / r.width; ST.eleccion = fx < .38 ? 0 : fx > .62 ? 2 : 1; } });
 cv.addEventListener("pointermove", e => { if (ST.fase === "apunta" && (ST.apuntando || e.pointerType === "mouse")) mueve(e); });
 cv.addEventListener("pointerup", e => { if (ST.fase === "apunta" && ST.apuntando) { ST.apuntando = false; chuta(); } else if (ST.fase === "para" && ST.x0 != null) { const dx = e.clientX - ST.x0; ST.eleccion = dx < -30 ? 0 : dx > 30 ? 2 : 1; ST.x0 = null; } });
 function mueve(e) { const p = enGol(e); ST.aim.set(Math.max(-2.1, Math.min(2.1, p.x)), Math.max(.05, Math.min(2.5, p.y))); }
@@ -76,7 +76,7 @@ async function chuta() {
 }
 async function turnoParada() {
   if (profes) await profes.regano(cam);
-  vistaParada(); ST.fase = "para"; ST.eleccion = null; $("modo").textContent = "🧤 ¡Eres el portero! Desliza o pulsa ⬅ ⬆ ➡ antes de que chute"; $("botonesP").style.display = ""; msg("Tejedor se coloca el balón... elige lado");
+  vistaParada(); ST.fase = "para"; ST.eleccion = null; $("modo").textContent = "🧤 ¡Eres el portero! Toca la IZQUIERDA, el CENTRO o la DERECHA de la pantalla antes de que chute"; $("botonesP").style.display = ""; msg("Tejedor se coloca el balón... elige lado");
   const t0 = performance.now(); while (ST.eleccion == null && performance.now() - t0 < 2800) await esperar(30);
   const el = ST.eleccion ?? 1; ST.fase = ""; $("botonesP").style.display = "none";
   const tercio = [0, 0, 1, 2, 2, 0, 2, 1][Math.floor(Math.random() * 8)], alto = Math.random() < .3;

@@ -63,14 +63,17 @@ if qs:
     if multi < 2: err.append("quiz_semana: debe haber al menos 2 preguntas con varias respuestas correctas (correcta: lista de 2 o 3 indices)")
     if simples and (len(set(simples)) < 3 or max(simples.count(i) for i in set(simples)) > (len(simples) + 1) // 2):
         err.append("quiz_semana: la respuesta correcta esta casi siempre en la misma posicion; reparte las correctas entre las posiciones 0, 1, 2 y 3")
-PLANT = {"pulsa": ("buenos", "malos"), "timing": (), "decide": ("escenas",), "memoria": ("pares",), "aguanta": (), "busca": ("objetivo", "senuelos"),
-         "simon": ("botones",), "ritmo": ("notas",), "runner": ("buenos", "malos"), "apila": ("bloque",)}
+PLANT = {"pulsa": ("buenos", "malos"), "timing": (), "aguanta": (), "busca": ("objetivo", "senuelos"),
+         "simon": ("botones",), "ritmo": ("notas",), "runner": ("buenos", "malos"), "apila": ("bloque",), "carril3d": ("buenos", "malos")}
+PROHIBIDAS = ("decide", "memoria")   # quiz-like games are not videogames: quizzes live in the Quiz section
 if mj:
     seen = set()
     for g in mj.get("juegos", []):
         gid = g.get("id", "?")
         if gid in seen or not re.fullmatch(r"[a-z0-9-]{3,40}", str(gid)): err.append("minijuego: id invalido o repetido " + str(gid))
         seen.add(gid)
+        if g.get("plantilla") in PROHIBIDAS:
+            err.append(f"minijuego {gid}: la plantilla {g['plantilla']} ya no esta permitida: los juegos deben ser videojuegos de accion, los quizzes van en el Quiz semanal"); continue
         if g.get("plantilla") not in PLANT:
             err.append(f"minijuego {gid}: plantilla desconocida"); continue
         for k in ("titulo", "emoji", "intro", "resumen"):
@@ -78,6 +81,10 @@ if mj:
         for k in PLANT[g["plantilla"]]:
             if not g.get(k): err.append(f"minijuego {gid}: falta {k}")
         pl = g["plantilla"]
+        if pl == "carril3d":
+            if g.get("tema", "tren") not in ("tren", "calle"): err.append(f"minijuego {gid}: tema debe ser tren o calle")
+            for pu in g.get("puertas", []):
+                if len(pu.get("opciones", [])) != 3 or pu.get("correcta") not in (0, 1, 2) or not pu.get("pregunta"): err.append(f"minijuego {gid}: puerta mal formada (3 opciones, correcta 0-2)"); break
         if pl in ("pulsa", "runner") and (len(g.get("buenos", [])) < 1 or len(g.get("malos", [])) < 1): err.append(f"minijuego {gid}: {pl} necesita buenos y malos")
         if pl == "memoria" and not 4 <= len(g.get("pares", [])) <= 8: err.append(f"minijuego {gid}: memoria de 4 a 8 pares")
         if pl == "simon" and len(g.get("botones", [])) != 4: err.append(f"minijuego {gid}: simon necesita 4 botones")

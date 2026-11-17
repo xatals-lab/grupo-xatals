@@ -96,3 +96,20 @@ html,body{overflow-x:clip}main{overflow-x:clip}
 .marcador{font-weight:800;font-size:.95rem;background:#0006;border-radius:99px;padding:.3rem .8rem;display:inline-block}.lance{font-family:Bangers,Impact,sans-serif;font-size:2rem;color:var(--amarillo);margin:.4rem 0}
 .botones{text-align:center;margin-top:.8rem}.nota{color:#ccc;font-size:.9rem}
 @media(max-width:600px){.naipe{width:40px;height:62px}.mesa{border-radius:30px;padding:.5rem}}
+
+/* ---- mobile first: everything must fit on a phone screen ---- */
+html{-webkit-text-size-adjust:100%}body{overscroll-behavior-y:contain;padding-bottom:env(safe-area-inset-bottom)}
+.lienzo3d{height:min(56dvh,540px);min-height:280px}
+.arena{touch-action:manipulation}
+.c3d-ui{position:absolute;inset:0;pointer-events:none}
+.c3d-preg{position:absolute;left:.5rem;right:.5rem;top:.5rem;background:#000c;border:2px solid var(--amarillo);border-radius:14px;padding:.5rem .8rem;font-weight:800;text-align:center;opacity:0;transform:translateY(-10px);transition:.3s}
+.c3d-preg.on{opacity:1;transform:none}
+.c3d-flechas{position:absolute;left:.5rem;right:.5rem;bottom:.5rem;display:flex;justify-content:space-between}
+.c3d-b{pointer-events:auto;margin:0;width:30%;min-height:56px;font-size:1.8rem;opacity:.75;box-shadow:0 5px 0 #0008}
+@media(max-width:600px){.hud{flex-wrap:wrap}.msg{font-size:1.05rem;min-height:2.6rem}h1{font-size:clamp(1.7rem,8vw,2.4rem)}.panel{padding:.7rem .8rem}main{padding-left:.6rem;padding-right:.6rem}button,.btn{min-height:48px}}
+@media(max-height:700px){.lienzo3d{height:50dvh}}
+
+.ctl3d{position:absolute;left:.5rem;right:.5rem;bottom:.5rem;display:flex;gap:.5rem;justify-content:center;align-items:center;z-index:6;pointer-events:none}
+.ctl3d button{pointer-events:auto;margin:0;min-width:64px;min-height:58px;font-size:1.5rem;opacity:.85;flex:1;max-width:30%}
+.ctl3d #copia{max-width:none;flex:1;font-size:1.1rem}.ctl3d #botonesP{display:flex;gap:.5rem;flex:1;pointer-events:none}.ctl3d #botonesP button{max-width:none}
+@media(max-width:700px){body.jugando main>h1,body.jugando main>p:not(#modo):not(.medal),body.jugando #intro,body.jugando #estrellas{display:none}body.jugando main{padding-top:.3rem}}
