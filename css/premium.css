@@ -56,3 +56,43 @@ html,body{overflow-x:clip}main{overflow-x:clip}
 .obj{position:absolute;font-size:2.2rem;transform:translateX(-50%)}
 .torre{position:relative;height:min(52vh,360px);max-width:420px;margin:.4rem auto;background:linear-gradient(#0a0a18,#1d1140);border-radius:18px;overflow:hidden;border:1px solid #ffffff2a}
 .bloque3d{position:absolute;height:12%;background:linear-gradient(180deg,#ffe500,#ffb800);border-radius:8px;box-shadow:inset 0 -6px 0 #0004,0 8px 16px #000a;display:grid;place-items:center;font-size:1.5rem}
+
+/* ---- XP chip, toasts, profile modal, typewriter ---- */
+#xpchip{margin:0 0 0 .4rem;padding:.25rem .7rem;display:flex;gap:.5rem;align-items:center;font-family:Sora,sans-serif;font-size:.8rem;font-weight:800;min-height:38px;box-shadow:none;border-radius:99px}
+#xpchip .xpb{width:70px;height:8px;background:#000;border-radius:99px;overflow:hidden;display:inline-block}#xpchip .xpb i{display:block;height:100%;background:linear-gradient(90deg,#39ff14,#ffe500)}
+#toasts{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:200;display:flex;flex-direction:column;gap:.5rem;align-items:center;width:min(92vw,520px);pointer-events:none}
+.toast{background:#101018f2;border:1px solid #ffffff33;border-left:5px solid var(--amarillo);border-radius:14px;padding:.65rem .9rem;box-shadow:0 14px 40px #000c;opacity:0;transform:translateY(20px) scale(.96);transition:.35s;font-size:.95rem;backdrop-filter:blur(10px)}
+.toast.in{opacity:1;transform:none}.toast.nivel{border-left-color:var(--verde);background:linear-gradient(90deg,#0f2a10,#101018)}.toast.insig{border-left-color:var(--rosa)}.toast.broma{border-left-color:var(--cian)}
+.modal{position:fixed;inset:0;background:#000b;z-index:150;display:grid;place-items:center;padding:1rem;backdrop-filter:blur(6px)}
+.modal-in{background:linear-gradient(160deg,#1a1a26,#0b0b11);border:1px solid #ffffff33;border-radius:24px;padding:1.2rem 1.4rem;max-width:620px;width:100%;max-height:90vh;overflow:auto;position:relative;box-shadow:0 30px 90px #000}
+.modal-in .cerrar{position:absolute;right:.8rem;top:.8rem;padding:.2rem .7rem;margin:0;min-height:36px}
+.escribiendo::after{content:"▍";color:var(--amarillo);animation:parpadeo .7s steps(2) infinite}@keyframes parpadeo{50%{opacity:0}}
+.euskera{font-size:.85rem;color:#c9b27a;max-width:640px;margin:0 auto .8rem}
+/* ---- games feel premium: clean glass, modern type, no pixel font ---- */
+.arena .hud,.meter{font-family:Sora,system-ui,sans-serif;font-size:.8rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.arena{background:radial-gradient(90% 70% at 50% 0,#17202f,#07090f);border:1px solid #ffffff22;box-shadow:0 30px 80px #000d,inset 0 0 80px #00e5ff10}
+.msg{font-family:Sora,system-ui,sans-serif;font-weight:800;font-size:1.25rem;text-shadow:0 2px 14px #000}
+.panel h2,.panel h3{font-family:Sora,system-ui,sans-serif;font-weight:800;letter-spacing:0}
+.panel h2{font-size:1.5rem}.panel h3{font-size:1.15rem}
+@keyframes pegada{0%{opacity:0}12%{opacity:1}100%{opacity:0}}
+#golpe{position:fixed;inset:0;z-index:180;pointer-events:none;background:radial-gradient(circle at 50% 50%,#ff1e1e00 0,#ff1e1ee6 55%,#7a0000f2 100%);animation:pegada 1.6s ease-out forwards;display:grid;place-items:center;text-align:center;padding:1rem}
+#golpe b{font-family:Bangers,Impact,sans-serif;font-size:clamp(2rem,7vw,4.4rem);color:#fff;text-shadow:0 0 30px #000,4px 4px 0 #000;letter-spacing:.04em;transform:rotate(-3deg)}
+.shakeAll{animation:shakeAll .6s}@keyframes shakeAll{10%,50%,90%{transform:translate(-12px,6px)}30%,70%{transform:translate(12px,-6px)}}
+.regano{position:absolute;inset:0;z-index:20;display:grid;place-items:center;background:#000a;backdrop-filter:blur(3px);text-align:center;padding:1rem}
+.regano .caja{background:#15151fee;border:2px solid var(--amarillo);border-radius:20px;padding:1rem 1.3rem;max-width:420px;box-shadow:0 20px 60px #000}
+.regano .nom{font-family:Bangers,Impact,sans-serif;font-size:1.8rem;color:var(--amarillo)}
+
+.sello{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%) rotate(-12deg);font-family:Bangers,Impact,sans-serif;font-size:clamp(2.4rem,9vw,5rem);color:#ff2b2b;border:6px solid #ff2b2b;border-radius:12px;padding:.1em .4em;background:#fff1;text-shadow:0 0 20px #000;z-index:5;animation:sello .8s ease-out forwards;pointer-events:none}
+@keyframes sello{0%{transform:translate(-50%,-50%) rotate(-12deg) scale(3);opacity:0}30%{opacity:1}100%{transform:translate(-50%,-50%) rotate(-12deg) scale(1);opacity:.95}}
+.lienzo3d{position:relative}
+
+.kupula{background:radial-gradient(90% 80% at 50% 0,#4a2a14,#1b0d06);border:1px solid #ffffff22;border-radius:22px;padding:1rem;box-shadow:0 30px 70px #000c;position:relative}
+.kupula::before{content:"BAR KUPULA";position:absolute;right:1rem;top:.6rem;font-family:Bangers,Impact,sans-serif;color:#ff2e93;text-shadow:0 0 14px #ff2e93;letter-spacing:.1em}
+.mesa{display:grid;grid-template-columns:1fr 1.2fr 1fr;grid-template-areas:". arriba ." "izq centro der" ". abajo .";gap:.6rem;align-items:center;text-align:center;min-height:380px;background:radial-gradient(circle,#0f5a2e,#073a1d);border-radius:60px;padding:1rem;box-shadow:inset 0 0 40px #000}
+.asiento.arriba{grid-area:arriba}.asiento.izq{grid-area:izq}.asiento.der{grid-area:der}.asiento.abajo{grid-area:abajo}.centro{grid-area:centro}
+.asiento b{font-size:.9rem}.naipe{display:inline-grid;place-items:center;width:52px;height:78px;margin:2px;background:#fffdf4;color:#111;border-radius:8px;box-shadow:0 6px 10px #0008;font-size:.8rem;line-height:1.1;cursor:default;user-select:none;transition:transform .15s}
+.naipe b{font-size:.8rem}.naipe i{font-style:normal;font-size:1.2rem}.naipe.dorso{background:repeating-linear-gradient(45deg,#8a1c1c 0 6px,#5e1010 6px 12px);color:#fff;font-size:1.6rem}
+#mias .naipe{cursor:pointer}#mias .naipe:hover{transform:translateY(-8px) rotate(-3deg)}.naipe.sel{transform:translateY(-14px);outline:3px solid var(--amarillo)}
+.marcador{font-weight:800;font-size:.95rem;background:#0006;border-radius:99px;padding:.3rem .8rem;display:inline-block}.lance{font-family:Bangers,Impact,sans-serif;font-size:2rem;color:var(--amarillo);margin:.4rem 0}
+.botones{text-align:center;margin-top:.8rem}.nota{color:#ccc;font-size:.9rem}
+@media(max-width:600px){.naipe{width:40px;height:62px}.mesa{border-radius:30px;padding:.5rem}}

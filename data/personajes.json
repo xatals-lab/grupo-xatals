@@ -479,6 +479,34 @@
           "cartera": -5
         }
       ]
+    },
+    {
+      "id": "bogus",
+      "nombre": "El Bogus",
+      "emoji": "🎸",
+      "rol": "El vecino de PheDiox y bajista de heavy metal",
+      "entrada": "Entra El Bogus con el pelo largo, el bajo a la espalda y cara de haber dormido mal: PheDiox ha vuelto a perder en el PC Fútbol.",
+      "pulla": "Le revienta la pared a PheDiox cada vez que pierde al PC Fútbol: el único vecino que escucha derrotas en directo.",
+      "opciones": [
+        {
+          "texto": "Invitarle a una caña de consuelo",
+          "resultado": "Acepta, pero pide que PheDiox no gane nunca.",
+          "animo": 15,
+          "cartera": -5
+        },
+        {
+          "texto": "Preguntarle por el grupo de heavy de Vitoria",
+          "resultado": "Os toca 40 minutos de bajo sin parar. Hasta el Bacterio entra a pedir silencio.",
+          "animo": 10,
+          "cartera": 0
+        },
+        {
+          "texto": "Decirle que PheDiox ha ganado por fin",
+          "resultado": "Se le cae el bajo del susto. Era mentira, y te pega un manotazo.",
+          "animo": -5,
+          "cartera": 0
+        }
+      ]
     }
   ]
 }

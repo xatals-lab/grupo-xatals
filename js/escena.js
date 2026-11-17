@@ -49,7 +49,7 @@ export const TX = {
   cielo() { return lienzo(16, 512, (g, w, h) => { const gr = g.createLinearGradient(0, 0, 0, h); gr.addColorStop(0, "#3d7fd0"); gr.addColorStop(.55, "#a9cdf0"); gr.addColorStop(1, "#f5e7c8"); g.fillStyle = gr; g.fillRect(0, 0, w, h); }); },
 };
 
-const mat = (o) => new THREE.MeshStandardMaterial(o);
+export const mat = (o) => new THREE.MeshStandardMaterial(o);
 const caja = (w, h, d, m) => { const x = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), m); x.castShadow = x.receiveShadow = true; return x; };
 
 export function crearEscena(contenedor) {
@@ -88,8 +88,7 @@ export function crearEscena(contenedor) {
   const rejM = new THREE.MeshBasicMaterial({ map: rej, transparent: true, opacity: .75, side: THREE.DoubleSide, depthWrite: false });
   const valla = (x, z, w, ry, alto = 4.2) => { const p = new THREE.Mesh(new THREE.PlaneGeometry(w, alto), rejM); p.position.set(x, alto / 2, z); p.rotation.y = ry; escena.add(p); for (let i = 0; i <= Math.round(w / 3); i++) { const post = new THREE.Mesh(new THREE.CylinderGeometry(.06, .06, alto, 8), mat({ color: 0x2f7a4a })); const u = -w / 2 + i * (w / Math.round(w / 3)); post.position.set(x + Math.cos(ry) * u, alto / 2, z - Math.sin(ry) * u); post.castShadow = true; escena.add(post); } };
   valla(0, -14, 30, 0, 6); valla(0, 14, 30, 0, 6); valla(-15, 0, 28, Math.PI / 2); valla(15, 0, 28, Math.PI / 2);
-  // bare winter trees
-  for (const [x, z] of [[-17, -12], [18, 12], [-18, 14], [17, -14]]) { const tr = new THREE.Group(); const tk = new THREE.Mesh(new THREE.CylinderGeometry(.18, .26, 4, 8), mat({ color: 0x5b4636 })); tk.position.y = 2; tk.castShadow = true; tr.add(tk); for (let i = 0; i < 4; i++) { const b = new THREE.Mesh(new THREE.SphereGeometry(1.3 + Math.random(), 10, 8), mat({ color: [0x7a8f4a, 0x8a9a56, 0x6f8442][i % 3], roughness: 1 })); b.position.set((Math.random() - .5) * 2, 4.6 + Math.random() * 1.6, (Math.random() - .5) * 2); b.castShadow = true; tr.add(b); } tr.position.set(x, 0, z); escena.add(tr); }
+  // no trees: the real yard was only concrete
   function redar() { const w = contenedor.clientWidth, h = contenedor.clientHeight; renderer.setSize(w, h); cam.aspect = w / h; cam.fov = cam.aspect < .9 ? 74 : 58; cam.updateProjectionMatrix(); }
   new ResizeObserver(redar).observe(contenedor); redar();
   return { renderer, escena, cam, mat, caja };

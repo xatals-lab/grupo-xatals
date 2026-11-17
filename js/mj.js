@@ -8,7 +8,7 @@ const G=all.juegos.find(x=>x.id===id);
 const root=$("mj");
 if(!G){root.innerHTML="<p>No encuentro ese juego. <a href='juegos.html'>Ver todos</a></p>";return;}
 document.title=G.titulo+" · Grupo Xatals";
-$("titulo").textContent=G.emoji+" "+G.titulo;
+$("titulo").textContent=G.emoji+" "+G.titulo;if(window.maquina)maquina($("titulo"),24);
 $("intro").textContent=G.intro;
 $("estrellas").textContent="Dificultad "+"★".repeat(G.dificultad||2)+"☆".repeat(5-(G.dificultad||2));
 const arena=$("arena"),hud=$("hud"),msg=$("msg"),rec=$("rec");

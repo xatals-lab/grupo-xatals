@@ -6,6 +6,11 @@ function pinta(){
   <table><tr><th>Mercado</th><th>Cuota</th><th>Fichas</th></tr>`+a.mercados.map(m=>`<tr><td>${m.texto}</td><td>x${m.cuota}</td><td><input type="number" min="0" value="0" data-id="${m.id}"></td></tr>`).join("")+`</table>
   <button id="jugar">⚽ Jugar el partido</button><button class="sec" id="reset">Reiniciar fichas</button><div id="res"></div>`;
   document.getElementById("reset").onclick=()=>{fichas=a.fichas_iniciales;localStorage.setItem("xatals_fichas",fichas);pinta();};
+  const ins=[...app.querySelectorAll("input[type=number]")];
+  const resto=()=>fichas-ins.reduce((s,i)=>s+(+i.value||0),0);
+  const aviso=document.createElement("p");aviso.id="restoF";aviso.className="medal";app.querySelector("table").after(aviso);
+  function topa(){ins.forEach(i=>{const otros=ins.reduce((s,j)=>s+(j===i?0:(+j.value||0)),0);const max=Math.max(0,fichas-otros);i.max=max;if(+i.value>max)i.value=max;});const r=resto();aviso.textContent=r>0?`Te quedan ${r} fichas por apostar (de ${fichas}).`:"Has apostado todas tus fichas: tope alcanzado.";ins.forEach(i=>{i.disabled=r===0&&!(+i.value>0);});}
+  ins.forEach(i=>i.oninput=topa);topa();
   document.getElementById("jugar").onclick=jugar;
 }
 function jugar(){

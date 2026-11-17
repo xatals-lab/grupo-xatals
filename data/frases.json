@@ -168,5 +168,15 @@
       "koi",
       "phediox"
     ]
+  },
+  {
+    "frase": "¡Otra vez perdiendo al PC Fútbol! ¡Voy a tirar esta pared!",
+    "autor": "bogus",
+    "opciones": [
+      "bogus",
+      "phediox",
+      "buxai",
+      "wilhelm"
+    ]
   }
 ]

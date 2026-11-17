@@ -1,0 +1,186 @@
+{
+ "profesores": [
+  {
+   "id": "gaviria",
+   "nombre": "Eugenio Gaviria",
+   "emoji": "✝️",
+   "rol": "Profesor de religión y tutor de 5º de primaria",
+   "aspecto": "Calvo, alto y delgado, con gafas.",
+   "look": {
+    "pelo": null,
+    "gafas": "normal",
+    "alto": 1.12,
+    "ancho": 0.9,
+    "jersey": "#6b1f2a",
+    "pantalon": "#2b2b33"
+   },
+   "amenazas": [
+    "¡Chicos! A la próxima os quito el balón y os mando a rezar tres padrenuestros.",
+    "Esto va a la nota de religión... y al cielo no entráis con esas patadas.",
+    "Un grito más y aviso a vuestros padres. Y a San Pedro."
+   ]
+  },
+  {
+   "id": "chino",
+   "nombre": "El Chino",
+   "emoji": "📏",
+   "rol": "Profesor de 2º de la ESO",
+   "aspecto": "Calvo, con perilla y bigote de chino tradicional.",
+   "look": {
+    "pelo": null,
+    "perilla": true,
+    "bigote": true,
+    "alto": 1.0,
+    "ancho": 1.0,
+    "jersey": "#1f3d2b",
+    "pantalon": "#30303a"
+   },
+   "amenazas": [
+    "Os voy a dar leña como en segundo. A la próxima, el balón al contenedor.",
+    "Esto es un patio, no el Camp Nou. Un grito más y os pongo a correr hasta Navidad.",
+    "Os he visto. Os veo siempre. Es mi superpoder."
+   ]
+  },
+  {
+   "id": "montoya",
+   "nombre": "Jesús Montoya",
+   "emoji": "🕶️",
+   "rol": "Profesor",
+   "aspecto": "Gafas de sol, bigote y pelo negro.",
+   "look": {
+    "pelo": "#111",
+    "gafas": "sol",
+    "bigote": true,
+    "alto": 1.04,
+    "ancho": 1.0,
+    "jersey": "#5a2a1e",
+    "pantalon": "#26262c"
+   },
+   "amenazas": [
+    "No os veo con estas gafas, pero os oigo. Balón confiscado.",
+    "A la próxima, os quedáis sin recreo. Y sin balón. Y sin dignidad.",
+    "Tengo un oído biónico para las patadas. Cuidado."
+   ]
+  },
+  {
+   "id": "monte",
+   "nombre": "Jesús Monte",
+   "emoji": "📚",
+   "rol": "Profesor",
+   "aspecto": "Calvo, con barba y gafas.",
+   "look": {
+    "pelo": null,
+    "barba": true,
+    "gafas": "normal",
+    "alto": 1.0,
+    "ancho": 1.05,
+    "jersey": "#2a4a3a",
+    "pantalon": "#2d2d34"
+   },
+   "amenazas": [
+    "Serio pero comprometido: os pongo deberes de recreo.",
+    "A la próxima, redacción de 300 palabras sobre el respeto al balón ajeno.",
+    "Me tomo en serio vuestra educación. Aunque vosotros no."
+   ]
+  },
+  {
+   "id": "gordo",
+   "nombre": "El Gordo",
+   "emoji": "🇬🇧",
+   "rol": "Profesor de inglés",
+   "aspecto": "Muy obeso, pelo negro corto.",
+   "look": {
+    "pelo": "#121212",
+    "alto": 0.98,
+    "ancho": 1.5,
+    "jersey": "#6b1f2a",
+    "pantalon": "#2b2b33"
+   },
+   "amenazas": [
+    "Speak English or no ball! La próxima, balón confiscado. In English, please.",
+    "Un patada más y os pongo un dictado de 400 palabras. Con 'present perfect'.",
+    "I will take the ball. And your lunch. Both."
+   ]
+  },
+  {
+   "id": "abad",
+   "nombre": "Javier Abad",
+   "emoji": "🧬",
+   "rol": "Profesor de biología",
+   "aspecto": "Corpulento, con sobrepeso, serio y disciplinado.",
+   "look": {
+    "pelo": "#2b2118",
+    "alto": 1.02,
+    "ancho": 1.35,
+    "jersey": "#24402f",
+    "pantalon": "#2a2a30"
+   },
+   "amenazas": [
+    "En biología esto se llama selección natural: el próximo que sobre sois vosotros.",
+    "Disciplina o suspenso. Sin términos medios, como las células.",
+    "Un golpe más y os diseco la paciencia."
+   ]
+  },
+  {
+   "id": "bacterio",
+   "nombre": "El Bacterio",
+   "emoji": "🧪",
+   "rol": "Profesor de física y química",
+   "aspecto": "Parece un científico de la NASA, bata blanca.",
+   "look": {
+    "pelo": "#8a8a8a",
+    "gafas": "normal",
+    "bata": true,
+    "alto": 1.06,
+    "ancho": 0.95,
+    "jersey": "#e8e8e8",
+    "pantalon": "#2c2c34"
+   },
+   "amenazas": [
+    "Examen sorpresa para el que siga pegando patadas. Y vaya examen, vaya examen.",
+    "Os suspendo en química, física y fútbol.",
+    "Eso que huelo no es un experimento: es vuestra mala educación."
+   ]
+  },
+  {
+   "id": "maketo",
+   "nombre": "Miguel Valladolid (el Maketo)",
+   "emoji": "📖",
+   "rol": "Profesor de filosofía",
+   "aspecto": "Grave, serio y con la jubilación en el horizonte.",
+   "look": {
+    "pelo": "#9a9a9a",
+    "gafas": "normal",
+    "alto": 1.02,
+    "ancho": 1.0,
+    "jersey": "#3a3a52",
+    "pantalon": "#2b2b33"
+   },
+   "amenazas": [
+    "Si seguís así, os suspendo la vida entera. Y solo me quedan semanas.",
+    "Pensad: ¿existe el balón si no lo veo? Pues no existe. Confiscado.",
+    "En Navidades me jubilo. Hasta entonces, sufrid."
+   ]
+  },
+  {
+   "id": "agustin",
+   "nombre": "don Agustín Abascal",
+   "emoji": "👕",
+   "rol": "Profesor (padre de Abascal)",
+   "aspecto": "Profesor de los de siempre, con el jersey de lana.",
+   "look": {
+    "pelo": "#4a3a2a",
+    "bigote": true,
+    "alto": 1.02,
+    "ancho": 1.05,
+    "jersey": "#6b1f2a",
+    "pantalon": "#2a2a30"
+   },
+   "amenazas": [
+    "Esa camiseta no la tiene mi hijo. Dádmela, que la apunto.",
+    "Un balonazo más y aviso a mi hijo Daniel, que colecciona hasta vuestras broncas.",
+    "Orden en el patio. O boletín de notas con comentarios."
+   ]
+  }
+ ]
+}

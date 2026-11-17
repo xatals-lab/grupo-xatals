@@ -13,7 +13,7 @@ def load(n):
         return None
 
 
-p, a, f, c, s, rk, qs, mj, eu, rc = (load(n) for n in ("personajes", "apuestas", "frases", "chistes", "semana", "ranking", "quiz_semana", "minijuegos", "euskera", "recursos"))
+p, a, f, c, s, rk, qs, mj, eu, rc, pf, lg = (load(n) for n in ("personajes", "apuestas", "frases", "chistes", "semana", "ranking", "quiz_semana", "minijuegos", "euskera", "recursos", "profesores", "liga"))
 ids = set()
 if p:
     for x in p.get("cuadrilla", []) + p.get("invitados", []):
@@ -102,5 +102,16 @@ if eu:
     for w in eu.get("palabras", []):
         if not w.get("eu") or not w.get("es"): err.append("euskera: palabra sin eu o es: " + str(w)[:50])
 if rc and not rc.get("grupos"): err.append("recursos: faltan grupos")
+if pf:
+    seen_p = set()
+    for x in pf.get("profesores", []):
+        pid = x.get("id", "?")
+        if pid in seen_p or not x.get("nombre") or not x.get("rol") or not x.get("aspecto") or not isinstance(x.get("look"), dict): err.append(f"profesores {pid}: faltan datos o id repetido")
+        seen_p.add(pid)
+        if not (isinstance(x.get("amenazas"), list) and len(x["amenazas"]) >= 3 and all(isinstance(z, str) and z for z in x["amenazas"])): err.append(f"profesores {pid}: necesita 3 amenazas de texto")
+if lg is not None and not all(k in lg for k in ("partidos", "ranking", "comentarios")): err.append("liga: faltan campos")
+if c:
+    for x in c:
+        if not isinstance(x, dict) or not x.get("texto") or not x.get("tema"): err.append("chistes: entrada sin tema o texto"); break
 print("\n".join(err) if err else "VALIDATION OK")
 sys.exit(1 if err else 0)

@@ -11,6 +11,8 @@ STOP = set("""para pero como esto esta este esos esas porque cuando donde sobre 
 tiene tienen tengo tenemos hacer hace puede pueden estoy estamos estan están estaba hemos habia había sido ser son eres soy fue ahora aqui aquí asi así bien pues ya
 que qué los las una uno unos unas del con por sin sus mis tus nos les lo la el en de y o a se me te mi tu su si sí no al un es ha he hay quien quién cual cuál
 vale gracias hola jaja jajaja entonces luego file saved image hermes hermek audio voice document message photo sticker http https www com""".split())
+NOTICE = re.compile(r"shutting down|interrupted|Cronjob|is back online|pick up where|restarted|Session |paused", re.I)
+ENG = set("the is are was were will your you and with this that have has not for when back online send any message try task current it's i'll".split())
 SWEAR = re.compile(r"\b(joder|hostia|hostias|mierda|co[ñn]o|cabr[oó]n|gilipollas|puta|puto|cojones|co[jñ]one?s|capullo|imb[eé]cil|idiota|subnormal|co[ñn]azo|tarado)\b", re.I)
 
 
@@ -24,6 +26,8 @@ def main(src, out):
         pid = PEOPLE.get(str(m.get("uid")))
         if m.get("text"):
             m["text"] = re.sub(r"https?://\S+|\[[^\]]{0,200}\]", " ", m["text"])
+        if m.get("text") and (NOTICE.search(m["text"]) or sum(1 for w_ in re.findall(r"[a-z']+", m["text"].lower()) if w_ in ENG) >= 3):
+            continue                                       # Hermes system notices and English noise are not the friends' words
         if pid and m.get("role") == "user" and m.get("text"):
             msgs.append((datetime.fromtimestamp(m["ts"], MAD), pid, m["text"]))
     msgs.sort(key=lambda x: x[0])
@@ -38,13 +42,13 @@ def main(src, out):
     huecos = {i: [] for i in ids}
     for ts, pid, text in msgs:
         p = per[pid]
-        w = re.findall(r"[a-záéíóúüñ]+", text.lower())
+        w = [re.sub(r"(.)\1{2,}", r"\1\1", x) for x in re.findall(r"[a-záéíóúüñ]+", text.lower())]
         p["mensajes"] += 1; p["palabras"] += len(w); p["insultos"] += len(SWEAR.findall(text))
         p["preguntas"] += text.count("?"); p["exclamaciones"] += text.count("!"); p["largos"] += 1 if len(text) > 200 else 0
         horas[pid][ts.hour] += 1; dias[pid][ts.weekday()] += 1
         y, wk, _ = ts.isocalendar(); semanas.setdefault(f"{y}-W{wk:02d}", Counter())[pid] += 1
         for x in w:
-            if len(x) >= 4 and x not in STOP and not x.startswith("jaj"):
+            if 4 <= len(x) <= 14 and x not in STOP and x not in ENG and not x.startswith("jaj"):
                 palabras[pid][x] += 1
         if pid in ult:
             huecos[pid].append((ts - ult[pid]).total_seconds() / 86400)

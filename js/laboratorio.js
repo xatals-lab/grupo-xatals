@@ -1,0 +1,27 @@
+/* Laboratorio: juguetes interactivos de la cuadrilla. Sliders, botones y cosas que pasan. */
+(async()=>{
+const app=document.getElementById("app");
+const [per,prof]=await Promise.all([cargaJSON("personajes"),cargaJSON("profesores")]);
+const hit=()=>{if(window.reto)reto("lab");};
+const tramo=(v,l)=>l.find(x=>v<=x[0])||l[l.length-1];
+const CALI=[[10,"🥤 Sobrio","Koi pide servicios mínimos y HRK habla de convenios colectivos.","Koi"],[30,"🍷 Primer calimocho","Empiezas a hablar de política con voz de Don Héctor Viribay.","Viribay"],[50,"🍷🍷 Ambiente","Se te suelta la lengua: cuentas lo del Bacterio por quinta vez.","Dug"],[70,"🍻 Cantas","Sale el Diiiios de PheDiox. Vecinos preocupados.","PheDiox"],[90,"🥴 Epopeya","Retas a Tejedor a un penalti. Pierdes y te pega.","Tejedor"],[101,"💀 Edortha Mari","Desapareces del mapa. Dicen que te vieron con un carrito.","Edortha"]];
+const CURSO=[["1º Primaria","Aprendes a escribir y ya hay uno que parece un señor mayor: Don Héctor."],["3º Primaria","Buxai se pega con todo el curso. Tú aún llevas la bata."],["5º Primaria","Tutor: Eugenio Gaviria, religión. Calvo, alto, gafas y mucha cruz."],["1º ESO","El Gordo te enseña inglés a base de miedo."],["2º ESO","El Chino te da leña. Bihl repite curso. La vida es dura."],["4º ESO","Abad en biología: disciplina o suspenso. El Bacterio ya se ríe."],["1º Bachillerato","Montoya con gafas de sol: no te ve, pero te oye."],["2º Bachillerato","Mus en el Kupula, filosofía del Maketo y la jubilación en Navidades."]];
+const ALAVES=[["Querejeta es paciente","Descenso en la jornada 38 y gritos en el palco."],["Querejeta lo despide todo","Cuatro entrenadores y un Bordalás de vuelta. Séptimo, por pura pena."],["Presupuesto de Champions","Europa League y ansiedad contenida. Mendizorroza llora de emoción."]];
+app.innerHTML=`
+<div class="panel rev in"><h2>🍷 El calimocho-ómetro</h2><p>Sube la barra y mira qué pasa en la cuadrilla.</p><input type="range" id="cali" min="0" max="100" value="10" style="width:100%"><div id="caliOut"></div></div>
+<div class="panel rev in"><h2>🎒 La máquina del tiempo de Marianistas</h2><p>Desliza para elegir curso. ¿Qué te toca?</p><input type="range" id="curso" min="0" max="7" value="0" style="width:100%"><div id="cursoOut"></div></div>
+<div class="panel rev in"><h2>💙 El simulador de Querejeta</h2><p>Elige la paciencia del presidente con los entrenadores.</p><input type="range" id="alaves" min="0" max="2" value="1" style="width:100%"><div id="alavesOut"></div></div>
+<div class="panel rev in"><h2>🧑‍💼 El Koi-reloj</h2><p>Mueve la hora y mira dónde está Koi.</p><input type="range" id="koi" min="0" max="23" value="12" style="width:100%"><div id="koiOut"></div></div>
+<div class="panel rev in"><h2>🔥 El generador de pullas</h2><p>Elige a dos y que se líen.</p><select id="pa"></select> <select id="pb"></select><br><button class="rosa" id="pulla">💥 ¡Pulla!</button><div id="pullaOut" style="font-size:1.1rem;margin-top:.6rem"></div></div>
+<div class="panel rev in"><h2>📣 Provoca a un profe</h2><p>Pulsa y escucha el rapapolvo de Santa María.</p><select id="pp"></select> <button class="rosa" id="prov">😡 Provocar</button><div id="provOut" style="font-size:1.1rem;margin-top:.6rem"></div></div>`;
+const $=id=>document.getElementById(id);
+function cali(){const v=+$("cali").value,t=tramo(v,CALI);const bar=Math.min(100,v);$("caliOut").innerHTML=`<h3>${t[1]} · ${v}%</h3><p>${t[2]}</p><div class="bar ${v>70?"mal":""}"><i style="width:${bar}%"></i></div><p class="medal">Aparece: ${t[3]}</p>`;}
+$("cali").oninput=()=>{cali();hit();sonido(300+ +$("cali").value*5,.04);};cali();
+function curso(){const i=+$("curso").value;$("cursoOut").innerHTML=`<h3>${CURSO[i][0]}</h3><p>${CURSO[i][1]}</p>`;}$("curso").oninput=()=>{curso();hit();sonido(400,.05);};curso();
+function alaves(){const i=+$("alaves").value;$("alavesOut").innerHTML=`<h3>${ALAVES[i][0]}</h3><p>${ALAVES[i][1]}</p>`;}$("alaves").oninput=()=>{alaves();hit();sonido(500,.05);};alaves();
+function koi(){const h=+$("koi").value;let t;if(h<8)t="😴 Koi duerme. Es lo único productivo que hace.";else if(h<17)t="🏭 Koi está en SMC 'actualizando catálogos'. Nadie sabe qué significa.";else if(h===17)t="🚪 Las 17:00: Koi sale por la puerta a velocidad récord.";else if(h<22)t="🍺 Koi en el bar... pidiendo pica, el flojo.";else t="📵 Koi con el móvil apagado. Servicios mínimos nocturnos.";$("koiOut").innerHTML=`<h3>${String(h).padStart(2,"0")}:00</h3><p>${t}</p>`;}$("koi").oninput=()=>{koi();hit();};koi();
+const nombres=[...per.cuadrilla,...per.invitados];$("pa").innerHTML=$("pb").innerHTML=nombres.map(n=>`<option value="${n.id}">${n.nombre}</option>`).join("");$("pb").selectedIndex=3;
+$("pulla").onclick=()=>{hit();const a=nombres.find(x=>x.id===$("pa").value),b=nombres.find(x=>x.id===$("pb").value);const P=[`${a.nombre} le dice a ${b.nombre}: «${b.pulla||"tú sí que eres un personaje"}»`,`${b.nombre} contesta: «Mira quién habla, ${a.nombre}. ${a.pulla||"Tú no eres mejor."}»`];$("pullaOut").innerHTML=P.map(p=>`<p>${p}</p>`).join("");sonido(260,.15);};
+$("pp").innerHTML=prof.profesores.map(p=>`<option value="${p.id}">${p.nombre}</option>`).join("");
+$("prov").onclick=()=>{hit();const p=prof.profesores.find(x=>x.id===$("pp").value);$("provOut").innerHTML=`<p class="medal">${p.emoji} ${p.nombre.toUpperCase()}</p><p>«${azar(p.amenazas)}»</p>`;sonido(150,.25);};
+})().catch(e=>{document.getElementById("app").textContent="No he podido cargar el laboratorio.";console.error(e)});

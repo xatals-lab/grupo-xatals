@@ -2,8 +2,8 @@ document.documentElement.classList.add("js");
 const SITE_URL="https://educadug.github.io/grupo-xatals/";
 const SALT="xatals-2026";
 const JUGADORES={dug:"Dug",hrk:"HRK (Héctor)",koi:"Koi (Íñigo)"};
-const NAV=[["index.html","Inicio"],["juegos.html","Juegos"],["paneles.html","Paneles"],["quizsemana.html","Quiz semanal"],["records.html","Hall of Fame"],["chistes.html","Chistes"],["semana.html","Esta semana"],["recursos.html","Recursos"]];
-const AGRUPA={"bar.html":"juegos.html","recreo.html":"juegos.html","futbol.html":"juegos.html","examen.html":"juegos.html","apuestas.html":"juegos.html","quiz.html":"juegos.html","mj.html":"juegos.html"};
+const NAV=[["index.html","Inicio"],["juegos.html","Juegos"],["laboratorio.html","Laboratorio"],["paneles.html","Paneles"],["quizsemana.html","Quiz semanal"],["records.html","Hall of Fame"],["chistes.html","Chistes"],["semana.html","Esta semana"],["claustro.html","Claustro"],["recursos.html","Recursos"]];
+const AGRUPA={"bar.html":"juegos.html","recreo.html":"juegos.html","futbol.html":"juegos.html","examen.html":"juegos.html","apuestas.html":"juegos.html","quiz.html":"juegos.html","mj.html":"juegos.html","mus.html":"juegos.html","examen-maketo.html":"juegos.html"};
 function pintaCabecera(){
   let actual=location.pathname.split("/").pop()||"index.html";actual=AGRUPA[actual]||actual;
   const h=document.createElement("header");h.className="top";
@@ -38,6 +38,7 @@ function semanaISO(d=new Date()){const t=new Date(Date.UTC(d.getFullYear(),d.get
 function codigoRecord(juego,jug,puntos){const sem=semanaISO();return `XT:${juego}:${jug}:${puntos}:${sem}:${hash(`${juego}|${jug}|${puntos}|${sem}|${SALT}`)}`;}
 function panelRecord(el,juego,puntos,etiqueta){
   puntos=Math.max(0,Math.round(puntos));
+  if(window.xpJuego)xpJuego(juego,puntos);
   const guardado=localStorage.getItem("xatals_jugador");
   el.innerHTML=`<div class="panel"><h3>🏆 ${etiqueta||"Tu puntuación"}: ${puntos}</h3><p>¿Quién eres? <select id="selJ">${Object.entries(JUGADORES).map(([k,v])=>`<option value="${k}" ${k===guardado?"selected":""}>${v}</option>`).join("")}</select></p>
   <div class="codebox" id="cod"></div><p><button id="cp">📋 Copiar código</button><a class="btn rosa" id="tg" target="_blank" rel="noopener">✈️ Enviar a Hermek por Telegram</a></p>
@@ -45,7 +46,7 @@ function panelRecord(el,juego,puntos,etiqueta){
   const sel=el.querySelector("#selJ");
   function act(){const c=codigoRecord(juego,sel.value,puntos);localStorage.setItem("xatals_jugador",sel.value);el.querySelector("#cod").textContent=c;
     el.querySelector("#tg").href="https://t.me/share/url?url="+encodeURIComponent(SITE_URL)+"&text="+encodeURIComponent("Hermek, apunta mi récord en el Hall of Fame: "+c);
-    el.querySelector("#cp").onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(c);el.querySelector("#cp").textContent="✅ Copiado";};}
+    el.querySelector("#cp").onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(c);el.querySelector("#cp").textContent="✅ Copiado";if(window.reto)reto("record");};el.querySelector("#tg").onclick=()=>{if(window.reto)reto("record");};}
   sel.onchange=act;act();
 }
 /* ---- arcade feel: retro beeps (mutable) and confetti ---- */
