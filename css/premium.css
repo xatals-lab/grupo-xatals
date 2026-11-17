@@ -113,3 +113,7 @@ html{-webkit-text-size-adjust:100%}body{overscroll-behavior-y:contain;padding-bo
 .ctl3d button{pointer-events:auto;margin:0;min-width:64px;min-height:58px;font-size:1.5rem;opacity:.85;flex:1;max-width:30%}
 .ctl3d #copia{max-width:none;flex:1;font-size:1.1rem}.ctl3d #botonesP{display:flex;gap:.5rem;flex:1;pointer-events:none}.ctl3d #botonesP button{max-width:none}
 @media(max-width:700px){body.jugando main>h1,body.jugando main>p:not(#modo):not(.medal),body.jugando #intro,body.jugando #estrellas{display:none}body.jugando main{padding-top:.3rem}}
+
+.c3d-ui.slowmo::before{content:"";position:absolute;inset:0;box-shadow:inset 0 0 90px 30px #00e5ffaa;pointer-events:none;animation:latido 1s ease-in-out infinite}
+.c3d-ui.slowmo::after{content:"🐌 CÁMARA LENTA: ¡ELIGE VÍA!";position:absolute;left:0;right:0;top:4.6rem;text-align:center;font-family:Bangers,Impact,sans-serif;font-size:1.6rem;color:#00e5ff;text-shadow:0 0 14px #000,2px 2px 0 #000;pointer-events:none}
+@keyframes latido{50%{opacity:.5}}

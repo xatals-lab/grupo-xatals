@@ -83,7 +83,8 @@ export function iniciar(cont, cfg, cb) {
   const reloj = new THREE.Clock(); let hudT = 0;
   function paso(dt) {
     const tt = reloj.elapsedTime;
-    if (E.activo) { E.t -= dt; E.cd -= dt; E.cdPuerta -= dt; E.boost = Math.max(0, E.boost - dt); E.lento = Math.max(0, E.lento - dt); const cerca = E.puertas.some(p => !p.hecho && p.z > -75); E.v = (11 + (cfg.duracion - E.t) * .1) * (E.boost > 0 ? 1.35 : 1) * (E.lento > 0 ? .6 : 1) * (cerca ? .6 : 1);   // slower, and slower still while reading a gate
+    if (E.activo) { E.t -= dt; E.cd -= dt; E.cdPuerta -= dt; E.boost = Math.max(0, E.boost - dt); E.lento = Math.max(0, E.lento - dt); const cerca = E.puertas.some(p => !p.hecho && p.z > -75), slow = E.puertas.some(p => !p.hecho && p.z > -22); E.v = (11 + (cfg.duracion - E.t) * .1) * (E.boost > 0 ? 1.35 : 1) * (E.lento > 0 ? .6 : 1) * (cerca ? .75 : 1); if (slow) E.v = 5.2;   // SLOW MOTION: about 3 seconds to choose the lane
+      ui.classList.toggle("slowmo", slow);   // slower, and slower still while reading a gate
       if (E.cd <= 0 && !E.puertas.some(p => p.z < -35)) { spawn(); E.cd = Math.max(.55, 1.15 - (cfg.duracion - E.t) * .012); }
       if (pregs.length && E.cdPuerta <= 0 && E.t > 6) { puerta(); E.cdPuerta = 11; } }
     const mov = E.v * dt; tex.offset.y -= mov / 7.5;
