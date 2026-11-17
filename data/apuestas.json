@@ -1,53 +1,59 @@
 {
   "fecha": "2026-11-21T14:00:00+01:00",
   "fichas_iniciales": 100,
-  "jornada": "2026-11-21",
+  "jornada": "Próximo partido",
   "mercados": [
     {
       "cuota": 2.1,
       "grupo": "1x2",
-      "id": "resultado-1",
+      "id": "1",
       "prob": 0.45,
       "texto": "Gana el Alavés"
     },
     {
       "cuota": 3.2,
       "grupo": "1x2",
-      "id": "resultado-x",
+      "id": "x",
       "prob": 0.3,
       "texto": "Empate"
     },
     {
-      "cuota": 3.8,
+      "cuota": 3.6,
       "grupo": "1x2",
-      "id": "resultado-2",
+      "id": "2",
       "prob": 0.25,
       "texto": "Gana el RC Deportivo"
     },
     {
+      "cuota": 1.2,
+      "id": "paraguas",
+      "prob": 0.8,
+      "texto": "¿Aparece lluvia en la conversación del grupo?"
+    },
+    {
       "cuota": 4,
-      "id": "paraguas-arbitro",
-      "prob": 0.3,
-      "texto": "El árbitro consulta el pronóstico antes del saque"
+      "id": "koipostea",
+      "prob": 0.2,
+      "texto": "¿Koi escribe antes del pitido inicial?"
     },
     {
-      "cuota": 12,
-      "id": "koi-grada",
-      "prob": 0.05,
-      "texto": "Koi aparece en Mendizorroza sin que nadie le lleve el carnet"
+      "cuota": 1.5,
+      "id": "prince",
+      "prob": 0.65,
+      "texto": "¿Alguien menciona la frase «príncipes o peregrinos»?"
     },
     {
-      "cuota": 2.5,
-      "id": "pica-descanso",
-      "prob": 0.4,
-      "texto": "Alguien pide pica en el descanso y pierde el respeto de la grada"
+      "cuota": 2,
+      "id": "coffee",
+      "prob": 0.5,
+      "texto": "¿Dug menciona café o txakoli?"
     },
     {
-      "cuota": 3,
-      "id": "gol-celebrado",
-      "prob": 0.25,
-      "texto": "El Alavés marca y la cuadrilla celebra como si no lloviera"
+      "cuota": 1.4,
+      "id": "hrk",
+      "prob": 0.7,
+      "texto": "¿El HRK hace una pregunta directa y sin rodeos?"
     }
   ],
-  "partido": "Alavés-RC Deportivo"
+  "partido": "Alavés - RC Deportivo"
 }
