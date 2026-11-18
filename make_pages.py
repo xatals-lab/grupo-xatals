@@ -82,6 +82,7 @@ PAGES = {
 <p><button class="rosa" id="empezar">▶ Sentarse a la mesa</button></p><div class="panel log" id="log"><i>Aquí irá lo que dicen en la mesa.</i></div><div id="rec"></div>""", '<script src="js/mus.js"></script>'),
 "laboratorio": ("Laboratorio", '<h1>🧪 Laboratorio de la cuadrilla</h1><p class="escribe">Sliders, botones y cosas que pasan. Tócalo todo.</p><div id="app">Cargando…</div>', '<script src="js/laboratorio.js"></script>'),
 "claustro": ("Claustro y orla", '<h1>🎓 El claustro y la orla</h1><p>Los profes de Santa María y los compañeros de la cuadrilla, todos juntos.</p><div id="app">Cargando…</div>', '<script src="js/claustro.js"></script>'),
+"creditos": ("Créditos", '<h1>📸 Créditos de las fotos</h1><div id="app">Cargando…</div>', '<script src="js/creditos.js"></script>'),
 "records": ("Hall of Fame", '<h1>🏆 Hall of Fame</h1><div id="app">Cargando…</div>', '<script src="js/records.js"></script>'),
 }
 for name, (title, body, script) in PAGES.items():

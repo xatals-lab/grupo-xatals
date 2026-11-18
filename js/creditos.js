@@ -1,0 +1,2 @@
+(async()=>{const d=await cargaJSON("creditos"),a=document.getElementById("app");
+a.innerHTML="<p>Las fotos de las tarjetas vienen de Wikimedia Commons con licencias libres. Gracias a sus autores.</p><ul class='creditos'>"+Object.entries(d).map(([k,v])=>`<li><b>${v.titulo}</b> · ${v.autor||"autor desconocido"} · <i>${v.licencia}</i> · <a href="${v.url}" target="_blank" rel="noopener noreferrer">fuente</a></li>`).join("")+"</ul>";})().catch(e=>{document.getElementById("app").textContent="No he podido cargar los créditos.";console.error(e)});

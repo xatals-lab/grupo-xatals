@@ -9,7 +9,7 @@ function pintaCabecera(){
   const h=document.createElement("header");h.className="top";
   h.innerHTML='<a class="logo" href="index.html">XATALS</a><nav>'+NAV.map(([u,t])=>`<a href="${u}" class="${u===actual?"on":""}">${t}</a>`).join("")+"</nav>";
   document.body.prepend(h);
-  const f=document.createElement("footer");f.textContent="Grupo Xatals · todo exagerado e inventado con cariño · lo actualiza Hermek cada viernes";document.body.append(f);
+  const f=document.createElement("footer");f.innerHTML="Grupo Xatals · todo exagerado e inventado con cariño · lo actualiza Hermek cada viernes · <a href='creditos.html' style='color:#c9b27a'>📸 créditos</a>";document.body.append(f);
   fetch("data/euskera.json?v="+Date.now()).then(r=>r.json()).then(d=>{const w=azar(d.palabras);const p=document.createElement("p");p.className="euskera";p.innerHTML=`🗣️ <b>Gaurko hitza</b> (palabra del día): <b>${w.eu}</b> = ${w.es}. <i>${w.chiste||""}</i>`;f.prepend(p);}).catch(()=>{});
   document.querySelectorAll(".card").forEach(c=>{
     c.addEventListener("mousemove",e=>{const r=c.getBoundingClientRect();c.style.setProperty("--ry",((e.clientX-r.left)/r.width-.5)*14+"deg");c.style.setProperty("--rx",(-((e.clientY-r.top)/r.height-.5))*14+"deg");});
@@ -54,11 +54,22 @@ let _ac=null;function sonido(f,d=.1){if(localStorage.getItem("xatals_mute")==="1
 function confeti(){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;const c=document.createElement("canvas");c.style.cssText="position:fixed;inset:0;pointer-events:none;z-index:120";c.width=innerWidth;c.height=innerHeight;document.body.append(c);const x=c.getContext("2d"),cols=["#ffe500","#ff2e93","#00e5ff","#39ff14","#fff"];const p=Array.from({length:120},()=>({x:innerWidth/2,y:innerHeight*.6,vx:(Math.random()-.5)*14,vy:-Math.random()*16-4,s:4+Math.random()*6,c:azar(cols),r:Math.random()*6}));let n=0;(function f(){x.clearRect(0,0,c.width,c.height);p.forEach(q=>{q.x+=q.vx;q.y+=q.vy;q.vy+=.45;q.r+=.2;x.fillStyle=q.c;x.save();x.translate(q.x,q.y);x.rotate(q.r);x.fillRect(-q.s/2,-q.s/2,q.s,q.s*.6);x.restore();});if(++n<110)requestAnimationFrame(f);else c.remove();})();}
 document.addEventListener("DOMContentLoaded",()=>{pintaCabecera();const sb=document.getElementById("start");if(sb)sb.addEventListener("click",()=>{document.body.classList.add("jugando");const a=document.querySelector(".arena");if(a)setTimeout(()=>a.scrollIntoView({block:"start",behavior:"smooth"}),50);},true);const m=document.createElement("button");m.className="sec mute";m.title="Sonido";const u=()=>m.textContent=localStorage.getItem("xatals_mute")==="1"?"🔇":"🔊";u();m.onclick=()=>{localStorage.setItem("xatals_mute",localStorage.getItem("xatals_mute")==="1"?"0":"1");u();};document.querySelector("header.top").append(m);});
 
-/* ---- every card gets a thumbnail: generated gradient + big emoji (+ site logo for external links) ---- */
+/* ---- every card gets a thumbnail: real royalty-free photo when we have one (credits page), else generated gradient + emoji ---- */
+const FOTOS = [[/cele[dn]|virgen blanca/, "celedon"], [/dónde está|encuentra|camiseta|multitud/, "multitud"], [/\bmus\b|carta|kupula/, "cartas"], [/tren|renfe|viribay|maquinista|v[ií]a\b/, "tren"],
+  [/examen|quiz|pregunta|bacterio/, "examen"], [/claustro|orla|profes|aula|cole\b|santa mar|marianistas/, "aula"], [/futbol|fútbol|penalti|tejedor/, "futbol"], [/alav[eé]s|apuestas|querejeta|bordal|mendizorroza|liga/, "estadio"],
+  [/pintxo|torre|gilda/, "pintxos"], [/caña|calimocho|pica\b|txakoli|ronda|\bbar\b/, "cerveza"], [/punk|guitarra|edortha|ritmo|heavy|bogus|concierto/, "guitarra"], [/buxai|recreo|puñet|pelea|bomb/, "boxeo"],
+  [/koi|servicios|reuni|papeleo|catálogo|irabi/, "oficina"], [/camino|albergue|peregrin|pr[ií]ncipe/, "camino"], [/chiste|risa|humor/, "risa"], [/panel|datos|dashboard|estad[ií]st/, "datos"], [/laboratorio/, "laboratorio"],
+  [/recurso|prensa|noticia|semana|novedad/, "periodico"], [/hall|fame|ranking|r[eé]cord|trofeo/, "trofeo"], [/euskera|vasco|txapela|gaurko/, "txapela"], [/lluvia|euria|paraguas/, "lluvia"], [/vaca/, "vaca"],
+  [/\bpc\b|ordenador|phediox|aiksmann|inform[aá]tico|tele\b/, "ordenador"], [/bihl|gimnasio|pesas/, "gimnasio"], [/diiios|globo|grito/, "globo"], [/vitoria|gasteiz|plaza/, "vitoria"]];
+let _cred = null; fetch("data/creditos.json").then(r => r.json()).then(d => { _cred = d; miniaturas(); mejoraFotos(); }).catch(() => { _cred = {}; });
+function fotoPara(txt) { if (!_cred) return null; for (const [re, k] of FOTOS) if (re.test(txt) && _cred[k]) return k; return null; }
+function mejoraFotos(){document.querySelectorAll(".card").forEach(c=>{const th=c.querySelector(".thumb");if(!th||th.classList.contains("conFoto")||c.dataset.img)return;const h3=c.querySelector("h3");const k=fotoPara(((h3?h3.textContent:"")+" "+(c.getAttribute("href")||"")+" "+(c.dataset.tag||"")).toLowerCase());if(!k)return;th.classList.add("conFoto");th.insertAdjacentHTML("afterbegin",`<img class="foto" src="img/${k}.jpg" alt="" loading="lazy" onerror="this.remove()">`);});}
 function _hue(s){let h=7;for(const ch of s)h=(h*31+ch.charCodeAt(0))%360;return h;}
 function miniaturas(root=document){root.querySelectorAll(".card").forEach(c=>{if(c.querySelector(".thumb"))return;const em=c.querySelector(".em"),h3=c.querySelector("h3");const e=c.dataset.thumb||(em?em.textContent.trim():"");if(!e)return;
-  const t=document.createElement("div");t.className="thumb";t.style.setProperty("--h",_hue((h3?h3.textContent:"")+e));t.innerHTML=`<span class="te">${e}</span>`;
+  const titulo=h3?h3.textContent:"";const t=document.createElement("div");t.className="thumb";t.style.setProperty("--h",_hue(titulo+e));
+  const k=c.dataset.img?null:fotoPara((titulo+" "+(c.getAttribute("href")||"")+" "+(c.dataset.tag||"")).toLowerCase());
+  if(k){t.classList.add("conFoto");t.innerHTML=`<img class="foto" src="img/${k}.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="te">${e}</span>`;}else t.innerHTML=`<span class="te">${e}</span>`;
   if(c.dataset.tag)t.insertAdjacentHTML("beforeend",`<span class="tt">${c.dataset.tag}</span>`);
   if(c.dataset.img){const im=document.createElement("img");im.alt="";im.loading="lazy";im.src=c.dataset.img;im.onerror=()=>im.remove();t.append(im);}
   if(em)em.remove();c.prepend(t);});}
-document.addEventListener("DOMContentLoaded",()=>{miniaturas();let tm=null;new MutationObserver(()=>{clearTimeout(tm);tm=setTimeout(()=>miniaturas(),60);}).observe(document.body,{childList:true,subtree:true});});
+document.addEventListener("DOMContentLoaded",()=>{miniaturas();let tm=null;new MutationObserver(()=>{clearTimeout(tm);tm=setTimeout(()=>{miniaturas();mejoraFotos();},60);}).observe(document.body,{childList:true,subtree:true});});

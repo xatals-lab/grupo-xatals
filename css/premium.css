@@ -140,3 +140,10 @@ html{-webkit-text-size-adjust:100%}body{overscroll-behavior-y:contain;padding-bo
 .home #retos ul{display:flex;gap:.5rem;flex-wrap:wrap;list-style:none;padding:0;margin:.4rem 0}.home #retos li{background:#0006;border-radius:99px;padding:.2rem .7rem;font-size:.85rem}
 .home #retos h2{font-size:1.1rem;margin:0 0 .3rem}.home #retos p{margin:.2rem 0}.home #retos p:last-child{display:none}
 @media(max-width:600px){.botonera{grid-template-columns:repeat(3,1fr)}.botonera a{font-size:1rem;min-height:84px}}
+
+.thumb .foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform .5s}
+.card:hover .thumb .foto{transform:scale(1.08)}
+.thumb.conFoto::before{z-index:1;background:linear-gradient(180deg,#0000 35%,#000b);mix-blend-mode:normal}
+.thumb.conFoto .te{position:absolute;left:.6rem;bottom:.3rem;font-size:2rem;z-index:3}
+.creditos li{margin:.5rem 0;font-size:.9rem}
+.thumb .foto{max-width:none;aspect-ratio:auto;padding:0;background:none;border-radius:0;right:auto;bottom:auto;box-shadow:none;width:100%;height:100%;left:0;top:0}
