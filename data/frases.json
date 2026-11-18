@@ -198,5 +198,15 @@
       "koi",
       "phediox"
     ]
+  },
+  {
+    "autor": "hrk",
+    "frase": "PheDiox se quejó al llegar al primer albergue, que era un poco precario.",
+    "opciones": [
+      "hrk",
+      "dug",
+      "koi",
+      "phediox"
+    ]
   }
 ]

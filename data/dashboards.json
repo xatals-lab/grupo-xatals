@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-17",
+ "generado": "2026-11-18",
  "desde": "2026-07-27",
  "total": 645,
  "personas": [
@@ -11,7 +11,7 @@
    "preguntas": 141,
    "exclamaciones": 12,
    "largos": 20,
-   "dias_sin_hablar": 4.1,
+   "dias_sin_hablar": 4.2,
    "mayor_silencio_dias": 7.7
   },
   {
@@ -33,7 +33,7 @@
    "preguntas": 3,
    "exclamaciones": 9,
    "largos": 0,
-   "dias_sin_hablar": 4.6,
+   "dias_sin_hablar": 4.7,
    "mayor_silencio_dias": 8.3
   }
  ],

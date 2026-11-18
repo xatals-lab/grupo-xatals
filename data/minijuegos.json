@@ -1,819 +1,896 @@
 {
- "juegos": [
-  {
-   "id": "servicios-minimos",
-   "plantilla": "pulsa",
-   "titulo": "Koi y los servicios mínimos",
-   "emoji": "🧑‍💼",
-   "resumen": "Caña y pintxo para ti; papeleo para Koi.",
-   "intro": "Cuando salen pintxos y cañas, pulsa. Cuando sale papeleo (anexos, libro de reclamaciones), NO: Koi pide servicios mínimos y se te cae la puntuación.",
-   "dificultad": 2,
-   "nuevo": false,
-   "duracion": 30,
-   "buenos": [
+  "juegos": [
     {
-     "e": "🍺"
+      "id": "servicios-minimos",
+      "plantilla": "pulsa",
+      "titulo": "Koi y los servicios mínimos",
+      "emoji": "🧑‍💼",
+      "resumen": "Caña y pintxo para ti; papeleo para Koi.",
+      "intro": "Cuando salen pintxos y cañas, pulsa. Cuando sale papeleo (anexos, libro de reclamaciones), NO: Koi pide servicios mínimos y se te cae la puntuación.",
+      "dificultad": 2,
+      "nuevo": false,
+      "duracion": 30,
+      "buenos": [
+        {
+          "e": "🍺"
+        },
+        {
+          "e": "🥘"
+        },
+        {
+          "e": "🍻"
+        }
+      ],
+      "malos": [
+        {
+          "e": "📎"
+        },
+        {
+          "e": "📋"
+        },
+        {
+          "e": "📑"
+        }
+      ],
+      "msg_ok": [
+        "¡Pintxo a salvo!",
+        "Caña cobrada.",
+        "Servicios máximos.",
+        "Pintxo salvado. Koi ni se ha enterado: estaba en horario de comer.",
+        "Reflejos de alguien que nunca ha currado a destajo."
+      ],
+      "msg_ko": [
+        "Koi: esto no entra en mi horario.",
+        "Servicios mínimos activados.",
+        "Anexo firmado, ánimo hundido.",
+        "Koi saca el libro de reclamaciones. Y tú sin bolígrafo.",
+        "Koi: 'esto lo veo el lunes'. Es viernes, pringado.",
+        "Ese anexo lo firma tu padre, blando."
+      ],
+      "consigna": "Pulsa los buenos y no toques los malos"
     },
     {
-     "e": "🥘"
+      "id": "calimocho-pica",
+      "plantilla": "pulsa",
+      "titulo": "Calimocho contra pica",
+      "emoji": "🍷",
+      "resumen": "Calimocho sí. Pica es bebida de flojos.",
+      "intro": "Pulsa los calimochos. Si tocas una pica (cerveza con limón), te cae la fama de flojo del grupo.",
+      "dificultad": 2,
+      "nuevo": false,
+      "duracion": 30,
+      "buenos": [
+        {
+          "e": "🍷"
+        },
+        {
+          "e": "🥤"
+        }
+      ],
+      "malos": [
+        {
+          "e": "🍺🍋"
+        }
+      ],
+      "msg_ok": [
+        "¡Calimocho, como Dios manda!",
+        "Eso es un hombre.",
+        "Otro al bote.",
+        "Calimocho cobrado. Koi lo mira con envidia: él pide pica."
+      ],
+      "msg_ko": [
+        "Pica: bebida de flojos.",
+        "Hoy te toca invitar por flojo.",
+        "Koi aplaude (pide pica).",
+        "Pica... eres flojo de nacimiento, como Koi.",
+        "Eso lo pide el más flojo del grupo: tú.",
+        "HRK te mira como a un email con cariño."
+      ],
+      "consigna": "Pulsa los buenos y no toques los malos"
     },
     {
-     "e": "🍻"
+      "id": "querejeta-destituye",
+      "plantilla": "pulsa",
+      "titulo": "Querejeta destituye",
+      "emoji": "👔",
+      "resumen": "Echa entrenadores antes de que se enfríe el palco.",
+      "intro": "Salen entrenadores del Alavés: pulsa para destituir, que Josean Querejeta no perdona. A Bordalás (el hombre de hierro, ya en el Getafe) no se le toca.",
+      "dificultad": 3,
+      "nuevo": false,
+      "duracion": 28,
+      "buenos": [
+        {
+          "e": "🧑‍🏫"
+        },
+        {
+          "e": "🧢"
+        },
+        {
+          "e": "📋"
+        }
+      ],
+      "malos": [
+        {
+          "e": "🦾"
+        }
+      ],
+      "msg_ok": [
+        "¡Destituido!",
+        "Rueda de prensa de despedida.",
+        "Otro al paro.",
+        "Otro entrenador a la calle: Querejeta, hazme socio.",
+        "Destituido más rápido que Dug un domingo."
+      ],
+      "msg_ko": [
+        "Bordalás ni se inmuta.",
+        "El hombre de hierro te mira mal.",
+        "Eso se paga con pica.",
+        "Bordalás te mira y te quita las ganas de vivir.",
+        "Josean ya te ha despedido a ti.",
+        "Eso es tocar al hombre de hierro, valiente."
+      ],
+      "consigna": "Pulsa los buenos y no toques los malos"
+    },
+    {
+      "id": "patadas-tejedor",
+      "plantilla": "pulsa",
+      "titulo": "Recreo con Tejedor",
+      "emoji": "⚽",
+      "resumen": "Pasa los balones y esquiva las patadas.",
+      "intro": "En el recreo, Tejedor acaba todos los partidos a patadas. Pulsa los balones para pasarlos y evita las espinillas.",
+      "dificultad": 3,
+      "nuevo": false,
+      "duracion": 28,
+      "buenos": [
+        {
+          "e": "⚽"
+        }
+      ],
+      "malos": [
+        {
+          "e": "🦵"
+        },
+        {
+          "e": "🥾"
+        }
+      ],
+      "msg_ok": [
+        "Pase a la red.",
+        "¡Qué control!",
+        "Tejedor se emociona.",
+        "Pase al pie, como cuando aún había colegio y rodillas."
+      ],
+      "msg_ko": [
+        "¡Patada en la espinilla!",
+        "Tejedor: 'ha sido fútbol'.",
+        "Falta, penalti y bronca.",
+        "Tejedor te rompe la espinilla y dice 'ha sido fútbol'.",
+        "Con 41 años y cara de 20: así te pega, con vitalidad.",
+        "Falta, roja y Tejedor sigue jugando."
+      ],
+      "consigna": "Pulsa los buenos y no toques los malos"
+    },
+    {
+      "id": "irabi-rodamientos",
+      "plantilla": "pulsa",
+      "titulo": "Irabi S.A.: turno de rodamientos",
+      "emoji": "⚙️",
+      "resumen": "Rodamientos para Héctor, correos con cariño no.",
+      "intro": "En la fábrica de Héctor en Bergara las condiciones son las más duras y los emails, directos. Pulsa los rodamientos. Los correos con cariño no existen: no los toques.",
+      "dificultad": 3,
+      "nuevo": false,
+      "duracion": 30,
+      "buenos": [
+        {
+          "e": "⚙️"
+        },
+        {
+          "e": "🔩"
+        },
+        {
+          "e": "🛠️"
+        }
+      ],
+      "malos": [
+        {
+          "e": "💌"
+        },
+        {
+          "e": "🌸"
+        }
+      ],
+      "msg_ok": [
+        "Rodamiento bien rodado.",
+        "HRK asiente sin decir nada.",
+        "Producción al máximo.",
+        "HRK asiente. Es el mayor elogio que dará en su vida."
+      ],
+      "msg_ko": [
+        "Aquí no se manda cariño.",
+        "HRK pone cara de tierra embarrada.",
+        "Insulto de bienvenida.",
+        "Aquí no hay cariño, hay rodamientos, blando.",
+        "HRK te llama algo que no se puede escribir.",
+        "Con ese email del cariño te echan de la nave."
+      ],
+      "consigna": "Pulsa los buenos y no toques los malos"
+    },
+    {
+      "id": "diiios",
+      "plantilla": "aguanta",
+      "titulo": "El grito de PheDiox",
+      "emoji": "🗣️",
+      "resumen": "Estira el Diiiios hasta la zona verde.",
+      "intro": "Mantén pulsado para estirar el DIIIIOOOS y suelta cuando la aguja esté en la zona verde. Aquí sí se estira: en el audio de Hermek no.",
+      "dificultad": 3,
+      "nuevo": false,
+      "palabra": "Dios",
+      "rondas": 5,
+      "consigna": "Estira el Dios hasta la zona verde",
+      "msg_ok": [
+        "¡Ese Dios sí que sí!",
+        "PheDiox se quita el sombrero.",
+        "Voz de estadio."
+      ],
+      "msg_ko": [
+        "Dios se quedó corto.",
+        "Se te cortó la voz.",
+        "Eso no era ni un Dios de pueblo.",
+        "PheDiox ha cambiado de obsesión mientras gritabas."
+      ]
+    },
+    {
+      "id": "busca-edortha",
+      "plantilla": "busca",
+      "titulo": "¿Dónde está Edortha Mari?",
+      "emoji": "🎸",
+      "resumen": "El desaparecido de las dos hijas, escondido entre carritos.",
+      "intro": "Edortha Mari desapareció del mapa al tener dos hijas. Encuéntralo entre carritos, peluches y biberones antes de que se esfume.",
+      "dificultad": 3,
+      "nuevo": false,
+      "objetivo": {
+        "e": "🎸",
+        "t": "Edortha Mari (el de la guitarra punk)"
+      },
+      "senuelos": [
+        {
+          "e": "👶"
+        },
+        {
+          "e": "🍼"
+        },
+        {
+          "e": "🛒"
+        },
+        {
+          "e": "🧸"
+        },
+        {
+          "e": "🚼"
+        },
+        {
+          "e": "🌳"
+        }
+      ],
+      "rondas": 5,
+      "tiempo": 14,
+      "msg_ko": [
+        "Se ha esfumado otra vez.",
+        "Dicen que lo vieron en un parque con un carrito.",
+        "Edortha lleva años desaparecido y tú no lo encuentras ni con linterna.",
+        "Ni sus amigos íntimos lo ven; tú menos."
+      ]
+    },
+    {
+      "id": "camiseta-abascal",
+      "plantilla": "busca",
+      "titulo": "La camiseta del Alavés del 98",
+      "emoji": "🎽",
+      "resumen": "Encuentra la camiseta entre las 40 de Abascal.",
+      "intro": "Daniel Abascal tiene todas las camisetas de fútbol posibles. Encuentra la del Alavés del 98 antes de que la guarde en la mochila.",
+      "dificultad": 4,
+      "nuevo": false,
+      "objetivo": {
+        "e": "🎽",
+        "t": "la camiseta del Alavés del 98"
+      },
+      "senuelos": [
+        {
+          "e": "👕"
+        }
+      ],
+      "rondas": 4,
+      "tiempo": 16,
+      "msg_ko": [
+        "Abascal ya la ha guardado en la mochila.",
+        "Abascal ya te ha rechazado el cambio de camiseta con desprecio."
+      ]
+    },
+    {
+      "id": "aiksmann-tele",
+      "plantilla": "simon",
+      "titulo": "Aiksmann arregla la tele",
+      "emoji": "🖥️",
+      "resumen": "Repite la secuencia de cables como el último informático de 2003.",
+      "intro": "El informático de Marianistas reinicia el sistema con una secuencia de cables. Repítela sin equivocarte.",
+      "dificultad": 3,
+      "nuevo": false,
+      "rondas": 8,
+      "botones": [
+        {
+          "e": "🔌",
+          "c": "#ff2e93"
+        },
+        {
+          "e": "📺",
+          "c": "#00e5ff"
+        },
+        {
+          "e": "🖥️",
+          "c": "#39ff14"
+        },
+        {
+          "e": "💾",
+          "c": "#ffe500"
+        }
+      ],
+      "msg_ok": [
+        "Reiniciado.",
+        "Funciona con un clip.",
+        "Windows 98 aprueba."
+      ],
+      "msg_ko": [
+        "Pantalla azul.",
+        "Eso era el cable de la impresora.",
+        "Pantalla azul, como la cara de Aiksmann cuando ve tu PC.",
+        "Hasta Windows 98 lo hacía mejor."
+      ],
+      "consigna": "¡Ahora repite la secuencia!"
+    },
+    {
+      "id": "bihl-gimnasio",
+      "plantilla": "timing",
+      "titulo": "Bihl en el gimnasio",
+      "emoji": "🏋️",
+      "resumen": "Levanta pesas en el punto exacto, con humildad.",
+      "intro": "Bihl, el quinto hombre de la industria guipuzcoana, levanta todo con humildad. Para la aguja en la zona verde para levantar el peso. La zona se hace más pequeña.",
+      "dificultad": 3,
+      "nuevo": false,
+      "rondas": 5,
+      "zona": 36,
+      "consigna": "Para la aguja en la zona verde",
+      "msg_ok": [
+        "Levantado, y encima dice que no es para tanto.",
+        "Bihl se sonroja.",
+        "Peso muerto, pero vivo.",
+        "Bihl: 'no es para tanto'. Y ha levantado un coche."
+      ],
+      "msg_ko": [
+        "Se te cae la barra.",
+        "Eso pesaba más que el examen del Bacterio.",
+        "Bihl te levanta a ti de un brazo y te devuelve a la cinta."
+      ]
+    },
+    {
+      "id": "celedon",
+      "plantilla": "timing",
+      "titulo": "Bajar a Celedón",
+      "emoji": "🎈",
+      "resumen": "Frena la bajada en la zona buena, que es la Blanca.",
+      "intro": "Es la fiesta de la Blanca: Celedón baja de la torre. Para la aguja en la zona verde para frenar la bajada. Si te pasas, aterrizas en el pote equivocado.",
+      "dificultad": 2,
+      "nuevo": false,
+      "rondas": 5,
+      "zona": 38,
+      "consigna": "Frena a Celedón en la zona verde",
+      "msg_ok": [
+        "Aterrizaje perfecto en la plaza.",
+        "El pueblo aplaude con txapela.",
+        "Pote servido."
+      ],
+      "msg_ko": [
+        "Aterrizas en la fuente.",
+        "Celedón pide otra caña mientras cuelga.",
+        "Celedón te mira desde el aire con cara de 'qué vergüenza'."
+      ]
+    },
+    {
+      "id": "carteles-viribay",
+      "plantilla": "pulsa",
+      "titulo": "Pega los carteles de Viribay",
+      "emoji": "🪧",
+      "resumen": "Campaña electoral escolar: pega carteles y esquiva al conserje.",
+      "intro": "Es la campaña de delegado más seria del colegio. Pulsa los carteles «Votando a Viribay, ganamos todos» y no toques al profe ni al conserje que los arrancan.",
+      "dificultad": 2,
+      "nuevo": false,
+      "duracion": 30,
+      "buenos": [
+        {
+          "e": "🪧"
+        },
+        {
+          "e": "📢"
+        }
+      ],
+      "malos": [
+        {
+          "e": "🧹"
+        },
+        {
+          "e": "🧑‍🏫"
+        }
+      ],
+      "msg_ok": [
+        "¡Votando a Viribay, ganamos todos!",
+        "Cartel pegado: Aznar estaría orgulloso.",
+        "Ederra! Otro mitin ganado."
+      ],
+      "msg_ko": [
+        "El profe te arranca el cartel: oposición dura.",
+        "El conserje se ríe de tu programa.",
+        "Ai ama! Te han pillado pegando."
+      ],
+      "consigna": "Pega carteles, no toques al profe"
+    },
+    {
+      "id": "edortha-punk",
+      "plantilla": "ritmo",
+      "titulo": "Edortha al punk",
+      "emoji": "🎸",
+      "resumen": "Toca el punk de Edortha Mari antes de que desaparezca otra vez.",
+      "intro": "Edortha Mari era tranquilísimo hasta que cogía la guitarra. Pulsa cada nota cuando cruce la línea amarilla: flechas, A S D F o toca los botones.",
+      "dificultad": 3,
+      "nuevo": false,
+      "duracion": 30,
+      "notas": [
+        "🎸",
+        "🤘",
+        "🔥",
+        "🥁"
+      ],
+      "consigna": "Pulsa cada nota en la línea amarilla",
+      "msg_ok": [
+        "Ederra! Esto es punk de verdad.",
+        "El público pide otra... y que Edortha no desaparezca.",
+        "Dicen que lo vieron tocando con un carrito."
+      ],
+      "msg_ko": [
+        "Eso no era punk, era Koi tocando servicios mínimos.",
+        "Ai ama! Se te cae la púa.",
+        "Edortha te mira y desaparece."
+      ]
+    },
+    {
+      "id": "koi-huye",
+      "plantilla": "carril3d",
+      "titulo": "Koi huye de la reunión",
+      "emoji": "🏃",
+      "resumen": "3D: corre por la calle de Vitoria esquivando papeleo y cogiendo cañas.",
+      "intro": "Son las 17:01 y Koi ya está fuera de horario. Corre por la calle: desliza a izquierda o derecha para cambiar de carril, coge cañas y pintxos y esquiva anexos y llamadas.",
+      "dificultad": 3,
+      "nuevo": false,
+      "duracion": 40,
+      "jugador": {
+        "e": "🏃"
+      },
+      "buenos": [
+        {
+          "e": "🍺"
+        },
+        {
+          "e": "🥘"
+        }
+      ],
+      "malos": [
+        {
+          "e": "📎"
+        },
+        {
+          "e": "📋"
+        },
+        {
+          "e": "📞"
+        }
+      ],
+      "consigna": "Coge lo bueno, esquiva el papeleo",
+      "msg_ok": [
+        "¡Caña a la mano!",
+        "Pintxo en vuelo.",
+        "Eso sí que es servicio máximo."
+      ],
+      "msg_ko": [
+        "Un anexo te placa por la espalda.",
+        "Llamada del jefe: ¡a las 17:02!",
+        "Ai ama! Reunión sorpresa."
+      ],
+      "tema": "calle"
+    },
+    {
+      "id": "torre-pintxos",
+      "plantilla": "apila",
+      "titulo": "La torre de pintxos",
+      "emoji": "🥘",
+      "resumen": "Apila pintxos en la barra sin que se caiga la torre.",
+      "intro": "En el bote de la cuadrilla se apilan pintxos en una torre imposible. Suelta cada pintxo justo encima del anterior: lo que sobresale se pierde.",
+      "dificultad": 3,
+      "nuevo": false,
+      "bloque": {
+        "e": "🥘"
+      },
+      "niveles": [
+        "Base: la barra",
+        "Piso 2: tortilla",
+        "Piso 3: gilda",
+        "Piso 4: txistorra",
+        "Piso 5: croquetas",
+        "Piso 6: bacalao",
+        "Piso 7: txuleta",
+        "Piso 8: morcilla",
+        "Piso 9: anchoas",
+        "Piso 10: Celedón",
+        "Piso 11: Bordalás",
+        "Piso 12: el Bacterio"
+      ],
+      "msg_ok": [
+        "Clavado, ni una miga.",
+        "Qué pulso: Koi lo pediría por servicios mínimos.",
+        "Pintxo perfecto."
+      ],
+      "msg_ko": [
+        "Se cae la torre: Tejedor lo celebra a patadas.",
+        "Ai ama! Adiós pintxos."
+      ]
+    },
+    {
+      "id": "rastrea-koi-w47",
+      "plantilla": "busca",
+      "titulo": "¿Dónde está Koi?",
+      "emoji": "🔎",
+      "resumen": "Encuentra al Koi antes de que acabe el cartel del Azkena.",
+      "intro": "Koi lleva días sin intervenir y Héctor quiere saber qué día irá al festival. Busca al desaparecido entre carteles, botas y camas de albergue.",
+      "dificultad": 2,
+      "objetivo": {
+        "e": "🫥",
+        "t": "Koi en modo invisible"
+      },
+      "senuelos": [
+        {
+          "e": "🎸"
+        },
+        {
+          "e": "🥾"
+        },
+        {
+          "e": "🛏️"
+        },
+        {
+          "e": "📊"
+        },
+        {
+          "e": "🏠"
+        }
+      ],
+      "rondas": 5,
+      "tiempo": 14,
+      "msg_ko": [
+        "Has encontrado el cartel, el albergue y hasta el eje del gráfico. Koi, no.",
+        "Se te ha escapado. Estaba fuera del chat, como de costumbre."
+      ],
+      "nuevo": false
+    },
+    {
+      "id": "torre-del-albergue-w47",
+      "plantilla": "apila",
+      "titulo": "PheDiox levanta el albergue",
+      "emoji": "🧱",
+      "resumen": "Apila camas, mochilas y excusas antes de que el dueño vuelva a preguntar si sois príncipes.",
+      "intro": "PheDiox ha encontrado el albergue y ya está evaluando el colchón. Levanta una torre digna de un peregrino; Koi, mientras tanto, sigue sin confirmar el Azkena.",
+      "dificultad": 3,
+      "bloque": {
+        "e": "🛏️"
+      },
+      "niveles": [
+        "🥾",
+        "🎒",
+        "🛏️",
+        "🧱",
+        "📱",
+        "🎸",
+        "🍲",
+        "🗺️",
+        "🏠",
+        "🧦",
+        "☔",
+        "👑"
+      ],
+      "msg_ok": [
+        "¡Ederra! Has apilado más que Koi ha escrito esta semana.",
+        "La torre aguanta; PheDiox ya pide habitación con vistas.",
+        "Aupa, peregrino: el dueño te deja dormir antes de preguntarte el título nobiliario."
+      ],
+      "msg_ko": [
+        "Se ha caído todo. PheDiox quiere hablar con recepción.",
+        "Koi ha desaparecido entre los bloques; tampoco estaba confirmado.",
+        "La torre se inclina más que la paciencia del dueño del albergue."
+      ],
+      "vds": false,
+      "nuevo": false
+    },
+    {
+      "dificultad": 2,
+      "emoji": "🛎️",
+      "id": "albergue-de-lujo",
+      "intro": "El albergue es sencillo y PheDiox ya mira la puerta. Aguanta la palabra suite sin que te echen antes del desayuno.",
+      "msg_ko": [
+        "Te han echado antes de terminar la palabra, príncipe.",
+        "PheDiox ha pedido hablar con dirección. No hay dirección.",
+        "Ni cinco segundos sin reclamar, qué cruz."
+      ],
+      "msg_ok": [
+        "Has aguantado más que PheDiox en una cama sin dosel.",
+        "Ederra: cinco rondas sin llamar a recepción.",
+        "El hospitalero te deja quedarte. No preguntes por las estrellas."
+      ],
+      "palabra": "suite",
+      "plantilla": "aguanta",
+      "resumen": "Estira «suite» mientras el Camino te recuerda que has venido andando.",
+      "rondas": 5,
+      "titulo": "Aguanta, PheDiox",
+      "nuevo": false
+    },
+    {
+      "id": "don-hector",
+      "plantilla": "carril3d",
+      "tema": "tren",
+      "titulo": "Don Héctor Viribay: maquinista de Renfe",
+      "emoji": "🚆",
+      "vds": true,
+      "semana": "2026-W47",
+      "nuevo": false,
+      "dificultad": 2,
+      "resumen": "3D: conduce el tren de Don Héctor y elige vía en cada cartel.",
+      "intro": "Las preguntas de este tren son todas sobre Héctor Viribay, también llamado Don Héctor o Viribaytxo: el compañero del cole que hablaba como un señor mayor, fue delegado, abogado y acabó de maquinista de Renfe. Desliza a izquierda o derecha (o toca los lados) para cambiar de vía, coge los carteles de campaña y, cuando aparezcan tres carteles, elige la vía con la respuesta correcta. El tren va más despacio al acercarse a los carteles para que te dé tiempo a leer.",
+      "duracion": 50,
+      "vidas": 3,
+      "buenos": [
+        {
+          "e": "🪧"
+        },
+        {
+          "e": "📢"
+        },
+        {
+          "e": "🎩"
+        }
+      ],
+      "malos": [
+        {
+          "e": "🐄"
+        },
+        {
+          "e": "⏰"
+        },
+        {
+          "e": "🚧"
+        }
+      ],
+      "puertas": [
+        {
+          "pregunta": "Viribay se presentó a delegado: ¿cuál fue su lema de campaña?",
+          "opciones": [
+            "El futuro es hoy",
+            "Votando a Viribay, ganamos todos",
+            "Yo también soy Viribay"
+          ],
+          "correcta": 1
+        },
+        {
+          "pregunta": "Don Héctor terminó Derecho: ¿qué hizo después?",
+          "opciones": [
+            "Piloto de Ryanair",
+            "Informático del cole",
+            "Montó un bufete solo, de la nada"
+          ],
+          "correcta": 2
+        },
+        {
+          "pregunta": "De niño, Viribaytxo ya hablaba...",
+          "opciones": [
+            "Como un señor mayor",
+            "Solo en euskera",
+            "Con la voz de Koi"
+          ],
+          "correcta": 0
+        },
+        {
+          "pregunta": "Héctor Viribay acabó trabajando de...",
+          "opciones": [
+            "Camarero del Kupula",
+            "Maquinista de Renfe",
+            "Árbitro del Alavés"
+          ],
+          "correcta": 1
+        },
+        {
+          "pregunta": "Cuando era pequeño, Don Héctor se alistó en las juventudes de...",
+          "opciones": [
+            "Un club de ajedrez",
+            "El Alavés",
+            "Las del Partido Popular"
+          ],
+          "correcta": 2
+        }
+      ],
+      "msg_ok": [
+        "¡Carteles pegados! Aznar estaría orgulloso.",
+        "Don Héctor sonríe sin mover la cara.",
+        "Ederra! Otro mitin ganado."
+      ],
+      "msg_ko": [
+        "Una vaca en la vía: Renfe de toda la vida.",
+        "Retraso de Renfe: normal.",
+        "Ai ama! Obras en la vía, hijo de puta."
+      ],
+      "sujeto": "Héctor Viribay (Don Héctor)"
+    },
+    {
+      "buenos": [
+        {
+          "e": "🎟️"
+        },
+        {
+          "e": "🎸"
+        }
+      ],
+      "dificultad": 2,
+      "duracion": 35,
+      "emoji": "🎸",
+      "id": "kois-catalogo-en-azkena",
+      "intro": "Mueve a Koi por tres carriles: recoge entradas del Azkena y esquiva catálogos y excusas. Llega al escenario antes de que vuelva a desaparecer del chat.",
+      "jugador": {
+        "e": "🤘"
+      },
+      "malos": [
+        {
+          "e": "📘"
+        },
+        {
+          "e": "💤"
+        },
+        {
+          "e": "📵"
+        }
+      ],
+      "msg_ko": [
+        "Koi se ha quedado en casa actualizando catálogos. Otra vez.",
+        "El concierto terminó y Koi aún pregunta qué día era.",
+        "Te ha atropellado una excusa de servicios mínimos."
+      ],
+      "msg_ok": [
+        "¡Lo has conseguido! Koi ha llegado antes de que acabe el bis.",
+        "Aupa, Koi en un concierto: esto sí que no estaba en el catálogo.",
+        "Has esquivado las excusas. El HRK ya está buscando el carnet."
+      ],
+      "plantilla": "runner",
+      "resumen": "Corre entre escenarios, esquiva catálogos y recoge entradas antes de que Koi se escaquee.",
+      "titulo": "Koi esquiva el Azkena",
+      "nuevo": false
+    },
+    {
+      "bloque": {
+        "e": "🛏️"
+      },
+      "dificultad": 3,
+      "emoji": "🥾",
+      "id": "peregrino-o-principe-camino",
+      "intro": "Apila doce literas para construir el albergue perfecto sin que PheDiox se quede protestando abajo. Coloca cada bloque con buen pulso; si la torre cae, el dueño vuelve a preguntar si sois príncipes o peregrinos.",
+      "msg_ko": [
+        "La torre se ha caído y PheDiox pide habitación presidencial. Qué pesado.",
+        "Has montado un albergue torcido; hasta el peregrino más sufrido se va.",
+        "Se desplomó la litera. PheDiox ya está redactando una queja de tres páginas."
+      ],
+      "msg_ok": [
+        "¡Ederra! Doce literas y ni una petición de servicio real.",
+        "Has levantado el albergue. PheDiox sigue protestando, pero ahora desde arriba.",
+        "¡Aupa, arquitecto! Por fin un alojamiento que aguanta una queja de PheDiox."
+      ],
+      "niveles": [
+        "🛏️",
+        "🛏️🛏️",
+        "🛏️🛏️🛏️",
+        "🛏️🛏️🛏️🛏️",
+        "🛏️🛏️🛏️🛏️🛏️",
+        "🛏️🛏️🛏️🛏️🛏️🛏️",
+        "🛏️🛏️🛏️🛏️🛏️🛏️🛏️",
+        "🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️",
+        "🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️",
+        "🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️",
+        "🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️",
+        "🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️"
+      ],
+      "plantilla": "apila",
+      "resumen": "Apila literas para levantar un albergue antes de que PheDiox pida trato de príncipe.",
+      "titulo": "El albergue de los príncipes",
+      "vds": true,
+      "semana": "2026-W48",
+      "nuevo": false
+    },
+    {
+      "consigna": "Esquiva las literas y mantén el ritmo hasta el desayuno; cinco rondas, sin montar una suite en el pasillo.",
+      "dificultad": 3,
+      "emoji": "🥾",
+      "id": "koi-camino-al-desayuno",
+      "intro": "Pulsa siguiendo el ritmo para esquivar los obstáculos que caen. Aguanta cinco rondas y llega al desayuno sin quejarte del albergue como si hubieras reservado un palacio.",
+      "msg_ko": [
+        "Te has estampado con una litera. El albergue no acepta reclamaciones por torpeza.",
+        "Has durado menos que la paciencia del dueño. Y eso que preguntó con educación.",
+        "PheDiox te ha adelantado mientras redactabas la queja."
+      ],
+      "msg_ok": [
+        "¡Has llegado al desayuno sin pedir mayordomo!",
+        "Ederra: cinco rondas y ni una protesta de príncipe.",
+        "Aupa, peregrino. La corona se queda en recepción."
+      ],
+      "notas": [
+        "🥾",
+        "🧭",
+        "🍞",
+        "🥾",
+        "🛏️"
+      ],
+      "plantilla": "ritmo",
+      "resumen": "Esquiva las literas al compás y sobrevive hasta el desayuno sin pedir servicio de habitaciones.",
+      "titulo": "Albergue a ritmo de peregrino",
+      "duracion": 30,
+      "nuevo": false
+    },
+    {
+      "buenos": [
+        {
+          "e": "🥾"
+        },
+        {
+          "e": "🧭"
+        },
+        {
+          "e": "🍞"
+        }
+      ],
+      "dificultad": 3,
+      "duracion": 35,
+      "emoji": "🥾",
+      "id": "phediox-principe-del-albergue",
+      "intro": "Corre por tres carriles, esquiva literas y mochilas y recoge botas de peregrino. Llega al desayuno sin quejarte del albergue ni pedir servicio de habitaciones; cinco vidas no, tres carriles y a espabilar.",
+      "jugador": {
+        "e": "🥾"
+      },
+      "malos": [
+        {
+          "e": "🛏️"
+        },
+        {
+          "e": "🎒"
+        },
+        {
+          "e": "🧦"
+        }
+      ],
+      "msg_ko": [
+        "Te has comido una litera. El albergue sigue siendo más resistente que tú.",
+        "Has acabado en objetos perdidos. Por fin alguien te encuentra.",
+        "El dueño te ha preguntado otra vez. Esta vez te lo has ganado."
+      ],
+      "msg_ok": [
+        "¡Ederra! Has llegado al desayuno sin pedir mayordomo.",
+        "Has esquivado la litera. PheDiox ya está redactando una reseña de tres líneas.",
+        "¡Aupa! Peregrino de verdad; la corona se queda en recepción."
+      ],
+      "plantilla": "runner",
+      "resumen": "Esquiva literas, recoge botas y sobrevive al albergue sin pedir servicio de habitaciones.",
+      "titulo": "PheDiox: príncipe del albergue",
+      "vds": true,
+      "semana": "2026-W49",
+      "nuevo": true
     }
-   ],
-   "malos": [
-    {
-     "e": "📎"
-    },
-    {
-     "e": "📋"
-    },
-    {
-     "e": "📑"
-    }
-   ],
-   "msg_ok": [
-    "¡Pintxo a salvo!",
-    "Caña cobrada.",
-    "Servicios máximos.",
-    "Pintxo salvado. Koi ni se ha enterado: estaba en horario de comer.",
-    "Reflejos de alguien que nunca ha currado a destajo."
-   ],
-   "msg_ko": [
-    "Koi: esto no entra en mi horario.",
-    "Servicios mínimos activados.",
-    "Anexo firmado, ánimo hundido.",
-    "Koi saca el libro de reclamaciones. Y tú sin bolígrafo.",
-    "Koi: 'esto lo veo el lunes'. Es viernes, pringado.",
-    "Ese anexo lo firma tu padre, blando."
-   ],
-   "consigna": "Pulsa los buenos y no toques los malos"
-  },
-  {
-   "id": "calimocho-pica",
-   "plantilla": "pulsa",
-   "titulo": "Calimocho contra pica",
-   "emoji": "🍷",
-   "resumen": "Calimocho sí. Pica es bebida de flojos.",
-   "intro": "Pulsa los calimochos. Si tocas una pica (cerveza con limón), te cae la fama de flojo del grupo.",
-   "dificultad": 2,
-   "nuevo": false,
-   "duracion": 30,
-   "buenos": [
-    {
-     "e": "🍷"
-    },
-    {
-     "e": "🥤"
-    }
-   ],
-   "malos": [
-    {
-     "e": "🍺🍋"
-    }
-   ],
-   "msg_ok": [
-    "¡Calimocho, como Dios manda!",
-    "Eso es un hombre.",
-    "Otro al bote.",
-    "Calimocho cobrado. Koi lo mira con envidia: él pide pica."
-   ],
-   "msg_ko": [
-    "Pica: bebida de flojos.",
-    "Hoy te toca invitar por flojo.",
-    "Koi aplaude (pide pica).",
-    "Pica... eres flojo de nacimiento, como Koi.",
-    "Eso lo pide el más flojo del grupo: tú.",
-    "HRK te mira como a un email con cariño."
-   ],
-   "consigna": "Pulsa los buenos y no toques los malos"
-  },
-  {
-   "id": "querejeta-destituye",
-   "plantilla": "pulsa",
-   "titulo": "Querejeta destituye",
-   "emoji": "👔",
-   "resumen": "Echa entrenadores antes de que se enfríe el palco.",
-   "intro": "Salen entrenadores del Alavés: pulsa para destituir, que Josean Querejeta no perdona. A Bordalás (el hombre de hierro, ya en el Getafe) no se le toca.",
-   "dificultad": 3,
-   "nuevo": false,
-   "duracion": 28,
-   "buenos": [
-    {
-     "e": "🧑‍🏫"
-    },
-    {
-     "e": "🧢"
-    },
-    {
-     "e": "📋"
-    }
-   ],
-   "malos": [
-    {
-     "e": "🦾"
-    }
-   ],
-   "msg_ok": [
-    "¡Destituido!",
-    "Rueda de prensa de despedida.",
-    "Otro al paro.",
-    "Otro entrenador a la calle: Querejeta, hazme socio.",
-    "Destituido más rápido que Dug un domingo."
-   ],
-   "msg_ko": [
-    "Bordalás ni se inmuta.",
-    "El hombre de hierro te mira mal.",
-    "Eso se paga con pica.",
-    "Bordalás te mira y te quita las ganas de vivir.",
-    "Josean ya te ha despedido a ti.",
-    "Eso es tocar al hombre de hierro, valiente."
-   ],
-   "consigna": "Pulsa los buenos y no toques los malos"
-  },
-  {
-   "id": "patadas-tejedor",
-   "plantilla": "pulsa",
-   "titulo": "Recreo con Tejedor",
-   "emoji": "⚽",
-   "resumen": "Pasa los balones y esquiva las patadas.",
-   "intro": "En el recreo, Tejedor acaba todos los partidos a patadas. Pulsa los balones para pasarlos y evita las espinillas.",
-   "dificultad": 3,
-   "nuevo": false,
-   "duracion": 28,
-   "buenos": [
-    {
-     "e": "⚽"
-    }
-   ],
-   "malos": [
-    {
-     "e": "🦵"
-    },
-    {
-     "e": "🥾"
-    }
-   ],
-   "msg_ok": [
-    "Pase a la red.",
-    "¡Qué control!",
-    "Tejedor se emociona.",
-    "Pase al pie, como cuando aún había colegio y rodillas."
-   ],
-   "msg_ko": [
-    "¡Patada en la espinilla!",
-    "Tejedor: 'ha sido fútbol'.",
-    "Falta, penalti y bronca.",
-    "Tejedor te rompe la espinilla y dice 'ha sido fútbol'.",
-    "Con 41 años y cara de 20: así te pega, con vitalidad.",
-    "Falta, roja y Tejedor sigue jugando."
-   ],
-   "consigna": "Pulsa los buenos y no toques los malos"
-  },
-  {
-   "id": "irabi-rodamientos",
-   "plantilla": "pulsa",
-   "titulo": "Irabi S.A.: turno de rodamientos",
-   "emoji": "⚙️",
-   "resumen": "Rodamientos para Héctor, correos con cariño no.",
-   "intro": "En la fábrica de Héctor en Bergara las condiciones son las más duras y los emails, directos. Pulsa los rodamientos. Los correos con cariño no existen: no los toques.",
-   "dificultad": 3,
-   "nuevo": false,
-   "duracion": 30,
-   "buenos": [
-    {
-     "e": "⚙️"
-    },
-    {
-     "e": "🔩"
-    },
-    {
-     "e": "🛠️"
-    }
-   ],
-   "malos": [
-    {
-     "e": "💌"
-    },
-    {
-     "e": "🌸"
-    }
-   ],
-   "msg_ok": [
-    "Rodamiento bien rodado.",
-    "HRK asiente sin decir nada.",
-    "Producción al máximo.",
-    "HRK asiente. Es el mayor elogio que dará en su vida."
-   ],
-   "msg_ko": [
-    "Aquí no se manda cariño.",
-    "HRK pone cara de tierra embarrada.",
-    "Insulto de bienvenida.",
-    "Aquí no hay cariño, hay rodamientos, blando.",
-    "HRK te llama algo que no se puede escribir.",
-    "Con ese email del cariño te echan de la nave."
-   ],
-   "consigna": "Pulsa los buenos y no toques los malos"
-  },
-  {
-   "id": "diiios",
-   "plantilla": "aguanta",
-   "titulo": "El grito de PheDiox",
-   "emoji": "🗣️",
-   "resumen": "Estira el Diiiios hasta la zona verde.",
-   "intro": "Mantén pulsado para estirar el DIIIIOOOS y suelta cuando la aguja esté en la zona verde. Aquí sí se estira: en el audio de Hermek no.",
-   "dificultad": 3,
-   "nuevo": false,
-   "palabra": "Dios",
-   "rondas": 5,
-   "consigna": "Estira el Dios hasta la zona verde",
-   "msg_ok": [
-    "¡Ese Dios sí que sí!",
-    "PheDiox se quita el sombrero.",
-    "Voz de estadio."
-   ],
-   "msg_ko": [
-    "Dios se quedó corto.",
-    "Se te cortó la voz.",
-    "Eso no era ni un Dios de pueblo.",
-    "PheDiox ha cambiado de obsesión mientras gritabas."
-   ]
-  },
-  {
-   "id": "busca-edortha",
-   "plantilla": "busca",
-   "titulo": "¿Dónde está Edortha Mari?",
-   "emoji": "🎸",
-   "resumen": "El desaparecido de las dos hijas, escondido entre carritos.",
-   "intro": "Edortha Mari desapareció del mapa al tener dos hijas. Encuéntralo entre carritos, peluches y biberones antes de que se esfume.",
-   "dificultad": 3,
-   "nuevo": false,
-   "objetivo": {
-    "e": "🎸",
-    "t": "Edortha Mari (el de la guitarra punk)"
-   },
-   "senuelos": [
-    {
-     "e": "👶"
-    },
-    {
-     "e": "🍼"
-    },
-    {
-     "e": "🛒"
-    },
-    {
-     "e": "🧸"
-    },
-    {
-     "e": "🚼"
-    },
-    {
-     "e": "🌳"
-    }
-   ],
-   "rondas": 5,
-   "tiempo": 14,
-   "msg_ko": [
-    "Se ha esfumado otra vez.",
-    "Dicen que lo vieron en un parque con un carrito.",
-    "Edortha lleva años desaparecido y tú no lo encuentras ni con linterna.",
-    "Ni sus amigos íntimos lo ven; tú menos."
-   ]
-  },
-  {
-   "id": "camiseta-abascal",
-   "plantilla": "busca",
-   "titulo": "La camiseta del Alavés del 98",
-   "emoji": "🎽",
-   "resumen": "Encuentra la camiseta entre las 40 de Abascal.",
-   "intro": "Daniel Abascal tiene todas las camisetas de fútbol posibles. Encuentra la del Alavés del 98 antes de que la guarde en la mochila.",
-   "dificultad": 4,
-   "nuevo": false,
-   "objetivo": {
-    "e": "🎽",
-    "t": "la camiseta del Alavés del 98"
-   },
-   "senuelos": [
-    {
-     "e": "👕"
-    }
-   ],
-   "rondas": 4,
-   "tiempo": 16,
-   "msg_ko": [
-    "Abascal ya la ha guardado en la mochila.",
-    "Abascal ya te ha rechazado el cambio de camiseta con desprecio."
-   ]
-  },
-  {
-   "id": "aiksmann-tele",
-   "plantilla": "simon",
-   "titulo": "Aiksmann arregla la tele",
-   "emoji": "🖥️",
-   "resumen": "Repite la secuencia de cables como el último informático de 2003.",
-   "intro": "El informático de Marianistas reinicia el sistema con una secuencia de cables. Repítela sin equivocarte.",
-   "dificultad": 3,
-   "nuevo": false,
-   "rondas": 8,
-   "botones": [
-    {
-     "e": "🔌",
-     "c": "#ff2e93"
-    },
-    {
-     "e": "📺",
-     "c": "#00e5ff"
-    },
-    {
-     "e": "🖥️",
-     "c": "#39ff14"
-    },
-    {
-     "e": "💾",
-     "c": "#ffe500"
-    }
-   ],
-   "msg_ok": [
-    "Reiniciado.",
-    "Funciona con un clip.",
-    "Windows 98 aprueba."
-   ],
-   "msg_ko": [
-    "Pantalla azul.",
-    "Eso era el cable de la impresora.",
-    "Pantalla azul, como la cara de Aiksmann cuando ve tu PC.",
-    "Hasta Windows 98 lo hacía mejor."
-   ],
-   "consigna": "¡Ahora repite la secuencia!"
-  },
-  {
-   "id": "bihl-gimnasio",
-   "plantilla": "timing",
-   "titulo": "Bihl en el gimnasio",
-   "emoji": "🏋️",
-   "resumen": "Levanta pesas en el punto exacto, con humildad.",
-   "intro": "Bihl, el quinto hombre de la industria guipuzcoana, levanta todo con humildad. Para la aguja en la zona verde para levantar el peso. La zona se hace más pequeña.",
-   "dificultad": 3,
-   "nuevo": false,
-   "rondas": 5,
-   "zona": 36,
-   "consigna": "Para la aguja en la zona verde",
-   "msg_ok": [
-    "Levantado, y encima dice que no es para tanto.",
-    "Bihl se sonroja.",
-    "Peso muerto, pero vivo.",
-    "Bihl: 'no es para tanto'. Y ha levantado un coche."
-   ],
-   "msg_ko": [
-    "Se te cae la barra.",
-    "Eso pesaba más que el examen del Bacterio.",
-    "Bihl te levanta a ti de un brazo y te devuelve a la cinta."
-   ]
-  },
-  {
-   "id": "celedon",
-   "plantilla": "timing",
-   "titulo": "Bajar a Celedón",
-   "emoji": "🎈",
-   "resumen": "Frena la bajada en la zona buena, que es la Blanca.",
-   "intro": "Es la fiesta de la Blanca: Celedón baja de la torre. Para la aguja en la zona verde para frenar la bajada. Si te pasas, aterrizas en el pote equivocado.",
-   "dificultad": 2,
-   "nuevo": false,
-   "rondas": 5,
-   "zona": 38,
-   "consigna": "Frena a Celedón en la zona verde",
-   "msg_ok": [
-    "Aterrizaje perfecto en la plaza.",
-    "El pueblo aplaude con txapela.",
-    "Pote servido."
-   ],
-   "msg_ko": [
-    "Aterrizas en la fuente.",
-    "Celedón pide otra caña mientras cuelga.",
-    "Celedón te mira desde el aire con cara de 'qué vergüenza'."
-   ]
-  },
-  {
-   "id": "carteles-viribay",
-   "plantilla": "pulsa",
-   "titulo": "Pega los carteles de Viribay",
-   "emoji": "🪧",
-   "resumen": "Campaña electoral escolar: pega carteles y esquiva al conserje.",
-   "intro": "Es la campaña de delegado más seria del colegio. Pulsa los carteles «Votando a Viribay, ganamos todos» y no toques al profe ni al conserje que los arrancan.",
-   "dificultad": 2,
-   "nuevo": false,
-   "duracion": 30,
-   "buenos": [
-    {
-     "e": "🪧"
-    },
-    {
-     "e": "📢"
-    }
-   ],
-   "malos": [
-    {
-     "e": "🧹"
-    },
-    {
-     "e": "🧑‍🏫"
-    }
-   ],
-   "msg_ok": [
-    "¡Votando a Viribay, ganamos todos!",
-    "Cartel pegado: Aznar estaría orgulloso.",
-    "Ederra! Otro mitin ganado."
-   ],
-   "msg_ko": [
-    "El profe te arranca el cartel: oposición dura.",
-    "El conserje se ríe de tu programa.",
-    "Ai ama! Te han pillado pegando."
-   ],
-   "consigna": "Pega carteles, no toques al profe"
-  },
-  {
-   "id": "edortha-punk",
-   "plantilla": "ritmo",
-   "titulo": "Edortha al punk",
-   "emoji": "🎸",
-   "resumen": "Toca el punk de Edortha Mari antes de que desaparezca otra vez.",
-   "intro": "Edortha Mari era tranquilísimo hasta que cogía la guitarra. Pulsa cada nota cuando cruce la línea amarilla: flechas, A S D F o toca los botones.",
-   "dificultad": 3,
-   "nuevo": false,
-   "duracion": 30,
-   "notas": [
-    "🎸",
-    "🤘",
-    "🔥",
-    "🥁"
-   ],
-   "consigna": "Pulsa cada nota en la línea amarilla",
-   "msg_ok": [
-    "Ederra! Esto es punk de verdad.",
-    "El público pide otra... y que Edortha no desaparezca.",
-    "Dicen que lo vieron tocando con un carrito."
-   ],
-   "msg_ko": [
-    "Eso no era punk, era Koi tocando servicios mínimos.",
-    "Ai ama! Se te cae la púa.",
-    "Edortha te mira y desaparece."
-   ]
-  },
-  {
-   "id": "koi-huye",
-   "plantilla": "carril3d",
-   "titulo": "Koi huye de la reunión",
-   "emoji": "🏃",
-   "resumen": "3D: corre por la calle de Vitoria esquivando papeleo y cogiendo cañas.",
-   "intro": "Son las 17:01 y Koi ya está fuera de horario. Corre por la calle: desliza a izquierda o derecha para cambiar de carril, coge cañas y pintxos y esquiva anexos y llamadas.",
-   "dificultad": 3,
-   "nuevo": false,
-   "duracion": 40,
-   "jugador": {
-    "e": "🏃"
-   },
-   "buenos": [
-    {
-     "e": "🍺"
-    },
-    {
-     "e": "🥘"
-    }
-   ],
-   "malos": [
-    {
-     "e": "📎"
-    },
-    {
-     "e": "📋"
-    },
-    {
-     "e": "📞"
-    }
-   ],
-   "consigna": "Coge lo bueno, esquiva el papeleo",
-   "msg_ok": [
-    "¡Caña a la mano!",
-    "Pintxo en vuelo.",
-    "Eso sí que es servicio máximo."
-   ],
-   "msg_ko": [
-    "Un anexo te placa por la espalda.",
-    "Llamada del jefe: ¡a las 17:02!",
-    "Ai ama! Reunión sorpresa."
-   ],
-   "tema": "calle"
-  },
-  {
-   "id": "torre-pintxos",
-   "plantilla": "apila",
-   "titulo": "La torre de pintxos",
-   "emoji": "🥘",
-   "resumen": "Apila pintxos en la barra sin que se caiga la torre.",
-   "intro": "En el bote de la cuadrilla se apilan pintxos en una torre imposible. Suelta cada pintxo justo encima del anterior: lo que sobresale se pierde.",
-   "dificultad": 3,
-   "nuevo": false,
-   "bloque": {
-    "e": "🥘"
-   },
-   "niveles": [
-    "Base: la barra",
-    "Piso 2: tortilla",
-    "Piso 3: gilda",
-    "Piso 4: txistorra",
-    "Piso 5: croquetas",
-    "Piso 6: bacalao",
-    "Piso 7: txuleta",
-    "Piso 8: morcilla",
-    "Piso 9: anchoas",
-    "Piso 10: Celedón",
-    "Piso 11: Bordalás",
-    "Piso 12: el Bacterio"
-   ],
-   "msg_ok": [
-    "Clavado, ni una miga.",
-    "Qué pulso: Koi lo pediría por servicios mínimos.",
-    "Pintxo perfecto."
-   ],
-   "msg_ko": [
-    "Se cae la torre: Tejedor lo celebra a patadas.",
-    "Ai ama! Adiós pintxos."
-   ]
-  },
-  {
-   "id": "rastrea-koi-w47",
-   "plantilla": "busca",
-   "titulo": "¿Dónde está Koi?",
-   "emoji": "🔎",
-   "resumen": "Encuentra al Koi antes de que acabe el cartel del Azkena.",
-   "intro": "Koi lleva días sin intervenir y Héctor quiere saber qué día irá al festival. Busca al desaparecido entre carteles, botas y camas de albergue.",
-   "dificultad": 2,
-   "objetivo": {
-    "e": "🫥",
-    "t": "Koi en modo invisible"
-   },
-   "senuelos": [
-    {
-     "e": "🎸"
-    },
-    {
-     "e": "🥾"
-    },
-    {
-     "e": "🛏️"
-    },
-    {
-     "e": "📊"
-    },
-    {
-     "e": "🏠"
-    }
-   ],
-   "rondas": 5,
-   "tiempo": 14,
-   "msg_ko": [
-    "Has encontrado el cartel, el albergue y hasta el eje del gráfico. Koi, no.",
-    "Se te ha escapado. Estaba fuera del chat, como de costumbre."
-   ],
-   "nuevo": false
-  },
-  {
-   "id": "torre-del-albergue-w47",
-   "plantilla": "apila",
-   "titulo": "PheDiox levanta el albergue",
-   "emoji": "🧱",
-   "resumen": "Apila camas, mochilas y excusas antes de que el dueño vuelva a preguntar si sois príncipes.",
-   "intro": "PheDiox ha encontrado el albergue y ya está evaluando el colchón. Levanta una torre digna de un peregrino; Koi, mientras tanto, sigue sin confirmar el Azkena.",
-   "dificultad": 3,
-   "bloque": {
-    "e": "🛏️"
-   },
-   "niveles": [
-    "🥾",
-    "🎒",
-    "🛏️",
-    "🧱",
-    "📱",
-    "🎸",
-    "🍲",
-    "🗺️",
-    "🏠",
-    "🧦",
-    "☔",
-    "👑"
-   ],
-   "msg_ok": [
-    "¡Ederra! Has apilado más que Koi ha escrito esta semana.",
-    "La torre aguanta; PheDiox ya pide habitación con vistas.",
-    "Aupa, peregrino: el dueño te deja dormir antes de preguntarte el título nobiliario."
-   ],
-   "msg_ko": [
-    "Se ha caído todo. PheDiox quiere hablar con recepción.",
-    "Koi ha desaparecido entre los bloques; tampoco estaba confirmado.",
-    "La torre se inclina más que la paciencia del dueño del albergue."
-   ],
-   "vds": false,
-   "nuevo": false
-  },
-  {
-   "dificultad": 2,
-   "emoji": "🛎️",
-   "id": "albergue-de-lujo",
-   "intro": "El albergue es sencillo y PheDiox ya mira la puerta. Aguanta la palabra suite sin que te echen antes del desayuno.",
-   "msg_ko": [
-    "Te han echado antes de terminar la palabra, príncipe.",
-    "PheDiox ha pedido hablar con dirección. No hay dirección.",
-    "Ni cinco segundos sin reclamar, qué cruz."
-   ],
-   "msg_ok": [
-    "Has aguantado más que PheDiox en una cama sin dosel.",
-    "Ederra: cinco rondas sin llamar a recepción.",
-    "El hospitalero te deja quedarte. No preguntes por las estrellas."
-   ],
-   "palabra": "suite",
-   "plantilla": "aguanta",
-   "resumen": "Estira «suite» mientras el Camino te recuerda que has venido andando.",
-   "rondas": 5,
-   "titulo": "Aguanta, PheDiox",
-   "nuevo": false
-  },
-  {
-   "id": "don-hector",
-   "plantilla": "carril3d",
-   "tema": "tren",
-   "titulo": "Don Héctor Viribay: maquinista de Renfe",
-   "emoji": "🚆",
-   "vds": true,
-   "semana": "2026-W47",
-   "nuevo": false,
-   "dificultad": 2,
-   "resumen": "3D: conduce el tren de Don Héctor y elige vía en cada cartel.",
-   "intro": "Las preguntas de este tren son todas sobre Héctor Viribay, también llamado Don Héctor o Viribaytxo: el compañero del cole que hablaba como un señor mayor, fue delegado, abogado y acabó de maquinista de Renfe. Desliza a izquierda o derecha (o toca los lados) para cambiar de vía, coge los carteles de campaña y, cuando aparezcan tres carteles, elige la vía con la respuesta correcta. El tren va más despacio al acercarse a los carteles para que te dé tiempo a leer.",
-   "duracion": 50,
-   "vidas": 3,
-   "buenos": [
-    {
-     "e": "🪧"
-    },
-    {
-     "e": "📢"
-    },
-    {
-     "e": "🎩"
-    }
-   ],
-   "malos": [
-    {
-     "e": "🐄"
-    },
-    {
-     "e": "⏰"
-    },
-    {
-     "e": "🚧"
-    }
-   ],
-   "puertas": [
-    {
-     "pregunta": "Viribay se presentó a delegado: ¿cuál fue su lema de campaña?",
-     "opciones": [
-      "El futuro es hoy",
-      "Votando a Viribay, ganamos todos",
-      "Yo también soy Viribay"
-     ],
-     "correcta": 1
-    },
-    {
-     "pregunta": "Don Héctor terminó Derecho: ¿qué hizo después?",
-     "opciones": [
-      "Piloto de Ryanair",
-      "Informático del cole",
-      "Montó un bufete solo, de la nada"
-     ],
-     "correcta": 2
-    },
-    {
-     "pregunta": "De niño, Viribaytxo ya hablaba...",
-     "opciones": [
-      "Como un señor mayor",
-      "Solo en euskera",
-      "Con la voz de Koi"
-     ],
-     "correcta": 0
-    },
-    {
-     "pregunta": "Héctor Viribay acabó trabajando de...",
-     "opciones": [
-      "Camarero del Kupula",
-      "Maquinista de Renfe",
-      "Árbitro del Alavés"
-     ],
-     "correcta": 1
-    },
-    {
-     "pregunta": "Cuando era pequeño, Don Héctor se alistó en las juventudes de...",
-     "opciones": [
-      "Un club de ajedrez",
-      "El Alavés",
-      "Las del Partido Popular"
-     ],
-     "correcta": 2
-    }
-   ],
-   "msg_ok": [
-    "¡Carteles pegados! Aznar estaría orgulloso.",
-    "Don Héctor sonríe sin mover la cara.",
-    "Ederra! Otro mitin ganado."
-   ],
-   "msg_ko": [
-    "Una vaca en la vía: Renfe de toda la vida.",
-    "Retraso de Renfe: normal.",
-    "Ai ama! Obras en la vía, hijo de puta."
-   ],
-   "sujeto": "Héctor Viribay (Don Héctor)"
-  },
-  {
-   "buenos": [
-    {
-     "e": "🎟️"
-    },
-    {
-     "e": "🎸"
-    }
-   ],
-   "dificultad": 2,
-   "duracion": 35,
-   "emoji": "🎸",
-   "id": "kois-catalogo-en-azkena",
-   "intro": "Mueve a Koi por tres carriles: recoge entradas del Azkena y esquiva catálogos y excusas. Llega al escenario antes de que vuelva a desaparecer del chat.",
-   "jugador": {
-    "e": "🤘"
-   },
-   "malos": [
-    {
-     "e": "📘"
-    },
-    {
-     "e": "💤"
-    },
-    {
-     "e": "📵"
-    }
-   ],
-   "msg_ko": [
-    "Koi se ha quedado en casa actualizando catálogos. Otra vez.",
-    "El concierto terminó y Koi aún pregunta qué día era.",
-    "Te ha atropellado una excusa de servicios mínimos."
-   ],
-   "msg_ok": [
-    "¡Lo has conseguido! Koi ha llegado antes de que acabe el bis.",
-    "Aupa, Koi en un concierto: esto sí que no estaba en el catálogo.",
-    "Has esquivado las excusas. El HRK ya está buscando el carnet."
-   ],
-   "plantilla": "runner",
-   "resumen": "Corre entre escenarios, esquiva catálogos y recoge entradas antes de que Koi se escaquee.",
-   "titulo": "Koi esquiva el Azkena",
-   "nuevo": false
-  },
-  {
-   "bloque": {
-    "e": "🛏️"
-   },
-   "dificultad": 3,
-   "emoji": "🥾",
-   "id": "peregrino-o-principe-camino",
-   "intro": "Apila doce literas para construir el albergue perfecto sin que PheDiox se quede protestando abajo. Coloca cada bloque con buen pulso; si la torre cae, el dueño vuelve a preguntar si sois príncipes o peregrinos.",
-   "msg_ko": [
-    "La torre se ha caído y PheDiox pide habitación presidencial. Qué pesado.",
-    "Has montado un albergue torcido; hasta el peregrino más sufrido se va.",
-    "Se desplomó la litera. PheDiox ya está redactando una queja de tres páginas."
-   ],
-   "msg_ok": [
-    "¡Ederra! Doce literas y ni una petición de servicio real.",
-    "Has levantado el albergue. PheDiox sigue protestando, pero ahora desde arriba.",
-    "¡Aupa, arquitecto! Por fin un alojamiento que aguanta una queja de PheDiox."
-   ],
-   "niveles": [
-    "🛏️",
-    "🛏️🛏️",
-    "🛏️🛏️🛏️",
-    "🛏️🛏️🛏️🛏️",
-    "🛏️🛏️🛏️🛏️🛏️",
-    "🛏️🛏️🛏️🛏️🛏️🛏️",
-    "🛏️🛏️🛏️🛏️🛏️🛏️🛏️",
-    "🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️",
-    "🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️",
-    "🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️",
-    "🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️",
-    "🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️🛏️"
-   ],
-   "plantilla": "apila",
-   "resumen": "Apila literas para levantar un albergue antes de que PheDiox pida trato de príncipe.",
-   "titulo": "El albergue de los príncipes",
-   "vds": true,
-   "semana": "2026-W48",
-   "nuevo": true
-  }
- ]
+  ]
 }

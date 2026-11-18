@@ -1,59 +1,59 @@
 {
   "fecha": "2026-11-21T14:00:00+01:00",
   "fichas_iniciales": 100,
-  "jornada": "Próximo partido",
+  "jornada": "Alavés-RC Deportivo, 21/11/2026",
   "mercados": [
     {
-      "cuota": 2.1,
+      "cuota": 2.25,
       "grupo": "1x2",
       "id": "1",
-      "prob": 0.45,
+      "prob": 0.42,
       "texto": "Gana el Alavés"
     },
     {
-      "cuota": 3.2,
+      "cuota": 3.1,
       "grupo": "1x2",
       "id": "x",
       "prob": 0.3,
       "texto": "Empate"
     },
     {
-      "cuota": 3.6,
+      "cuota": 3.8,
       "grupo": "1x2",
       "id": "2",
-      "prob": 0.25,
+      "prob": 0.28,
       "texto": "Gana el RC Deportivo"
     },
     {
-      "cuota": 1.2,
-      "id": "paraguas",
-      "prob": 0.8,
-      "texto": "¿Aparece lluvia en la conversación del grupo?"
+      "cuota": 4,
+      "id": "phediox-checkin",
+      "prob": 0.25,
+      "texto": "PheDiox pregunta por recepción antes del pitido inicial"
     },
     {
-      "cuota": 4,
-      "id": "koipostea",
-      "prob": 0.2,
-      "texto": "¿Koi escribe antes del pitido inicial?"
+      "cuota": 8,
+      "id": "koi-decide",
+      "prob": 0.12,
+      "texto": "Koi decide qué día va al Azkena antes del minuto 90"
+    },
+    {
+      "cuota": 12,
+      "id": "camino",
+      "prob": 0.08,
+      "texto": "El comentarista dice «¿Príncipes o peregrinos?»"
     },
     {
       "cuota": 1.5,
-      "id": "prince",
-      "prob": 0.65,
-      "texto": "¿Alguien menciona la frase «príncipes o peregrinos»?"
-    },
-    {
-      "cuota": 2,
-      "id": "coffee",
-      "prob": 0.5,
-      "texto": "¿Dug menciona café o txakoli?"
-    },
-    {
-      "cuota": 1.4,
-      "id": "hrk",
+      "id": "lluvia",
       "prob": 0.7,
-      "texto": "¿El HRK hace una pregunta directa y sin rodeos?"
+      "texto": "Alguien menciona la lluvia de Vitoria"
+    },
+    {
+      "cuota": 6,
+      "id": "reclamacion",
+      "prob": 0.18,
+      "texto": "PheDiox presenta una reclamación imaginaria al descanso"
     }
   ],
-  "partido": "Alavés - RC Deportivo"
+  "partido": "Alavés vs RC Deportivo"
 }
