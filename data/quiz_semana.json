@@ -1,93 +1,92 @@
 {
-  "semana": "2026-W47",
-  "titulo": "Peregrinos, café y Koi en paradero de chat",
   "preguntas": [
     {
-      "pregunta": "¿Quién contó la anécdota del albergue del Camino Primitivo?",
+      "correcta": 1,
       "opciones": [
-        "Héctor (HRK)",
         "Dug",
+        "HRK",
         "Koi",
         "PheDiox"
       ],
-      "correcta": 0
+      "pregunta": "¿Quién contó la anécdota del albergue?"
     },
     {
-      "pregunta": "¿Qué preguntó el dueño del albergue?",
+      "correcta": 2,
       "opciones": [
-        "¿Quién paga la cena?",
+        "Camino Francés",
+        "Camino del Norte",
+        "Camino Primitivo",
+        "Camino Lebaniego"
+      ],
+      "pregunta": "¿Qué camino hizo el grupo?"
+    },
+    {
+      "correcta": 0,
+      "opciones": [
         "¿Príncipes o peregrinos?",
-        "¿Dónde está el tren?",
-        "¿Tenéis habitación doble?"
+        "¿Peregrinos o turistas?",
+        "¿La habitación o el comedor?",
+        "¿Quién ha traído las botas?"
       ],
-      "correcta": 1
+      "pregunta": "¿Qué dijo el dueño del albergue?"
     },
     {
-      "pregunta": "¿Qué dos bebidas mencionó Héctor al preguntar por la preferencia de Dug?",
+      "correcta": 3,
       "opciones": [
-        "Pica y kalimotxo",
-        "Café solo y agua",
-        "Café blindado y txakoli",
-        "Sidra y cerveza"
+        "Koi",
+        "HRK",
+        "Dug",
+        "PheDiox"
       ],
-      "correcta": 2
+      "pregunta": "¿Quién se quejó del albergue precario?"
     },
     {
-      "pregunta": "¿Qué festival compartió el HRK?",
-      "opciones": [
-        "Sonorama",
-        "BBK Live",
-        "Primavera Sound",
-        "Azkena Rock Festival"
-      ],
-      "correcta": 3
-    },
-    {
-      "pregunta": "¿Qué pidió Dug sobre la participación de Koi?",
-      "opciones": [
-        "Un estudio de su actividad por semanas, días y horas",
-        "Que le reservaran un asiento",
-        "Que cerraran el chat",
-        "Que le escribieran una canción"
-      ],
-      "correcta": 0
-    },
-    {
-      "pregunta": "¿Qué temas aparecieron esta semana en la conversación?",
-      "opciones": [
-        "La conversación sobre hipotecas y ayudas a vivienda",
-        "La pregunta sobre qué día irá Koi al Azkena",
-        "La anécdota del albergue del Camino",
-        "Todas las anteriores"
-      ],
       "correcta": [
         0,
-        1,
         2
-      ]
+      ],
+      "opciones": [
+        "HRK, Koi y PheDiox",
+        "Dug, Koi y Tejedor",
+        "HRK, Dug y Buxai",
+        "Koi, Maketo y Bacterio"
+      ],
+      "pregunta": "¿Qué dos amigos hicieron el Camino Primitivo junto a PheDiox?"
     },
     {
-      "pregunta": "¿Quién llevaba días sin intervenir en el chat, según Dug?",
+      "correcta": 1,
       "opciones": [
-        "El HRK",
-        "Dug",
-        "Koi",
-        "PheDiox"
+        "Qué camiseta llevará",
+        "Qué día de los tres irá",
+        "A qué hora desayunará",
+        "Si irá en tren"
       ],
-      "correcta": 2
+      "pregunta": "¿Qué se preguntó sobre Koi y el Azkena?"
     },
     {
-      "pregunta": "¿Qué dos palabras aparecen en la pregunta del dueño del albergue?",
-      "opciones": [
-        "Camino y albergue",
-        "Príncipes y peregrinos",
-        "Café y txakoli",
-        "Tren y andén"
-      ],
       "correcta": [
-        1,
+        0,
         2
-      ]
+      ],
+      "opciones": [
+        "Es tradicional",
+        "Es de Bilbao",
+        "Es muy de Microsoft",
+        "Es profesor del colegio"
+      ],
+      "pregunta": "¿Qué dos cosas recordó Dug sobre Koi?"
+    },
+    {
+      "correcta": 1,
+      "opciones": [
+        "Eibar",
+        "RC Deportivo",
+        "Mirandés",
+        "Burgos"
+      ],
+      "pregunta": "¿Contra quién juega el Alavés el 21 de noviembre, según el calendario de la liga?"
     }
-  ]
+  ],
+  "semana": "2026-W47",
+  "titulo": "¿Príncipes o peregrinos? La semana de PheDiox"
 }
