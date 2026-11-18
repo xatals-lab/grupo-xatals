@@ -43,7 +43,7 @@ function tarjeta(p,i){const c=document.getElementById("tarjeta");c.style.display
   g.fillStyle="#00e5ff";g.font="32px Sora, sans-serif";g.fillText(p.xp+" XP   🔥 racha "+p.racha+"   🏅 "+Object.keys(p.insignias).length+" insignias",50,245);
   g.fillStyle="#333";g.fillRect(50,280,800,34);g.fillStyle="#39ff14";g.fillRect(50,280,800*i.pct/100,34);
   g.fillStyle="#ddd";g.font="26px Sora, sans-serif";const mj=Object.entries(p.juegos).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([k,v])=>k.replace("mj-","")+": "+v).join("   ·   ");g.fillText(mj||"Todavía sin récords: ¿a qué esperas?",50,370);
-  g.fillStyle="#ffe500";g.font="24px Permanent Marker, cursive";g.fillText("¿A que no me superas? educadug.github.io/grupo-xatals",50,440);
+  g.fillStyle="#ffe500";g.font="24px Permanent Marker, cursive";g.fillText("¿A que no me superas? xatals-lab.github.io/grupo-xatals",50,440);
   c.toBlob(b=>{const f=new File([b],"mi-nivel-xatal.png",{type:"image/png"});if(navigator.canShare&&navigator.canShare({files:[f]}))navigator.share({files:[f],text:"Mi nivel en Grupo Xatals"}).catch(()=>{});else{const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="mi-nivel-xatal.png";a.click();}});}
 /* bromitas: a joke now and then, after something you did */
 let _chistes=null,_ultimaBroma=0;async function bromita(){if(Date.now()-_ultimaBroma<30000||document.querySelectorAll(".toast").length>=2)return;_ultimaBroma=Date.now();try{_chistes=_chistes||await (await fetch("data/chistes.json")).json();}catch(e){return;}

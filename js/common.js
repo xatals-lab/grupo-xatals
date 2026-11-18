@@ -1,5 +1,5 @@
 document.documentElement.classList.add("js");
-const SITE_URL="https://educadug.github.io/grupo-xatals/";
+const SITE_URL="https://xatals-lab.github.io/grupo-xatals/";
 const SALT="xatals-2026";
 const JUGADORES={dug:"Dug",hrk:"HRK (Héctor)",koi:"Koi (Íñigo)"};
 const NAV=[["index.html","Inicio"],["juegos.html","Juegos"],["laboratorio.html","Laboratorio"],["paneles.html","Paneles"],["quizsemana.html","Quiz semanal"],["records.html","Hall of Fame"],["chistes.html","Chistes"],["semana.html","Esta semana"],["claustro.html","Claustro"],["recursos.html","Recursos"]];

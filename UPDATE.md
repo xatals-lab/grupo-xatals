@@ -14,5 +14,5 @@ Cada viernes por la mañana Hermek actualiza SOLO los ficheros de `data/` (y cop
 - Humor de cuadrilla, exagerado, cariñoso, sin acusaciones graves (delitos, sexo, salud, dinero). Mismas reglas de Dug de siempre (feedback_recall).
 - Antes de publicar, valida: `python3 tools/validate.py`. Si falla, corrige el JSON o restaura con `git checkout -- data/`. Nunca publiques con error.
 - Publica: `git add data fabulas && git commit -m "Viernes AAAA-MM-DD" && git push`. GitHub Pages se actualiza solo en 1 o 2 minutos.
-- Después manda al grupo el enlace: https://educadug.github.io/grupo-xatals/ con una línea graciosa sobre las novedades (y el enlace a la fábula de la semana si hay).
+- Después manda al grupo el enlace: https://xatals-lab.github.io/grupo-xatals/ con una línea graciosa sobre las novedades (y el enlace a la fábula de la semana si hay).
 - Si algo falla (push, validación), reintenta una vez y avisa a Dug por Telegram con el error exacto. No cambies la estructura de los JSON.
