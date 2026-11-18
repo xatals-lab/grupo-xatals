@@ -21,28 +21,27 @@ GAMES = [
 games_cards = "\n".join(card(*g) for g in GAMES)
 
 PAGES = {
-"index": ("Inicio", f"""<div class="hero"><span class="sun"></span><span class="floor"></span>
+"index": ("Inicio", """<div class="hero"><span class="sun"></span><span class="floor"></span>
 <span class="tag t1">Vitoria 4ever</span><span class="tag t2">Dios!!!</span><span class="tag t3">servicios mínimos</span><span class="tag t4">cañas &amp; pica</span>
-<h1>GRUPO XATALS</h1><p id="lema">Kaixo, lagunak! Dug · HRK · Koi · y media cuadrilla del cole armando lío</p><a class="btn rosa" href="juegos.html">▶ Jugar</a><a class="btn cian" href="quizsemana.html">Quiz de la semana</a></div>
-<div class="ticker"><span id="tk">Cargando bulos de la cuadrilla…</span></div>
-<div id="semana" class="panel rev">Cargando novedades…</div>
+<h1>GRUPO XATALS</h1><p id="lema">Kaixo, lagunak!</p><div class="acciones"><a class="btn rosa" href="juegos.html">▶ Jugar</a><a class="btn cian" href="quizsemana.html">🧠 Quiz</a></div></div>
+<nav class="botonera">
+<a href="juegos.html"><span class="ic">🎮</span>Juegos</a><a href="quizsemana.html"><span class="ic">🧠</span>Quiz</a><a href="records.html"><span class="ic">🏆</span>Hall of Fame</a>
+<a href="paneles.html"><span class="ic">📊</span>Paneles</a><a href="laboratorio.html"><span class="ic">🧪</span>Laboratorio</a><a href="claustro.html"><span class="ic">🎓</span>Claustro</a>
+<a href="chistes.html"><span class="ic">😂</span>Chistes</a><a href="semana.html"><span class="ic">📰</span>Esta semana</a><a href="recursos.html"><span class="ic">🔗</span>Recursos</a></nav>
 <div id="vds"></div>
 <div class="panel" id="retos"></div>
 <div id="hoy"></div>
 <div class="bento">
-<div class="bloque s4"><a class="card destacado" href="futbol.html"><span class="nuevo">3D</span><span class="vista">⚽</span><span class="em">⚽</span><h3>Tejedor al fútbol en 3D</h3><p>Penaltis en el patio de cemento del cole, con el edificio de Santa María al fondo. Cinco tiras tú, cinco paras tú.</p></a></div>
-<div class="bloque"><a class="card" href="quizsemana.html"><span class="em">🧠</span><h3>Quiz de la semana</h3><p>¿Quién se acuerda de todo lo que hemos dicho?</p></a></div>
-<div class="bloque"><a class="card" href="paneles.html"><span class="em">📊</span><h3>Paneles</h3><p>Datos reales del chat: horas, días y silencios de Koi.</p></a></div>
-<div class="bloque"><a class="card" href="records.html"><span class="em">🏆</span><h3>Hall of Fame</h3><p>Quién manda en la cuadrilla, con corona.</p></a></div>
-<div class="bloque"><a class="card" href="recreo.html"><span class="em">🥊</span><h3>Buxai en el recreo</h3><p>Puñetazos, esquivas y bombones.</p></a></div>
-<div class="bloque s3"><a class="card" href="juegos.html"><span class="em">🕹️</span><h3>Todos los juegos</h3><p>Más de 20 y creciendo: Hermek inventa más cada viernes con vuestras anécdotas.</p></a></div>
-<div class="bloque"><a class="card" href="mus.html"><span class="em">🃏</span><h3>Mus en el Kupula</h3><p>2º de Bachillerato, con el Rizos, Wilhelm y Koi de camarero.</p></a></div>
-<div class="bloque"><a class="card" href="laboratorio.html"><span class="em">🧪</span><h3>Laboratorio</h3><p>Sliders: sube el calimocho y mira qué pasa.</p></a></div>
-<div class="bloque"><a class="card" href="claustro.html"><span class="em">🎓</span><h3>Claustro y orla</h3><p>Todos los profes y los compañeros.</p></a></div>
-<div class="bloque s3"><a class="card" href="recursos.html"><span class="em">📰</span><h3>Recursos para los tres Xatals</h3><p>El Correo, Noticias de Álava, Marca, AS y compañía. Informazio-iturriak.</p></a></div>
-<div class="bloque s3"><a class="card" href="chistes.html"><span class="em">😂</span><h3>Chistes</h3><p>La máquina de la cuadrilla, por temas.</p></a></div>
-</div>""",
- '<script src="js/home.js"></script>'),
+<div class="bloque s4"><a class="card destacado" href="futbol.html" data-tag="3D"><span class="nuevo">3D</span><span class="em">⚽</span><h3>Tejedor al fútbol</h3><p>Penaltis en el patio del cole.</p></a></div>
+<div class="bloque"><a class="card" href="recreo.html" data-tag="3D"><span class="em">🥊</span><h3>Buxai en el recreo</h3></a></div>
+<div class="bloque"><a class="card" href="examen.html" data-tag="3D"><span class="em">🧪</span><h3>Copiar al Bacterio</h3></a></div>
+<div class="bloque"><a class="card" href="examen-maketo.html" data-tag="3D"><span class="em">📖</span><h3>Examen del Maketo</h3></a></div>
+<div class="bloque"><a class="card" href="mus.html"><span class="em">🃏</span><h3>Mus en el Kupula</h3></a></div>
+<div class="bloque"><a class="card" href="paneles.html"><span class="em">📊</span><h3>Paneles</h3></a></div>
+<div class="bloque"><a class="card" href="laboratorio.html"><span class="em">🧪</span><h3>Laboratorio</h3></a></div>
+<div class="bloque"><a class="card" href="claustro.html"><span class="em">🎓</span><h3>Claustro y orla</h3></a></div>
+<div class="bloque"><a class="card" href="recursos.html"><span class="em">📰</span><h3>Recursos</h3></a></div>
+</div>""", '<script src="js/home.js"></script>'),
 "juegos": ("Juegos", f'<h1>Juegos</h1><div class="grid">{games_cards}</div><h2>🎮 Videojuegos de la semana</h2><p>Cada viernes, uno nuevo y de un estilo distinto.</p><div class="grid" id="vdss"></div><h2>🔥 Más juegos de la cuadrilla</h2><p>Hermek se inventa más cada semana con vuestras anécdotas.</p><div class="grid" id="mjs"></div>', '<script src="js/juegos.js"></script>'),
 "bar": ("El Bar", """<h1>🍺 El Bar</h1>
 <div class="panel"><div class="seats" id="seats"></div></div>
