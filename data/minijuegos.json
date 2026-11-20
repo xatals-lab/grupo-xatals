@@ -890,6 +890,29 @@
       "titulo": "PheDiox: príncipe del albergue",
       "vds": true,
       "semana": "2026-W49",
+      "nuevo": false
+    },
+    {
+      "consigna": "Para la aguja en verde en cinco rondas y salva a Dug de alargar la presentación hasta el próximo pintxo.",
+      "dificultad": 3,
+      "emoji": "🎤",
+      "id": "dug-toastmasters-aguja-verde-timing",
+      "intro": "Detén la aguja en la zona verde cinco veces. Si fallas, Dug improvisa otra presentación y el HRK busca la salida.",
+      "msg_ko": [
+        "Se pasó de tiempo: el HRK ya ha redactado la dimisión.",
+        "La aguja se fue; Dug acaba de abrir la tercera presentación.",
+        "Has fallado el verde. Hasta el Koi habría hablado menos."
+      ],
+      "msg_ok": [
+        "¡Clavado! Dos premios y ni una diapositiva de más.",
+        "Dug acaba a tiempo: Toastmasters aún no ha pedido refuerzos.",
+        "Aupa, discurso salvado; el pintxo sigue caliente."
+      ],
+      "plantilla": "timing",
+      "resumen": "Para la aguja en verde y evita que Dug alargue el discurso hasta el siguiente pote.",
+      "rondas": 5,
+      "titulo": "Toastmasters: clava el discurso",
+      "zona": 36,
       "nuevo": true
     }
   ]
