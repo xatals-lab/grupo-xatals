@@ -52,9 +52,9 @@ PAGES = {
 "chistes": ("Chistes", '<h1>😂 Chistes</h1><div class="panel"><div id="temas"></div><div id="chiste" style="font-size:1.4rem;margin:1rem 0;font-family:var(--f-tag)">Pulsa el botón…</div><button id="otro">Otro chiste</button></div>', '<script src="js/chistes.js"></script>'),
 "semana": ("Esta semana", '<h1>📰 Esta semana</h1><div id="app" class="panel">Cargando…</div>', '<script src="js/semana.js"></script>'),
 "recreo": ("Buxai en el recreo", """<h1>🥊 Buxai en el recreo</h1>
-<p>Buxai se pelea con todos. Cuando se prepara, <b>esquiva</b> (deslizando, ← → o botones). Cuando se queda abierto, <b>pega</b> (toca, Espacio o botón). Cuidado: cuando le ganas, te la devuelve por la espalda. Y los profes vigilan el patio.</p>
-<div class="arena" id="arena3d"><div class="hud"><span>TÚ <div class="bar" style="width:120px"><i id="hpTu"></i></div></span><span id="pts">0 PTS</span><span>BUXAI <div class="bar mal" style="width:120px"><i id="hpBx"></i></div></span></div>
-<div id="lienzo3d" class="lienzo3d"><div class="ctl3d"><button id="izq">⬅</button><button class="rosa" id="pega">👊</button><button id="der">➡</button></div></div><div class="msg" id="msg">Cargando el patio…</div></div>
+<p>Juego de peleas, mejor de 3 rounds. Mueve, pega 👊, patea 🦵, bloquea 🛡 y carga el especial ⚡ (patada de Tejedor). Buxai no para de hablar de Aznar y, cuando vas ganando, juega sucio. Los profes vigilan.</p>
+<div class="arena" id="arena3d"><div class="hud"><span>PELEA</span><span id="pts">0 PTS</span><span></span></div>
+<div id="lienzo3d" class="lienzo3d"><div class="ctl3d pelea"><button id="bIzq">⬅</button><button id="bDer">➡</button><button id="bBloq" class="sec">🛡</button><button id="bPuno" class="rosa">👊</button><button id="bPatada" class="rosa">🦵</button><button id="bEsp" class="cian">⚡</button></div></div><div class="msg" id="msg">Cargando el patio…</div></div>
 <p><button class="cian" id="start">▶ EMPEZAR</button></p><div id="rec"></div>""", '<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script><script type="module" src="js/recreo3d.js"></script>'),
 "futbol": ("Tejedor al fútbol", """<h1>⚽ Tejedor al fútbol</h1>
 <p>Penaltis en el patio de cemento del cole contra Tejedor: cinco tiras tú y cinco paras tú. Él lee tu disparo casi siempre. Las escuadras no las llega a parar, pero se te pueden ir.</p>

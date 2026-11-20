@@ -154,3 +154,10 @@ html{-webkit-text-size-adjust:100%}body{overscroll-behavior-y:contain;padding-bo
 @keyframes subepop{0%{opacity:0;transform:translate(-50%,-20%) scale(.4)}20%{opacity:1;transform:translate(-50%,-70%) scale(1.25)}100%{opacity:0;transform:translate(-50%,-190%) scale(1)}}
 .juice-flash{position:absolute;inset:0;z-index:7;pointer-events:none;animation:flashj .3s ease-out forwards}
 @keyframes flashj{0%{opacity:0}25%{opacity:1}100%{opacity:0}}
+
+.pelea-hud{position:absolute;left:.4rem;right:.4rem;top:.4rem;display:grid;grid-template-columns:1fr auto 1fr;gap:.5rem;align-items:start;pointer-events:none;font-family:Bangers,Impact,sans-serif;letter-spacing:.06em}
+.pelea-hud b{font-size:1rem;color:#fff;text-shadow:0 2px 0 #000}.pelea-hud .bar{height:14px;margin:2px 0}.pelea-hud .bar.esp{height:7px}.pelea-hud .bar.esp i{background:linear-gradient(90deg,#00e5ff,#b066ff)}
+.pelea-hud>div:last-child{text-align:right}.pelea-hud .ronda{font-size:1.1rem;color:#ffe500;text-shadow:0 2px 0 #000;padding-top:.2rem}
+.globo3d{position:absolute;transform:translate(-50%,-100%);background:#fff;color:#111;border:3px solid #111;border-radius:16px;padding:.35rem .7rem;font-weight:800;font-size:.85rem;max-width:62%;text-align:center;opacity:0;transition:opacity .2s;pointer-events:none;box-shadow:0 6px 14px #0008;z-index:6}
+.globo3d.on{opacity:1}.globo3d::after{content:"";position:absolute;left:50%;bottom:-12px;border:8px solid transparent;border-top-color:#111;transform:translateX(-50%)}
+.ctl3d.pelea{flex-wrap:nowrap;gap:.3rem}.ctl3d.pelea button{min-width:0;max-width:none;flex:1;font-size:1.3rem;min-height:54px}
