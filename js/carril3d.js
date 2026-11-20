@@ -3,6 +3,7 @@
    Config comes from data/minijuegos.json (template "carril3d"). Everything is procedural: no downloads. */
 import { THREE, TX, mat } from "./escena.js";
 import { humanoide, animar } from "./figuras.js";
+import { particulas, popup, flash, vibra } from "./juice.js";
 
 const LANES = [-2.4, 0, 2.4];
 const lienzo = (w, h, f) => { const c = document.createElement("canvas"); c.width = w; c.height = h; f(c.getContext("2d"), w, h); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; };
@@ -31,6 +32,7 @@ export function iniciar(cont, cfg, cb) {
   escena.add(new THREE.Mesh(new THREE.SphereGeometry(160, 12, 8), new THREE.MeshBasicMaterial({ map: TX.cielo(), side: THREE.BackSide, fog: false })));
   const cam = new THREE.PerspectiveCamera(66, 1, .1, 220); escena.add(cam);
   escena.add(new THREE.HemisphereLight(0xdfeeff, 0x7a7a60, 1.05)); const sol = new THREE.DirectionalLight(0xfff0d0, 2); sol.position.set(-8, 14, 6); escena.add(sol);
+  const fx = particulas(escena);
   const tex = suelo(tema); tex.wrapS = tex.wrapT = THREE.RepeatWrapping; tex.repeat.set(1.4, 40);
   const via = new THREE.Mesh(new THREE.PlaneGeometry(8.6, 300), new THREE.MeshStandardMaterial({ map: tex, roughness: 1 })); via.rotation.x = -Math.PI / 2; via.position.set(0, 0, -100); escena.add(via);
   const verde = new THREE.Mesh(new THREE.PlaneGeometry(220, 320), new THREE.MeshStandardMaterial({ color: tema === "tren" ? 0x5a8a4a : 0x8d8d86, roughness: 1 })); verde.rotation.x = -Math.PI / 2; verde.position.set(0, -.02, -100); escena.add(verde);
@@ -95,11 +97,11 @@ export function iniciar(cont, cfg, cb) {
     for (const p of E.puertas) { p.z += mov; p.g.position.z = p.z; }
     if (E.activo) {
       for (const it of E.items) if (!it.hit && it.z > -.9 && it.z < 1.4 && it.lane === E.carril) { it.hit = true; it.s.visible = false;
-        if (it.bueno) { E.pts += 60; if (window.sonido) sonido(760, .08); if (cfg.msg_ok) cb.say(pick(cfg.msg_ok)); }
-        else { E.vidas--; E.lento = 1.5; E.shake = .6; E.pts = Math.max(0, E.pts - 30); if (window.sonido) sonido(110, .25); if (cfg.msg_ko) cb.say(pick(cfg.msg_ko)); if (E.vidas <= 0) fin("Te has estrellado. Fin del viaje."); } }
+        if (it.bueno) { fx.burst(new THREE.Vector3(E.x, 1.4, 0), 0xffe500, 14, 5); popup(cont, "+60", "#ffe500", 50, 62); vibra(12); E.pts += 60; if (window.sonido) sonido(760, .08); if (cfg.msg_ok) cb.say(pick(cfg.msg_ok)); }
+        else { fx.burst(new THREE.Vector3(E.x, 1.2, 0), 0xff3b30, 18, 6); flash(cont, "#ff1e1e", 320); vibra(80); E.vidas--; E.lento = 1.5; E.shake = .6; E.pts = Math.max(0, E.pts - 30); if (window.sonido) sonido(110, .25); if (cfg.msg_ko) cb.say(pick(cfg.msg_ko)); if (E.vidas <= 0) fin("Te has estrellado. Fin del viaje."); } }
       for (const p of E.puertas) if (!p.hecho && p.z > -.6) { p.hecho = true; const ok = E.carril === p.q.correcta;
-        if (ok) { E.pts += 250; E.boost = 3; if (window.sonido) { sonido(660, .1); setTimeout(() => sonido(990, .15), 110); } cb.say("✅ ¡Vía correcta! Acelerón."); if (window.confeti) confeti(); }
-        else { E.vidas--; E.lento = 2; E.shake = .8; if (window.sonido) sonido(100, .3); cb.say("❌ Vía equivocada. Era: " + p.q.opciones[p.q.correcta]); if (E.vidas <= 0) fin("Te has estrellado. Fin del viaje."); }
+        if (ok) { fx.burst(new THREE.Vector3(E.x, 2, 0), 0x39ff14, 34, 9); popup(cont, "¡VÍA CORRECTA! +250", "#39ff14", 50, 40); vibra(40); E.pts += 250; E.boost = 3; if (window.sonido) { sonido(660, .1); setTimeout(() => sonido(990, .15), 110); } cb.say("✅ ¡Vía correcta! Acelerón."); if (window.confeti) confeti(); }
+        else { flash(cont, "#ff1e1e", 360); vibra(100); E.vidas--; E.lento = 2; E.shake = .8; if (window.sonido) sonido(100, .3); cb.say("❌ Vía equivocada. Era: " + p.q.opciones[p.q.correcta]); if (E.vidas <= 0) fin("Te has estrellado. Fin del viaje."); }
         pregEl.classList.remove("on"); }
       if (E.t <= 0) fin("Llegas a la estación. ¡Viaje completado!"); }
     E.items = E.items.filter(it => { if (it.z > 8 || it.hit) { escena.remove(it.s); return false; } return true; });
@@ -109,6 +111,7 @@ export function iniciar(cont, cfg, cb) {
   (function bucle() {
     if (!E.vivo) return; requestAnimationFrame(bucle); const real = Math.min(.35, reloj.getDelta());
     for (let rest = real; rest > 1e-4 && E.vivo; rest -= .04) paso(Math.min(.04, rest));
+    fx.update(real);
     const dt = real;
     cam.position.set(E.x * .55 + (E.shake > 0 ? (Math.random() - .5) * .25 * E.shake : 0), 2.9 + (E.shake > 0 ? (Math.random() - .5) * .15 * E.shake : 0), 6.2); cam.lookAt(E.x * .3, 1.4, -14);
     cam.fov += ((E.boost > 0 ? 88 : (cam.aspect < .8 ? 84 : 66)) - cam.fov) * Math.min(1, dt * 4); cam.updateProjectionMatrix();
