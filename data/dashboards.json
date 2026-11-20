@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-18",
+ "generado": "2026-11-20",
  "desde": "2026-07-27",
  "total": 645,
  "personas": [
@@ -11,7 +11,7 @@
    "preguntas": 141,
    "exclamaciones": 12,
    "largos": 20,
-   "dias_sin_hablar": 4.2,
+   "dias_sin_hablar": 6.5,
    "mayor_silencio_dias": 7.7
   },
   {
@@ -22,7 +22,7 @@
    "preguntas": 67,
    "exclamaciones": 13,
    "largos": 1,
-   "dias_sin_hablar": 5.1,
+   "dias_sin_hablar": 7.5,
    "mayor_silencio_dias": 14.0
   },
   {
@@ -33,7 +33,7 @@
    "preguntas": 3,
    "exclamaciones": 9,
    "largos": 0,
-   "dias_sin_hablar": 4.7,
+   "dias_sin_hablar": 7.0,
    "mayor_silencio_dias": 8.3
   }
  ],

@@ -4,7 +4,12 @@
       "rival": "RC Deportivo",
       "fecha": "2026-11-21",
       "resultado": "",
-      "pronosticos": []
+      "pronosticos": [
+        {
+          "jugador": "dug",
+          "texto": "Alavés 2-0 RC Deportivo"
+        }
+      ]
     }
   ],
   "ranking": [],
