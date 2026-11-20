@@ -2,6 +2,7 @@
    tap/swipe anywhere, big overlay buttons inside the view. Each export: (contenedor, config, {hud, say, fin}). */
 import { THREE, TX, mat } from "./escena.js";
 import { particulas, popup, flash, vibra } from "./juice.js";
+import { humanoide, animar } from "./figuras.js";
 
 const pick = a => a[Math.floor(Math.random() * a.length)];
 const EMO = new Map();
@@ -18,10 +19,10 @@ function mundo(cont, o = {}) {
   scene.add(new THREE.HemisphereLight(0xdfeeff, 0x80755f, 1.1)); const sol = new THREE.DirectionalLight(0xfff0d0, 2.2); sol.position.set(-6, 12, 8); scene.add(sol);
   const suelo = new THREE.Mesh(new THREE.PlaneGeometry(200, 200), new THREE.MeshStandardMaterial({ color: o.suelo ?? 0x8e8e88, roughness: 1 })); suelo.rotation.x = -Math.PI / 2; scene.add(suelo);
   const M = { fx: particulas(scene), shk: 0, punch: 0, renderer, scene, cam, suelo, vivo: true, tick: () => {}, taps: [], raycaster: new THREE.Raycaster(), t: 0 };
-  M.cont = cont; const _v = new THREE.Vector3();
+  M.cont = cont; escenografia(M); const _v = new THREE.Vector3();
   const pantalla = p => { _v.copy(p).project(cam); return [(_v.x * .5 + .5) * 100, (-_v.y * .5 + .5) * 100]; };
-  M.pum = (p, color = 0xffe500, txt = "", col = "#ffe500") => { M.fx.burst(p, color, 18); if (txt) { const [x, y] = pantalla(p); popup(cont, txt, col, x, y); } vibra(15); M.punch = 1; };
-  M.mal = (p, txt = "", color = 0xff3b30) => { M.fx.burst(p, color, 12, 4); flash(cont, "#ff1e1e", 300); M.shk = .6; vibra(70); if (txt) { const [x, y] = pantalla(p); popup(cont, txt, "#ff6b5b", x, y); } };
+  M.pum = (p, color = 0xffe500, txt = "", col = "#ffe500") => { M.fx.burst(p, color, 18); if (txt) { const [x, y] = pantalla(p); popup(cont, txt, col, x, y); } vibra(15); M.punch = 1; M.celeb = 1.2; };
+  M.mal = (p, txt = "", color = 0xff3b30) => { M.fx.burst(p, color, 12, 4); flash(cont, "#ff1e1e", 300); M.shk = .6; M.triste = 1; vibra(70); if (txt) { const [x, y] = pantalla(p); popup(cont, txt, "#ff6b5b", x, y); } };
   function redar() { const w = cont.clientWidth, h = cont.clientHeight; renderer.setSize(w, h); cam.aspect = w / h; cam.fov = cam.aspect < .8 ? 74 : 58; cam.updateProjectionMatrix(); }
   new ResizeObserver(redar).observe(cont); redar();
   let down = null; const cv = renderer.domElement;
@@ -30,10 +31,30 @@ function mundo(cont, o = {}) {
   M.pick = objs => M.raycaster.intersectObjects(objs, false)[0];
   M.ui = html => { const d = document.createElement("div"); d.className = "c3d-ui"; d.innerHTML = html; cont.append(d); return d; };
   const clock = new THREE.Clock();
-  (function bucle() { if (!M.vivo) return; requestAnimationFrame(bucle); const real = Math.min(.35, clock.getDelta()); M.t += real; for (let r = real; r > 1e-4 && M.vivo; r -= .04) M.tick(Math.min(.04, r), M.t); M.fx.update(real); const sh = M.shk > 0 ? M.shk : 0; if (M.shk > 0) M.shk -= real * 2.5; if (M.punch > 0) M.punch -= real * 4; cam.zoom = 1 + Math.max(0, M.punch) * .05; cam.updateProjectionMatrix();
+  (function bucle() { if (!M.vivo) return; requestAnimationFrame(bucle); const real = Math.min(.35, clock.getDelta()); M.t += real; for (let r = real; r > 1e-4 && M.vivo; r -= .04) M.tick(Math.min(.04, r), M.t); M.fx.update(real); if (M.deco) M.deco(real, M.t); const sh = M.shk > 0 ? M.shk : 0; if (M.shk > 0) M.shk -= real * 2.5; if (M.punch > 0) M.punch -= real * 4; cam.zoom = 1 + Math.max(0, M.punch) * .05; cam.updateProjectionMatrix();
     const ox = (Math.random() - .5) * .35 * sh, oy = (Math.random() - .5) * .25 * sh; cam.position.x += ox; cam.position.y += oy; renderer.render(scene, cam); cam.position.x -= ox; cam.position.y -= oy; })();
   M.destruir = () => { M.vivo = false; renderer.dispose(); renderer.domElement.remove(); cont.querySelectorAll(".c3d-ui").forEach(x => x.remove()); };
   return M;
+}
+
+/* ---- living stage for every game: cheering crowd that reacts, neon floor ring, pulsing coloured lights, drifting stars ---- */
+function escenografia(M) {
+  const { scene } = M, col = [0xff2e93, 0x00e5ff, 0xffe500, 0x39ff14, 0xff8800, 0xb066ff], gente = [];
+  for (let i = 0; i < 7; i++) {
+    const a = -1.05 + i * .35, h = humanoide(scene, { jersey: "#" + col[i % 6].toString(16).padStart(6, "0"), pantalon: 0x22223a, pelo: [0x2a1d12, 0x111111, 0xb8860b][i % 3], alto: 1.15 + Math.random() * .25 });
+    h.g.position.set(Math.sin(a) * 9.5, 0, -6.5 - Math.cos(a) * 2.5); h.g.rotation.y = -a * .5; h.fase = Math.random() * 6; gente.push(h);
+  }
+  const aro = new THREE.Mesh(new THREE.RingGeometry(5.2, 5.55, 48), new THREE.MeshBasicMaterial({ color: 0xff2e93, side: THREE.DoubleSide })); aro.rotation.x = -Math.PI / 2; aro.position.y = .03; scene.add(aro);
+  const l1 = new THREE.PointLight(0xff2e93, 28, 26), l2 = new THREE.PointLight(0x00e5ff, 28, 26); l1.position.set(-6, 5, 2); l2.position.set(6, 5, 2); scene.add(l1, l2);
+  const n = 110, pos = new Float32Array(n * 3); for (let i = 0; i < n; i++) { pos[i * 3] = (Math.random() - .5) * 30; pos[i * 3 + 1] = Math.random() * 10; pos[i * 3 + 2] = -20 + Math.random() * 24; }
+  const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.BufferAttribute(pos, 3)); const estrellas = new THREE.Points(g, new THREE.PointsMaterial({ color: 0xfff2a0, size: .14, transparent: true, opacity: .8 })); scene.add(estrellas);
+  M.celeb = 0; M.triste = 0;
+  M.deco = (dt, t) => {
+    gente.forEach(h => { if (M.celeb > 0) animar(h, "festejo", t + h.fase, 1.3); else if (M.triste > 0) animar(h, "derrota", t); else { animar(h, "reposo", t + h.fase); h.g.position.y = Math.abs(Math.sin(t * 3 + h.fase)) * .08; } });
+    M.celeb = Math.max(0, M.celeb - dt); M.triste = Math.max(0, M.triste - dt);
+    l1.intensity = 22 + 10 * Math.sin(t * 4); l2.intensity = 22 + 10 * Math.cos(t * 4); aro.material.color.setHSL((t * .08) % 1, 1, .55);
+    const a = g.attributes.position; for (let i = 0; i < n; i++) { let y = a.getY(i) + dt * .5; if (y > 10) y = 0; a.setY(i, y); } a.needsUpdate = true;
+  };
 }
 const cierra = (M, cb, p, t) => { cb.fin(p, t); setTimeout(() => M.destruir(), 500); };
 const beep = (f, d) => { if (window.sonido) sonido(f, d); };
