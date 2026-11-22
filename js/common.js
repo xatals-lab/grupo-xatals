@@ -73,3 +73,12 @@ function miniaturas(root=document){root.querySelectorAll(".card").forEach(c=>{if
   if(c.dataset.img){const im=document.createElement("img");im.alt="";im.loading="lazy";im.src=c.dataset.img;im.onerror=()=>im.remove();t.append(im);}
   if(em)em.remove();c.prepend(t);});}
 document.addEventListener("DOMContentLoaded",()=>{miniaturas();let tm=null;new MutationObserver(()=>{clearTimeout(tm);tm=setTimeout(()=>{miniaturas();mejoraFotos();},60);}).observe(document.body,{childList:true,subtree:true});});
+
+/* ---- who is playing: each friend chooses once; teachers call each one by his school surname ---- */
+const APELLIDOS={dug:"Urrutia",hrk:"Roca",koi:"Fernández de Trocóniz"};
+function jugadorActual(){const j=localStorage.getItem("xatals_jugador");return JUGADORES[j]?j:null;}
+function apellido(){return APELLIDOS[jugadorActual()]||"Urrutia";}
+function quienSoy(cb,forzar){const j=jugadorActual();if(j&&!forzar){cb(j);return;}
+  const m=document.createElement("div");m.className="modal";m.innerHTML=`<div class="modal-in" style="text-align:center"><h2>¿Quién eres?</h2><p>Los profes te llamarán por tu apellido del cole. Lo eliges una vez y se guarda en este móvil.</p>${Object.entries(JUGADORES).map(([k,v])=>`<button class="${k==="dug"?"":"rosa"}" data-k="${k}" style="display:block;width:100%">${v} · señor ${APELLIDOS[k]}</button>`).join("")}</div>`;
+  document.body.append(m);m.querySelectorAll("button").forEach(b=>b.onclick=()=>{localStorage.setItem("xatals_jugador",b.dataset.k);m.remove();document.querySelectorAll(".sr").forEach(e=>e.textContent=apellido());cb(b.dataset.k);});}
+document.addEventListener("DOMContentLoaded",()=>document.querySelectorAll(".sr").forEach(e=>e.textContent=apellido()));

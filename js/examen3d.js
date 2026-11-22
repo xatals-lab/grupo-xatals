@@ -41,13 +41,13 @@ function tickBacterio(dt) {
 }
 function finBacterio(gana, tiempo) {
   vivo = false; copia = false; $("start").disabled = false; const pts = gana ? 500 + Math.round(t * 10) + Math.round((100 - sos) * 2) : Math.round(cop * 3);
-  msg(gana ? "🏆 Copiado entero. El Bacterio no se entera. Aprobado... con un cinco." : tiempo ? "⏰ Se acaba el tiempo. Examen en blanco." : "🚨 ¡Pillado! «Vaya examen, señor Urrutia, vaya examen.»");
-  if (!gana && !tiempo) { golpe("¡TE HA PILLADO EL BACTERIO! «VAYA EXAMEN, SEÑOR URRUTIA, VAYA EXAMEN»"); if (window.reto) reto("suspende"); } if (gana && window.insignia) insignia("copia-bacterio", "Copiaste al Bacterio y vives para contarlo");
+  msg(gana ? "🏆 Copiado entero. El Bacterio no se entera. Aprobado... con un cinco." : tiempo ? "⏰ Se acaba el tiempo. Examen en blanco." : `🚨 ¡Pillado! «Vaya examen, señor ${apellido()}, vaya examen.»`);
+  if (!gana && !tiempo) { golpe(`¡TE HA PILLADO EL BACTERIO! «VAYA EXAMEN, SEÑOR ${apellido().toUpperCase()}, VAYA EXAMEN»`); if (window.reto) reto("suspende"); } if (gana && window.insignia) insignia("copia-bacterio", "Copiaste al Bacterio y vives para contarlo");
   panelRecord($("rec"), "examen", pts, "Puntos del examen");
 }
 /* --------------- maketo --------------- */
 const PREGUNTAS = [
-  ["¿Qué es la verdad, señor Urrutia?", ["Lo que dice Platón", "Lo que dice la cuadrilla", "Lo que no entra en el examen", "Una caña bien tirada"], ["Platón habría suspendido a más gente aún.", "La cuadrilla no es fuente académica. Fuera.", "Tampoco. Pero casi: suspenso.", "Bien dicho, y mal respondido. Suspenso."]],
+  [`¿Qué es la verdad, señor ${apellido()}?`, ["Lo que dice Platón", "Lo que dice la cuadrilla", "Lo que no entra en el examen", "Una caña bien tirada"], ["Platón habría suspendido a más gente aún.", "La cuadrilla no es fuente académica. Fuera.", "Tampoco. Pero casi: suspenso.", "Bien dicho, y mal respondido. Suspenso."]],
   ["Si cae un árbol en el patio de Marianistas (que no tiene árboles), ¿hace ruido?", ["Sí, el de la queja de Tejedor", "No, porque no hay árboles", "Depende de si lo oye el Bacterio", "Solo si Koi está de servicios mínimos"], ["Suspenso por listillo.", "Correcto... y suspenso por obvio.", "El Bacterio no entra en filosofía. Suspenso.", "Koi no entra en nada. Suspenso."]],
   ["¿Existe el balón si Tejedor no lo está pateando?", ["No, solo existe patada", "Sí, como idea platónica", "Solo en el recreo", "Existe, pero en la cara de Buxai"], ["Suspenso por materialista.", "Platón vuelve y te suspende también.", "El recreo no es una categoría metafísica.", "Eso es violencia. Y suspenso."]],
   ["La caña, ¿es un derecho natural o un contrato social?", ["Natural, como el agua", "Contrato, con la barra", "Es la pica: no cuenta", "Ni lo uno ni lo otro: es del Alavés"], ["Hobbes se levanta de la tumba. Suspenso.", "Rousseau se ríe. Y yo no. Suspenso.", "La pica es de flojos. Suspenso doble.", "El Alavés no figura en el temario. Suspenso."]],
@@ -73,9 +73,9 @@ async function finMaketo() {
     panelRecord($("rec"), "examen-maketo", pts + 300, "Puntos del examen del Maketo"); };
 }
 
-$("start").onclick = () => { $("rec").innerHTML = ""; $("start").disabled = true;
+$("start").onclick = () => quienSoy(() => { $("rec").innerHTML = ""; $("start").disabled = true;
   if (MODO === "bacterio") { cop = 0; sos = 0; t = 60; estado = "espalda"; resto = 1.5; vivo = true; copia = false; msg("Mantén COPIAR cuando no mire"); $("copia").disabled = false; }
-  else { qi = 0; notaTotal = 0; prof.g.visible = true; prof.g.position.set(0, 0, -4.2); vivo = false; msg("Examen oral de filosofía. Que Dios te pille confesado."); pintaPregunta(); } };
+  else { qi = 0; notaTotal = 0; prof.g.visible = true; prof.g.position.set(0, 0, -4.2); vivo = false; msg("Examen oral de filosofía. Que Dios te pille confesado."); pintaPregunta(); } });
 if (MODO === "bacterio") { const b = $("copia"); ["mousedown", "touchstart", "pointerdown"].forEach(ev => b.addEventListener(ev, e => { e.preventDefault(); copia = true; })); ["mouseup", "mouseleave", "touchend", "touchcancel", "pointerup"].forEach(ev => b.addEventListener(ev, () => { copia = false; }));
   document.addEventListener("keydown", e => { if (e.key === " ") { e.preventDefault(); copia = true; } }); document.addEventListener("keyup", e => { if (e.key === " ") copia = false; }); }
 const reloj = new THREE.Clock(); let tp = 0;
