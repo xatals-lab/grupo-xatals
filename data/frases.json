@@ -208,5 +208,15 @@
       "koi",
       "phediox"
     ]
+  },
+  {
+    "autor": "koi",
+    "frase": "Pero luego te pega Teje.",
+    "opciones": [
+      "koi",
+      "dug",
+      "hrk",
+      "tejedor"
+    ]
   }
 ]

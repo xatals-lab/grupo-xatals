@@ -1,59 +1,59 @@
 {
-  "fecha": "2026-11-21T14:00:00+01:00",
+  "fecha": "2026-11-28T21:00:00+01:00",
   "fichas_iniciales": 100,
-  "jornada": "Alavés-RC Deportivo, 21/11/2026",
+  "jornada": "Alavés–Real Madrid, 28 de noviembre de 2026",
   "mercados": [
     {
-      "cuota": 2.25,
+      "cuota": 5.5,
       "grupo": "1x2",
       "id": "1",
-      "prob": 0.42,
+      "prob": 0.18,
       "texto": "Gana el Alavés"
-    },
-    {
-      "cuota": 3.1,
-      "grupo": "1x2",
-      "id": "x",
-      "prob": 0.3,
-      "texto": "Empate"
     },
     {
       "cuota": 3.8,
       "grupo": "1x2",
-      "id": "2",
-      "prob": 0.28,
-      "texto": "Gana el RC Deportivo"
-    },
-    {
-      "cuota": 4,
-      "id": "phediox-checkin",
+      "id": "x",
       "prob": 0.25,
-      "texto": "PheDiox pregunta por recepción antes del pitido inicial"
+      "texto": "Empate"
     },
     {
-      "cuota": 8,
-      "id": "koi-decide",
-      "prob": 0.12,
-      "texto": "Koi decide qué día va al Azkena antes del minuto 90"
+      "cuota": 1.72,
+      "grupo": "1x2",
+      "id": "2",
+      "prob": 0.57,
+      "texto": "Gana el Real Madrid"
     },
     {
-      "cuota": 12,
-      "id": "camino",
-      "prob": 0.08,
-      "texto": "El comentarista dice «¿Príncipes o peregrinos?»"
+      "cuota": 25,
+      "id": "Celedon",
+      "prob": 0.04,
+      "texto": "Celedón se queda colgado en el cable del estadio"
     },
     {
       "cuota": 1.5,
-      "id": "lluvia",
-      "prob": 0.7,
-      "texto": "Alguien menciona la lluvia de Vitoria"
+      "id": "Koi-apuesta",
+      "prob": 0.67,
+      "texto": "Koi manda su pronóstico antes del pitido inicial"
     },
     {
-      "cuota": 6,
-      "id": "reclamacion",
-      "prob": 0.18,
-      "texto": "PheDiox presenta una reclamación imaginaria al descanso"
+      "cuota": 2.2,
+      "id": "pica",
+      "prob": 0.45,
+      "texto": "Alguien pide pica en el pote previo"
+    },
+    {
+      "cuota": 2.5,
+      "id": "paraguas",
+      "prob": 0.38,
+      "texto": "Llueve durante el partido en Mendizorroza"
+    },
+    {
+      "cuota": 1.1,
+      "id": "Tejedor",
+      "prob": 0.9,
+      "texto": "Tejedor aparece para repartir una patada en el videojuego"
     }
   ],
-  "partido": "Alavés vs RC Deportivo"
+  "partido": "Deportivo Alavés vs Real Madrid"
 }

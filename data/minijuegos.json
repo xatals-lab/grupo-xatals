@@ -913,6 +913,79 @@
       "rondas": 5,
       "titulo": "Toastmasters: clava el discurso",
       "zona": 36,
+      "nuevo": false
+    },
+    {
+      "dificultad": 2,
+      "emoji": "🧭",
+      "id": "varanasi-sin-koi",
+      "intro": "Busca el icono de Koi entre mapas y señuelos y tócalo antes de que se agote el tiempo. Ojo: en Varanasi no aparece, porque confirmó que nunca ha estado allí.",
+      "msg_ko": [
+        "Has buscado a Koi en Varanasi: allí no está ni el Wi-Fi.",
+        "Cinco rondas y sigues sin encontrarlo; Koi lleva años entrenando para desaparecer.",
+        "Has tocado el señuelo. Koi te manda un aprobado raspadillo desde ninguna parte."
+      ],
+      "objetivo": {
+        "e": "🧔",
+        "t": "Koi"
+      },
+      "plantilla": "busca",
+      "resumen": "Toca el mapa correcto y evita las pistas falsas antes de que se acabe el tiempo.",
+      "rondas": 5,
+      "senuelos": [
+        {
+          "e": "🕌"
+        },
+        {
+          "e": "🧳"
+        },
+        {
+          "e": "🗺️"
+        }
+      ],
+      "tiempo": 14,
+      "titulo": "Encuentra a Koi, pero no en Varanasi",
+      "nuevo": false
+    },
+    {
+      "botones": [
+        {
+          "c": "#e63946",
+          "e": "⚽"
+        },
+        {
+          "c": "#457b9d",
+          "e": "🥊"
+        },
+        {
+          "c": "#2a9d8f",
+          "e": "🦵"
+        },
+        {
+          "c": "#f4a261",
+          "e": "🥅"
+        }
+      ],
+      "dificultad": 3,
+      "emoji": "🥊",
+      "id": "tejedor-repartidor-simon",
+      "intro": "Mira la secuencia de iconos y repítela tocando los botones en el mismo orden. Cada ronda se alarga: aguanta la concentración mientras Tejedor intenta convertir cada victoria en una paliza.",
+      "msg_ko": [
+        "Tejedor te ha zurrado hasta en el Simon: ibas ganando, figura.",
+        "Secuencia fallida. El árbitro te ha puesto un aprobado raspadillo.",
+        "Ni para recordar cuatro botones; Tejedor ya está calentando la pierna."
+      ],
+      "msg_ok": [
+        "¡Ederra! Has repetido la secuencia y Tejedor aún busca el silbato.",
+        "Ocho rondas perfectas: hoy ganas y sales sin masaje de nudillos.",
+        "Has vencido al Simon. DUG pide que revisen el juego, otra anomalía."
+      ],
+      "plantilla": "simon",
+      "resumen": "Repite la secuencia de botones y supera ocho rondas sin equivocarte.",
+      "rondas": 8,
+      "titulo": "Tejedor: memoriza antes de que te zurre",
+      "vds": true,
+      "semana": "2026-W50",
       "nuevo": true
     }
   ]

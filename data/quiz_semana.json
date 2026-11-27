@@ -1,92 +1,92 @@
 {
   "preguntas": [
     {
-      "correcta": 1,
+      "correcta": 0,
       "opciones": [
-        "Dug",
-        "HRK",
-        "Koi",
-        "PheDiox"
+        "Ganar una pelea a Buxai",
+        "Empatar con Tejedor",
+        "Hacer que Koi fuera a Mendizorroza",
+        "Encontrar a Koi en Varanasi"
       ],
-      "pregunta": "¿Quién contó la anécdota del albergue?"
+      "pregunta": "¿Qué consiguió DUG en el juego de fútbol de Tejedor?"
     },
     {
-      "correcta": 2,
+      "correcta": 1,
       "opciones": [
-        "Camino Francés",
-        "Camino del Norte",
-        "Camino Primitivo",
-        "Camino Lebaniego"
+        "Ganó sin recibir golpes",
+        "Tejedor le zurró",
+        "Se fue a Varanasi",
+        "Ganó a Buxai"
       ],
-      "pregunta": "¿Qué camino hizo el grupo?"
+      "pregunta": "¿Qué le pasó a Koi en el juego de Tejedor?"
     },
     {
       "correcta": 0,
       "opciones": [
-        "¿Príncipes o peregrinos?",
-        "¿Peregrinos o turistas?",
-        "¿La habitación o el comedor?",
-        "¿Quién ha traído las botas?"
+        "DUG y Koi",
+        "El HRK y Tejedor",
+        "DUG y Buxai",
+        "Koi y el HRK"
       ],
-      "pregunta": "¿Qué dijo el dueño del albergue?"
+      "pregunta": "¿Quiénes leían Historias de la Puta Mili de principio a fin?"
     },
     {
-      "correcta": 3,
+      "correcta": 2,
       "opciones": [
-        "Koi",
-        "HRK",
-        "Dug",
-        "PheDiox"
+        "Que vivió allí",
+        "Que la visitó con DUG",
+        "Que nunca ha estado allí",
+        "Que juega allí al fútbol"
       ],
-      "pregunta": "¿Quién se quejó del albergue precario?"
+      "pregunta": "¿Qué confirmó Koi sobre Varanasi?"
+    },
+    {
+      "correcta": [
+        1,
+        3
+      ],
+      "opciones": [
+        "Koi y el HRK",
+        "DUG y Koi",
+        "Buxai y el HRK",
+        "DUG y Buxai"
+      ],
+      "pregunta": "¿Qué dos personas recibieron golpes de Tejedor por ir ganando?"
+    },
+    {
+      "correcta": 2,
+      "opciones": [
+        "Al padre, nombrado vicepresidente",
+        "A un profesor del colegio",
+        "Al hijo",
+        "A un jugador del Alavés"
+      ],
+      "pregunta": "¿A quién se refería DUG al aclarar la noticia sobre José Ángel Barreira?"
+    },
+    {
+      "correcta": 0,
+      "opciones": [
+        "Dijo que iba a darle unas cuantas",
+        "Se fue a Varanasi",
+        "Le pidió un autógrafo a Tejedor",
+        "Leyó la revista con Koi"
+      ],
+      "pregunta": "¿Qué hizo el HRK en el juego de la pelea contra Buxai?"
     },
     {
       "correcta": [
         0,
-        2
+        1
       ],
       "opciones": [
-        "HRK, Koi y PheDiox",
-        "Dug, Koi y Tejedor",
-        "HRK, Dug y Buxai",
-        "Koi, Maketo y Bacterio"
+        "Koi nunca ha estado en Varanasi",
+        "DUG ganó una pelea a Buxai",
+        "Tejedor perdió contra Koi",
+        "El HRK ganó el partido 3-1"
       ],
-      "pregunta": "¿Qué dos amigos hicieron el Camino Primitivo junto a PheDiox?"
-    },
-    {
-      "correcta": 1,
-      "opciones": [
-        "Qué camiseta llevará",
-        "Qué día de los tres irá",
-        "A qué hora desayunará",
-        "Si irá en tren"
-      ],
-      "pregunta": "¿Qué se preguntó sobre Koi y el Azkena?"
-    },
-    {
-      "correcta": [
-        0,
-        2
-      ],
-      "opciones": [
-        "Es tradicional",
-        "Es de Bilbao",
-        "Es muy de Microsoft",
-        "Es profesor del colegio"
-      ],
-      "pregunta": "¿Qué dos cosas recordó Dug sobre Koi?"
-    },
-    {
-      "correcta": 1,
-      "opciones": [
-        "Eibar",
-        "RC Deportivo",
-        "Mirandés",
-        "Burgos"
-      ],
-      "pregunta": "¿Contra quién juega el Alavés el 21 de noviembre, según el calendario de la liga?"
+      "pregunta": "¿Qué dos cosas encajan con lo contado esta semana?"
     }
   ],
-  "semana": "2026-W47",
-  "titulo": "¿Príncipes o peregrinos? La semana de PheDiox"
+  "semana": "2026-W48",
+  "titulo": "Tejedor pega, DUG gana y Koi no va a Varanasi"
 }

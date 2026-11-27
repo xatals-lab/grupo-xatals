@@ -3,15 +3,45 @@
     {
       "rival": "RC Deportivo",
       "fecha": "2026-11-21",
-      "resultado": "",
+      "resultado": "Alavés 3-1 RC Deportivo",
       "pronosticos": [
         {
           "jugador": "dug",
           "texto": "Alavés 2-0 RC Deportivo"
+        },
+        {
+          "jugador": "hrk",
+          "texto": "Alavés 2-0 RC Deportivo"
         }
       ]
+    },
+    {
+      "rival": "Real Madrid",
+      "fecha": "2026-11-28",
+      "resultado": "",
+      "pronosticos": []
     }
   ],
-  "ranking": [],
-  "comentarios": {}
+  "ranking": [
+    {
+      "jugador": "dug",
+      "puntos": 1,
+      "exactos": 0
+    },
+    {
+      "jugador": "hrk",
+      "puntos": 1,
+      "exactos": 0
+    },
+    {
+      "jugador": "koi",
+      "puntos": 0,
+      "exactos": 0
+    }
+  ],
+  "comentarios": {
+    "dug": "DUG y el HRK sacaron un punto cada uno ante el Deportivo, acertando el ganador sin clavar el marcador: como quien aparca de oído y deja el coche atravesado.",
+    "hrk": "El HRK acertó que ganaba el Alavés, pero el 3-1 exacto se le escapó; en Irabi ajusta rodamientos mejor que resultados.",
+    "koi": "Koi no dejó pronóstico contra el Deportivo y se quedó a cero: para el Madrid tiene que mandar marcador, no una postal de Varanasi."
+  }
 }
